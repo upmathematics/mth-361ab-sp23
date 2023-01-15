@@ -1,0 +1,89 @@
+---
+title: "**Welcome!** <br><br> **MTH 361: Applied Statistics I**"
+subtitle: "Fall 2022 - University of Portland"
+---
+
+<br>
+
+## **Quick Content Guide**
+
+| Page                                         | Contents                                                                             |
+|----------------------------------------------|--------------------------------------------------------------------------------------|
+| [Home](index.html)          | -                                                                                    |
+| [Syllabus](syllabus.html)   | About the class, class materials and resources, class assessment and expectations |
+| [Topics](topics.html) | Tentative topics, notes, assignments, and books and online resources list        |
+
+<br>
+
+## **Quick Facts**
+
+<br>
+
+### Instructor Information
+
+  * **Instructor:** [Alex John Quijano](https://www.alexjohnquijano.com/){target="_blank"} <br>
+  * **Office:** Buckley Center 279 <br>
+  * **Email:** quijano@up.edu <br>
+
+<br>
+
+### Class Time and Location
+
+  * Section A: MWF, 11:25 AM - 12:20 PM, Franz 205 <br>
+  * Section B: MWF, 12:30 PM - 1:25 PM, Franz 205 <br>
+
+<br>
+
+### Help Hours
+
+* **Alex John Quijano (Instructor)**
+  * Walk-in (Buckley Center 279)
+    - MWF, 4:00 PM - 5:00 PM
+  * One-to-One (Buckley Center 279 or in Teams) <br>
+    [[sign-up for a 30-minute session]](https://calendly.com/alexjohnquijano/quijano-sp23-scheduled-help-hours)
+      - Availability on TuTh, 11:00 AM - 4:00 PM 
+      - Availability on MWF, 2:00 PM - 4:00 PM
+    
+<br>
+
+## **Quick Resources**
+
+<br>
+
+### Textbook
+
+The main textbook is [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr. The textbook is free and open-source. You can also purchase a physical copy at the [UP Bookstore](https://uportland.bncollege.com/).
+
+If you have already purchased the physical copy of the 3rd edition of the textbook, you can either keep it or return/exchange it for the 4th edition.
+
+We will also use other supplementary books and resources throughout the course (please see the Topics Schedule).
+
+<br>
+
+### Computing
+
+#### R Studio Cloud
+
+This class will use the R programming language and the R Studio Integrated Development Environment (IDE). There are several ways to use R and R Studio. However, we will use the R Studio Cloud service, an online R Studio environment for easy access and usage.
+
+* *Accessing R Studio Cloud.* TBA
+
+<br>
+
+#### Getting a Computer
+
+If you need a computer, you can borrow computers - please see the [Clark Library Laptop Borrowing](https://library.up.edu/services/laptops.html){target="_blank"} webpage. For more information and resources, visit the [Clark Library Student Services](https://library.up.edu/services/services-students.html){target="_blank"}.
+
+* *Clark Library Digital labs.* On campus, there are two computer labs that are located in Shiley Hall room 208 and the Clark Library. When you log-in into the lab computers using your UP credentials, use a browser to access R Studio Cloud.
+
+<br>
+
+### Microsoft Teams
+
+We will be using Teams [MTH-361AB-sp23](https://teams.microsoft.com/l/team/19%3aVHaf9on4w352ST4xnIjKJzKfnU6V7vGqLxmdOh8EOxk1%40thread.tacv2/conversations?groupId=2da29649-c261-42c8-b545-b05f8829edcf&tenantId=ea8f3949-231c-40b6-a33f-56873af96f87){target="_blank"} as the main real-time communication tool for general announcements, assignment submissions, question-answering discussions, and direct messages. I added you to the Teams page already so you just need to log in using your UP credentials. If not, then send a request when you log in. Let me know if you need any assistance. If you need the Teams code for this class, use **ciyapht**.
+
+Please check the class Teams regularly. If you need to have Teams notifications sent to your email, please set up your email preferences within Teams.
+
+If you prefer communicating through email, note that I had set up an email filter for this course and you must put the “MTH 361” keyword in your subject line. It is easy for me to get notice of your email if you put the keyword in the subject line. Concise and specific messages are helpful so I know how I can best help you.
+
+<br>

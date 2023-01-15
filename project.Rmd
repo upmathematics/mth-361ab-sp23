@@ -1,0 +1,102 @@
+---
+title: "**Project Guidelines**"
+---
+
+<br>
+
+## **Group Lists**
+
+<br>
+
+  * Section A (11:25 AM - 12:20 PM) TBD
+  * Section B (12:30 PM - 1:25 PM) TBD
+  
+<br>
+
+## **Timeline**
+
+<br>
+
+| Phase |                                                                     Description                                                                     |  Due  |
+|:-----:|:---------------------------------------------------------------------------------------------------------------------------------------------------:|:-----:|
+|   1   |                                                                   Group Formation                                                                   |  2/1 |
+|   2   |                                    Data selection, study design, data exploration, and framing research questions                                   |  2/22 |
+|   3   |                                Hypothesis formulation, more data exploration, and testing out methods as appropriate                                | 3/22 |
+|   4   |           Testing out the methods, methods fine-tuning, and writing the interpretation and discussion of the results in the context of the data.      | 4/19 |
+|   5   |        Generate conclusions while putting the entire report together as one scientific narrative and creating a 10-minute presentation.         |  4/26 |
+
+Final Project Presentations:
+  
+  * Section A: Tu 5/2, 10:30 AM - 12:30 PM, Franz 205 <br>
+  * Section B: W 5/3, 1:30 PM - 3:30 PM, Franz 205 <br>
+
+<br>
+
+## **Purpose**
+
+<br>
+
+Writing a scientific report/paper is essential for any researcher. Your project is a way for you to get exposure to the rigors of writing a paper that involves data exploration and statistical analysis.
+
+<br>
+
+## **Submission Requirement**
+
+<br>
+
+The most important aspect of your project is that you must write a reproducible report. That means that you must include code into your report - similar to your lab assignments. This can be done easily using RMarkdown. Your submission should be a pdf file with the names of your group members.
+
+<br>
+
+## **Project Phases**
+
+<br>
+
+**Phase 1 - Group Formation:** Each group should consist of 3-4 people. For people who want to form their own groups, please send a list of names for your group by the due date. The rest will be randomly assigned. Final group formations will be announced.
+
+**Phase 2 - Data selection, study design, data exploration, and framing research questions:** The first part of your project involves exploring your chosen dataset. Your dataset must be rich enough with information that you can ask questions and perform statistical analysis. A rich data set involves many rows and columns with a mixture of numerical and categorical variables. Your first project report document must include these three parts.
+
+  * *Dataset:* Put together your first data frame. What is it? Where does it come from? What is the description of each variable? What are the types of variables? What kind of sampling strategy (or data collection) was used?
+  
+  * *Exploration:* Exploring the dataset involves creating plots such as scatterplots, barplots, boxplots, histograms, etc. Once you see what you are interested in, pick plots that are relevant to your research questions.
+  
+  * *Research questions:* Formulate your research question and include relevant background research.
+  
+**Phase 3 - Hypothesis formulation, more data exploration, and testing out methods as appropriate:** This phase of your project involves more data exploration, testing out methods that we discussed in class, and formulating your hypothesis, which includes statements and mathematical symbols. Make sure you make action items that address the comments provided to you in your Phase 2 submission.
+  
+  * *More Exploration:* In order to create a hypothesis, you need to explore more and consider different ways to look at your data. What other variables can you include in your analysis? What are your observations of the data?
+
+  * *Hypothesis Formulation:* Based on your research questions, formulate a hypothesis - or hypotheses. The hypothesis statements must be full sentences with its corresponding mathematical notations.
+
+  * *Trying Out Statistical Methods:* Depending on the hypothesis, what statistical method can you apply in order to answer your research question (randomization, bootstrapping, etc.)? Are you using proportions, means, difference in proportions, difference in means, etc? What are your point estimates? What are your initial results/findings/observations?
+  
+**Phase 4 - Methods fine-tuning, and writing the interpretation and discussion of the results in the context of the data.** This phase of your project involved carrying out the method you described from phase 3 and addressing the feedback comments.
+
+  * *Performing the statistical analysis:* Rigorously perform the appropriate statistical method to your data.
+  
+  * *Interpret the results and discuss your conclusions:* Write at least two paragraphs detailing the results of your analysis. What insights and conclusions can you write based on your results? How does your results support your hypothesis? Are your research questions answered or supported?
+
+**Phase 5 - Generate conclusions while putting the entire report together as one scientific narrative and creating a 10-minute presentation.**
+
+  * *Put your report together as one scientific narrative:* Your final report should contain these three parts below. Note that you already wrote most of these from Phases 2-4. You just need to organize them in a more scientific narrative fashion.
+      - *Introduction:* This section should include your background research, research questions, hypothesis statements, and data description.
+      - *Data Exploration:* This section should include your exploration of your data that leads to your question and hypotheses. Include details on how you wrangle your data or if made additional computations.
+      - *Methods:* This section should include the processes you took on performing your statistical method.
+      - *Results and Discussions.* This section should include the results of your statistical analysis and discuss them in context of your research question. You can still include figures and tables here.
+      - *Conclusions:* This is a summary of your argument or experiment/research, and it should be related to the introduction.
+      
+  * *Create a 10-minute Presentation:* There will be a final presentation on the day of the "final exam". Your talk should highlight and be organized around these following points.
+      - *Motivation:* What is the problem? Why should the audience tune in to this talk? Why is this an interesting problem?
+      - *Key Ideas:* What is your dataset? What statistical methods did you use? What are the strengths and weaknesses of the method you used? What are the results? What are your key conclusions?
+
+<br>
+
+## **Datasets**
+
+<br>
+
+Each group must choose a dataset or multiple related datasets from the list below for their project. If you need/want to have additional related data sets that are not listed but can help with your project, please let the instructor know for a discussion.
+
+TBD
+
+<br>

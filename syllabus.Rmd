@@ -1,0 +1,355 @@
+---
+title: '**MTH 361 A/B Syllabus**'
+subtitle: "Spring 2023 - University of Portland"
+---
+
+<br>
+
+## **About the Class**
+
+<br>
+
+### Course Title
+
+MTH 361 A/B: Applied Statistics I
+
+<br>
+
+### Description
+
+Applied Statistics I is an introduction to exploratory data analysis, regression modeling, hypothesis testing, point and interval estimates, and sampling methods. In this course, students will learn an overview of statistical methods utilized across disciplines. This is a data-driven approach to introductory statistics and focused on training a student to give clear and organized written and verbal explanations of statistical ideas to a wide audience. In the interest of scientific transparency, replicability, and reproducibility, part of this course introduces the R programming language for data exploration, visualization, and statistical computing.
+
+<br>
+
+### Instructor Information
+
+  * **Instructor:** [Alex John Quijano](https://www.alexjohnquijano.com/){target="_blank"} <br>
+  * **Office:** Buckley Center 279 <br>
+  * **Email:** quijano@up.edu <br>
+
+<br>
+
+### Class Time and Location
+
+  * Section A: MWF, 11:25 AM - 12:20 PM, Franz 205 <br>
+  * Section B: MWF, 12:30 PM - 1:25 PM, Franz 205 <br>
+
+<br>
+
+### Help Hours
+
+* **Alex John Quijano (Instructor)**
+  * Walk-in (Buckley Center 279)
+    - MWF, 4:00 PM - 5:00 PM
+  * One-to-One (Buckley Center 279 or in Teams) <br>
+    [[sign-up for a 30-minute session]](https://calendly.com/alexjohnquijano/quijano-sp23-scheduled-help-hours)
+      - Availability on TuTh, 11:00 AM - 4:00 PM 
+      - Availability on MWF, 2:00 PM - 4:00 PM
+    
+<br>
+
+### Prerequisites
+
+MTH 201.
+
+<br>
+
+### Learning Objectives
+
+Upon completing MTH 361, students should be able to:
+
+  * Formulate a hypothesis for a particular study design.
+  * Familiarize the basic structure of data, and interpret descriptive statistics.
+  * Understand and solve problems of inference for proportions, two-way tables, and means.
+  * Comprehend the basic concept of statistical modeling and its application to data.
+  * Know the basic concepts of random variables and probability theory.
+  
+<br>
+
+### Learning Outcomes
+
+Upon completing MTH 361, students should be able to do the following:
+
+  * Explain the basic structure of data, how it is collected, evaluate its limitations, and how they affect the results of inference, and represent data graphically and compute statistical properties of data.
+  * Utilize linear or logistic regression models appropriately, explain the concept of statistical inference, and explain the basic concepts of random variables and probability theory.
+  * Apply methods to analyze single variables or the relationship between two variables, and interpret results correctly in the context of a given data.
+  * Critique claims and evaluate decisions based on data, and write and run simple R codes for data analysis, statistical modeling, and basic visualizations.
+  * Complete a written project report demonstrating a comprehensive understanding of data exploratory analysis, statistical modeling, and statistical inference.
+
+<br>
+
+## **Academic Support**
+
+<br>
+
+### Collaboration Policy
+
+I expect you to participate in the class through lectures, discussions, and other engagements. I also expect you to make use of opportunities to get help outside of class (help hours, Teams, email, tutoring) if you need help. Concise and specific messages are the most helpful so I know how I can best help you.
+
+Students are encouraged to participate in discussions with their peers (or each other) regarding assignments. However, each student must take responsibility and ownership of their work and submit their work individually.
+
+<br>
+
+### Help Hours Guidelines
+
+It is strongly recommended that you attend the walk-in help hours or set up a one-to-one meeting with me if you feel like you are falling behind during our in-person class activities, or if you just need to clarify concepts discussed in class. In order to be more productive during a one-to-one meeting (or the walk-in help hours), these are three recommendations before you come in:
+
+  * List all gaps in knowledge you have (missed concepts) or list all concepts that were unclear to you during class. We will address them one by one.
+  * Prepare questions you want answered and be ready to show relevant materials.
+  * Regarding assignments, prepare to show (a) what are the steps you have tried and (b) what are the errors you encountered and the strategies you have tried.
+
+Note that these are recommendations so that you can get the most out of the help hours allocated for you. If you just want to come in and chat about something else, feel free to do so. If the dedicated time for one-to-one meeting does not work for you, send me a message to set up an appointment.
+
+<br>
+
+### The Learning Commons
+
+Students can get academic assistance through Learning Commons tutoring services and workshops. The Co-Pilot peer tutoring program provides students with opportunities to work with other students to get help in writing, math, group projects, and other courses. Students can schedule an appointment to meet with a Co-Pilot (tutor) or they can also meet with a Co-Pilot during drop-in hours. Check the Learning Commons website [www.up.edu/learningcommons](https://www.up.edu/learningcommons/index.html) for more information. Find a tutor at the Learning Commons to get support on your academic journey.
+
+<br>
+
+### Accessibility Statement
+
+The University of Portland endeavors to make its courses and services fully accessible to all students. Students are encouraged to discuss with their instructors what might be most helpful in enabling them to meet the learning goals of the course. Students who experience a disability are also encouraged to use the services of the Office for Accessible Education Services (AES), located in the Shepard Academic Resource Center (503-943-8985). If you have an AES Accommodation Plan, you should make an appointment to meet with your faculty member to discuss how to implement your plan in this class. Requests for alternate location for exams and/or extended exam time should, where possible, be made two weeks in advance of an exam, and must be made at least one week in advance of an exam. Also, if applicable, you should meet with your faculty member to discuss emergency medical information or how best to ensure your safe evacuation from the building in case of fire or other emergency.
+
+<br>
+
+## **Class Materials and Resources**
+
+<br>
+
+### Class Website
+
+The syllabus, tentative topics schedule, lecture slides, assignments, and all other class materials are posted on the [course website]() - the website can be viewed in Teams.
+
+<br>
+
+### Lectures and Labs Structure
+
+Lectures will occur synchronously during their scheduled time. The first 30 minutes of class will be a lecture/presentation followed by an activity with a mini-assignment.
+
+Labs will occur synchronously in some Fridays. The session will be going through R coding demonstrations and answering problems in the lab assignment.
+
+<br>
+
+### Mini-Assignments
+
+The course is structured with Mini-Assignments due at end-of-class or end-of-day. All completed mini-assignments are submitted through Teams Assignments. Mini-Assignments are low-stakes assignments but try to complete all of them for a maximized learning experience. Mini-Assignments are posted - or will be posted - in R Studio Cloud.
+
+<br>
+
+### Lab Assigments
+
+Labs are structured to contain both statistical concepts and substantial applications using R. These labs are high-stakes and must be taken seriously. It is recommended that you start your labs early and not wait at the last minute. Lab assignments are due every two weeks. Lab Assignments are posted - or will be posted - in R Studio Cloud.
+
+<br>
+
+### Project
+
+The final project is a group research project that demonstrates a comprehensive understanding of basic data analysis, statistical modeling, and inference. Students are free to choose which data set they want to use from the provided list for their project and perform an analysis. The timeline of the final report is done in five phases:
+
+  * Phase 1: Group formation.
+
+  * Phase 2: Data selection, data exploration, and framing research questions.
+
+  * Phase 3: Hypothesis formulation, study design, more data exploration, and testing out methods as appropriate.
+
+  * Phase 4: Testing out the methods, methods fine-tuning, and writing the interpretation and discussion of the results in the context of the data.
+
+  * Phase 5: Generate conclusions while putting the entire report together as one scientific narrative and creating a 10-minute presentation.
+
+Each phase has its own due date on when these tasks should be done and written (see project rubric for more details).
+
+<br>
+
+### Textbook
+
+The main textbook is [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr. The textbook is free and open-source. You can also purchase a physical copy at the [UP Bookstore](https://uportland.bncollege.com/).
+
+If you have already purchased the physical copy of the 3rd edition of the textbook, you can either keep it or return/exchange it for the 4th edition.
+
+We will also use other supplementary books and resources throughout the course (please see the Topics Schedule).
+
+<br>
+
+### Computing
+
+#### R Studio Cloud
+
+This class will use the R programming language and the R Studio Integrated Development Environment (IDE). There are several ways to use R and R Studio. However, we will use the R Studio Cloud service, an online R Studio environment for easy access and usage.
+
+* *Accessing R Studio Cloud.* TBA
+
+<br>
+
+#### Getting a Computer
+
+If you need a computer, you can borrow computers - please see the [Clark Library Laptop Borrowing](https://library.up.edu/services/laptops.html){target="_blank"} webpage. For more information and resources, visit the [Clark Library Student Services](https://library.up.edu/services/services-students.html){target="_blank"}.
+
+* *Clark Library Digital labs.* On campus, there are two computer labs that are located in Shiley Hall room 208 and the Clark Library. When you log-in into the lab computers using your UP credentials, use a browser to access R Studio Cloud.
+
+<br>
+
+#### Other: Installing R and R Studio.
+
+This course requires you to use the R studio Cloud because the assignments are mostly posted there. However, you can install R and R Studio in your own machine.
+
+* *Downloading and Installing on your own computer.* First, you need to install R; [r-project.org](https://www.r-project.org/){target="_blank"}. Next, you can install R Studio; [rstudio download](https://www.rstudio.com/products/rstudio/download/){target="_blank"}.
+
+<br>
+
+### Microsoft Teams
+
+We will be using Teams [MTH-361AB-sp23](https://teams.microsoft.com/l/team/19%3aVHaf9on4w352ST4xnIjKJzKfnU6V7vGqLxmdOh8EOxk1%40thread.tacv2/conversations?groupId=2da29649-c261-42c8-b545-b05f8829edcf&tenantId=ea8f3949-231c-40b6-a33f-56873af96f87){target="_blank"} as the main real-time communication tool for general announcements, assignment submissions, question-answering discussions, and direct messages. I added you to the Teams page already so you just need to log in using your UP credentials. If not, then send a request when you log in. Let me know if you need any assistance. If you need the Teams code for this class, use **ciyapht**.
+
+Please check the class Teams regularly. If you need to have Teams notifications sent to your email, please set up your email preferences within Teams.
+
+If you prefer communicating through email, note that I had set up an email filter for this course and you must put the “MTH 361” keyword in your subject line. It is easy for me to get notice of your email if you put the keyword in the subject line. Concise and specific messages are helpful so I know how I can best help you.
+
+<br>
+
+## **Class Assessment**
+
+<br>
+
+### Assessment Disclosure Statement
+
+Student work products for this course may be used by the University for educational quality assurance purposes.
+
+<br>
+
+### Attendance and Participation
+
+It is strongly recommended that you attend all classes and arrive promptly. Participation is an important part of learning. Be prepared to participate in the discussion by doing the assigned readings every week and submitting mini-assignments during class.
+
+<br>
+
+### Grading and Feedback
+
+Each assignment will be graded according to the general grading guide detailed below. Each student will be given feedback on their assignment and learning process to improve their performance. Note that each assignment has its own rubric guided by these general guidelines and the assignment's learning objectives.
+
+Grading guide for conceptual or mathematical questions:
+
+  * *Outstanding*; showed full understanding of the material. Congratulations!
+
+  * *Excellent*; showed approximate understanding but with minor errors. Well done!
+
+  * *Acceptable*; showed some understanding but okay despite a few errors. Good!
+
+  * *Needs Improvement*; showed some potential but it needs more work. Okay!
+
+  * *Needs Major Improvement*; at least you tried, E for effort!
+
+  * *Incorrect or no submission*; meh.
+  
+Note that these are categorical grades (not scores).
+  
+<br>
+  
+### Final Grades
+
+The computation of a student's final grade is based on the following:
+
+  * To get a minimum passing grade (C) for the course, you need at least \%80 *Acceptable* grades of mini-assignments, \%60 *Acceptable* grades of lab assignments, and an *Acceptable* grade for the final project.
+  * To get a maximum passing grade (A) for the course, you need at least \%80 *Outstanding* grades of mini-assignments, \%60 *Outstanding* grades of lab assignments, and an *Excellent* individual grade for the final group project.
+  * Getting either -/+ on your grade depends on your group grade for the final project.
+
+Note that these are not absolutes and subject to change based on circumstances. To give you a point of reference, there are 38 mini-assignments and 5 Lab assignments.
+
+<br>
+
+### Corrections and Resubmissions
+
+You can resubmit an assignment with your corrections for a one-level up grade. For example, if you have a *Needs Improvement* grade on an assignment, you can resubmit it with your detailed corrections - it must be mostly correct - to make the grade *Acceptable*. You can only resubmit once for each mini-assignment and twice for labs by the last day of class.
+
+<br>
+
+### Extra Credit
+
+Throughout the course, there will be opportunities for extra credit. You can submit at most two extra credit assignments at the last day of class. Extra credit can be from any of these two categories:
+
+ * *A critique on the statistical method, visualization, and/or analysis from a chosen article or news source*, which involves writing a critical essay (2-3 pages and single-spaced) regarding the probability or statistical analysis of a chosen scientific article or news source. The essay must include a summary of the article, a description of the data used, and statistical method used, and a description of a better statistical method, a better way to visualize the results, or a comment on statistical errors/pitfalls if it exists.
+  
+  * *Create an informative and visually appealing visualization of complex data*, which involves creating a visualization of a chosen data set. You can use tools (R, Python, etc.) to create the visualization. The resulting visualization must include a half-page description of how to read/interpret it and what are its weaknesses.
+
+<br>
+
+### Late Assignments and Incompletes
+
+You are expected to turn in all completed assignments on time. Circumstances that may disallow you to turn in your work on time – such as a medical reason – are understandable. Please let the instructor know if you are unable to submit your work and have missed the deadline way beyond its original posted date. Because every assignment is an important aspect of your learning in this class, we will discuss when you will turn in the assignment as well as decide upon an acceptable consequence for your turning it in late. I am committed to successfully helping you learn from this course.
+
+<br>
+
+## **Class Expectations**
+
+<br>
+
+### Classroom Norms
+
+  * Follow assignment submission guidelines.
+
+  * Give your undivided attention to the class discussions. 
+  
+  * If you don’t agree with what someone else has to say, you are encouraged to express your point of view, but do so respectfully, and support your claims with textual evidence.
+  
+  * Everyone has the right to be heard. Maintain confidentiality if a person decides to share a personal experience.
+
+  * No name calling and respect each person's identity.
+
+  * One person speaks at a time. Give chances for other people to speak.
+  
+  * Maintain the highest standards of excellence for both you and others.
+
+  * Possess the humility to understand that you are not an expert in everything and that everyone has room for improvement.
+
+  * Realize that each person will start with a distinct set of skills.
+  
+  * Take care of yourself. If you need to step out of the classroom to have a moment to yourself - or go the bathroom - feel free to do so.
+
+<br>
+
+### Non-Violence Statement
+
+The University of Portland is committed to fostering a community free from all forms of violence in which all members feel safe and respected. Violence of any kind, and in particular acts of power-based personal violence, are inconsistent with our mission. Together, we take a stand against violence. Join us in learning more about campus and community resources, UP’s prevention strategy, and reporting options on the Green Dot website, [www.up.edu/greendot](www.up.edu/greendot){target="_blank"} or the Title IX website, [www.up.edu/titleix](www.up.edu/titleix){target="_blank"}.
+
+<br>
+
+### Academic Honor Principle
+
+Academic integrity is openness and honesty in all scholarly endeavors. The University of Portland is a scholarly community dedicated to the discovery, investigation, and dissemination of truth, and to the development of the whole person. Membership in this community is a privilege, requiring each person to practice academic integrity at its highest level, while expecting and promoting the same in others. Breaches of academic integrity will not be tolerated and will be addressed by the community with all due gravity.
+
+In your written work, follow the conventions of an appropriate citation using the APA, MLA, CSE, or SIAM styles. Please consult with the instructor - or [Clark Library Research Guides](https://libguides.up.edu/guides/gethelp) if you have questions about proper citations.
+
+<br>
+
+### Inclusion and Diversity
+
+The natural and mathematical sciences are often viewed as objective disciplines. Science is a method for us to understand how the world works. However, it is historically built from a small set of privileged populations that often ignores the biases. I acknowledge that there may be some parts in this course that have overt and covert biases. Science is a human endeavor, and the pursuit of knowledge and skill must incorporate a diverse set of experiences. 
+
+I value all students regardless of their background, country of origin, race, religion, ethnicity, sexual orientation, disability status, etc. I am are committed to providing a climate of excellence and inclusiveness within all aspects of this course. If you have any concerns, issues, or challenges, you are encouraged to discuss with the instructor (set up a meeting by email or a direct message in Teams) with the assurance of full confidentiality except for academic integrity code violations or sexual harassment (which I am obligated by law to report).
+
+<br>
+
+### Mental Health Statement
+
+As a college student, you may sometimes experience problems with your mental health that interfere with academic experiences and negatively impact daily life. If you or someone you know experiences mental health challenges at UP, please contact the University of Portland Health and Counseling Center in Orrico Hall (down the hill from Franz Hall and near Mehling Hall) at 503-943-7134 or hcc@up.edu. Their services are free and confidential, and if necessary they can provide same day appointments. In addition, phone counseling is available by calling 503-943-7134 and pressing 3. The University of Portland Campus Safety Department (503-943-4444) also has personnel trained to respond sensitively to mental health emergencies at all hours. Remember that getting help is a smart and courageous thing to do – for yourself, for those you care about, and for those who care about you.
+
+<br>
+
+### COVID-19 Related Statements
+
+Generally, students are expected to attend all class sessions according to the instructor’s direction. Students who feel unwell or have a temperature above 100 degrees should NOT attend class in person. These students should inform their instructor as soon as possible. 
+
+Students who must be in isolation due to COVID-19 symptoms or a positive test should also contact their instructor as soon as possible to work out details for keeping up with the course material while in isolation. 
+
+Should the instructor test positive for COVID-19, even without symptoms, the course will be temporarily conducted remotely. Should the instructor be unable to teach for an extended period of time, the respective department or unit will find a substitute to continue the course. 
+
+Following current guidance from our county and state health authorities, face coverings are highly recommended in the classroom and all indoor spaces. As we move through the semester, however, classroom rules and procedures may change. All students and instructors must follow any University-wide COVID-19 rules and procedures that might be in put place at any given time during the semester for classrooms, labs, and all common areas of academic buildings. Such rules and procedures may include required face coverings, suggested distancing protocols and directions, and limitations on eating and drinking in the classroom, among other things. Failure to follow any of the COVID-19 classroom rules in place at the time could result in a student’s removal from the course and/or a report filed with the Office of Student Conduct.
+
+<br>
+
+### Ethics of Information
+
+The University of Portland is a community dedicated to the investigation and discovery of processes for thinking ethically and encouraging the development of ethical reasoning in the formation of the whole person. Using information ethically, as an element in open and honest scholarly endeavors, involves moral reasoning to determine the right way to access, create, distribute, and employ information including: considerations of intellectual property rights, fair use, information bias, censorship, and privacy. More information can be found in the Clark Library’s guide to the Ethical Use of Information at [libguides.up.edu/ethicaluse](libguides.up.edu/ethicaluse){target="_blank"}.
+
+<br>

@@ -1,0 +1,24 @@
+name: "MTH-361"
+output_dir: "docs"
+navbar:
+  title: "MTH-361"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Syllabus"
+      href: syllabus.html
+    - text: "Topics"
+      href: topics.html
+    - text: "Project"
+      href: project.html
+  right:
+    - text: "Quick Notes"
+      href: tba.html
+
+output:
+  html_document:
+    theme: flatly
+    lib_dir: site_libs
+    toc: true
+    toc_float: true
+    

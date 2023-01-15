@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>MTH 361 A/B Syllabus</title>
+
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">MTH-361</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="syllabus.html">Syllabus</a>
+</li>
+<li>
+  <a href="topics.html">Topics</a>
+</li>
+<li>
+  <a href="project.html">Project</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="tba.html">Quick Notes</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore"><strong>MTH 361 A/B Syllabus</strong></h1>
+<h3 class="subtitle">Spring 2023 - University of Portland</h3>
+
+</div>
+
+
+<p><br></p>
+<div id="about-the-class" class="section level2">
+<h2><strong>About the Class</strong></h2>
+<p><br></p>
+<div id="course-title" class="section level3">
+<h3>Course Title</h3>
+<p>MTH 361 A/B: Applied Statistics I</p>
+<p><br></p>
+</div>
+<div id="description" class="section level3">
+<h3>Description</h3>
+<p>Applied Statistics I is an introduction to exploratory data analysis,
+regression modeling, hypothesis testing, point and interval estimates,
+and sampling methods. In this course, students will learn an overview of
+statistical methods utilized across disciplines. This is a data-driven
+approach to introductory statistics and focused on training a student to
+give clear and organized written and verbal explanations of statistical
+ideas to a wide audience. In the interest of scientific transparency,
+replicability, and reproducibility, part of this course introduces the R
+programming language for data exploration, visualization, and
+statistical computing.</p>
+<p><br></p>
+</div>
+<div id="instructor-information" class="section level3">
+<h3>Instructor Information</h3>
+<ul>
+<li><strong>Instructor:</strong> <a
+href="https://www.alexjohnquijano.com/" target="_blank">Alex John
+Quijano</a> <br></li>
+<li><strong>Office:</strong> Buckley Center 279 <br></li>
+<li><strong>Email:</strong> <a href="mailto:quijano@up.edu"
+class="email">quijano@up.edu</a> <br></li>
+</ul>
+<p><br></p>
+</div>
+<div id="class-time-and-location" class="section level3">
+<h3>Class Time and Location</h3>
+<ul>
+<li>Section A: MWF, 11:25 AM - 12:20 PM, Franz 205 <br></li>
+<li>Section B: MWF, 12:30 PM - 1:25 PM, Franz 205 <br></li>
+</ul>
+<p><br></p>
+</div>
+<div id="help-hours" class="section level3">
+<h3>Help Hours</h3>
+<ul>
+<li><strong>Alex John Quijano (Instructor)</strong>
+<ul>
+<li>Walk-in (Buckley Center 279)
+<ul>
+<li>MWF, 4:00 PM - 5:00 PM</li>
+</ul></li>
+<li>One-to-One (Buckley Center 279 or in Teams) <br> <a
+href="https://calendly.com/alexjohnquijano/quijano-sp23-scheduled-help-hours">[sign-up
+for a 30-minute session]</a>
+<ul>
+<li>Availability on TuTh, 11:00 AM - 4:00 PM</li>
+<li>Availability on MWF, 2:00 PM - 4:00 PM</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><br></p>
+</div>
+<div id="prerequisites" class="section level3">
+<h3>Prerequisites</h3>
+<p>MTH 201.</p>
+<p><br></p>
+</div>
+<div id="learning-objectives" class="section level3">
+<h3>Learning Objectives</h3>
+<p>Upon completing MTH 361, students should be able to:</p>
+<ul>
+<li>Formulate a hypothesis for a particular study design.</li>
+<li>Familiarize the basic structure of data, and interpret descriptive
+statistics.</li>
+<li>Understand and solve problems of inference for proportions, two-way
+tables, and means.</li>
+<li>Comprehend the basic concept of statistical modeling and its
+application to data.</li>
+<li>Know the basic concepts of random variables and probability
+theory.</li>
+</ul>
+<p><br></p>
+</div>
+<div id="learning-outcomes" class="section level3">
+<h3>Learning Outcomes</h3>
+<p>Upon completing MTH 361, students should be able to do the
+following:</p>
+<ul>
+<li>Explain the basic structure of data, how it is collected, evaluate
+its limitations, and how they affect the results of inference, and
+represent data graphically and compute statistical properties of
+data.</li>
+<li>Utilize linear or logistic regression models appropriately, explain
+the concept of statistical inference, and explain the basic concepts of
+random variables and probability theory.</li>
+<li>Apply methods to analyze single variables or the relationship
+between two variables, and interpret results correctly in the context of
+a given data.</li>
+<li>Critique claims and evaluate decisions based on data, and write and
+run simple R codes for data analysis, statistical modeling, and basic
+visualizations.</li>
+<li>Complete a written project report demonstrating a comprehensive
+understanding of data exploratory analysis, statistical modeling, and
+statistical inference.</li>
+</ul>
+<p><br></p>
+</div>
+</div>
+<div id="academic-support" class="section level2">
+<h2><strong>Academic Support</strong></h2>
+<p><br></p>
+<div id="collaboration-policy" class="section level3">
+<h3>Collaboration Policy</h3>
+<p>I expect you to participate in the class through lectures,
+discussions, and other engagements. I also expect you to make use of
+opportunities to get help outside of class (help hours, Teams, email,
+tutoring) if you need help. Concise and specific messages are the most
+helpful so I know how I can best help you.</p>
+<p>Students are encouraged to participate in discussions with their
+peers (or each other) regarding assignments. However, each student must
+take responsibility and ownership of their work and submit their work
+individually.</p>
+<p><br></p>
+</div>
+<div id="help-hours-guidelines" class="section level3">
+<h3>Help Hours Guidelines</h3>
+<p>It is strongly recommended that you attend the walk-in help hours or
+set up a one-to-one meeting with me if you feel like you are falling
+behind during our in-person class activities, or if you just need to
+clarify concepts discussed in class. In order to be more productive
+during a one-to-one meeting (or the walk-in help hours), these are three
+recommendations before you come in:</p>
+<ul>
+<li>List all gaps in knowledge you have (missed concepts) or list all
+concepts that were unclear to you during class. We will address them one
+by one.</li>
+<li>Prepare questions you want answered and be ready to show relevant
+materials.</li>
+<li>Regarding assignments, prepare to show (a) what are the steps you
+have tried and (b) what are the errors you encountered and the
+strategies you have tried.</li>
+</ul>
+<p>Note that these are recommendations so that you can get the most out
+of the help hours allocated for you. If you just want to come in and
+chat about something else, feel free to do so. If the dedicated time for
+one-to-one meeting does not work for you, send me a message to set up an
+appointment.</p>
+<p><br></p>
+</div>
+<div id="the-learning-commons" class="section level3">
+<h3>The Learning Commons</h3>
+<p>Students can get academic assistance through Learning Commons
+tutoring services and workshops. The Co-Pilot peer tutoring program
+provides students with opportunities to work with other students to get
+help in writing, math, group projects, and other courses. Students can
+schedule an appointment to meet with a Co-Pilot (tutor) or they can also
+meet with a Co-Pilot during drop-in hours. Check the Learning Commons
+website <a
+href="https://www.up.edu/learningcommons/index.html">www.up.edu/learningcommons</a>
+for more information. Find a tutor at the Learning Commons to get
+support on your academic journey.</p>
+<p><br></p>
+</div>
+<div id="accessibility-statement" class="section level3">
+<h3>Accessibility Statement</h3>
+<p>The University of Portland endeavors to make its courses and services
+fully accessible to all students. Students are encouraged to discuss
+with their instructors what might be most helpful in enabling them to
+meet the learning goals of the course. Students who experience a
+disability are also encouraged to use the services of the Office for
+Accessible Education Services (AES), located in the Shepard Academic
+Resource Center (503-943-8985). If you have an AES Accommodation Plan,
+you should make an appointment to meet with your faculty member to
+discuss how to implement your plan in this class. Requests for alternate
+location for exams and/or extended exam time should, where possible, be
+made two weeks in advance of an exam, and must be made at least one week
+in advance of an exam. Also, if applicable, you should meet with your
+faculty member to discuss emergency medical information or how best to
+ensure your safe evacuation from the building in case of fire or other
+emergency.</p>
+<p><br></p>
+</div>
+</div>
+<div id="class-materials-and-resources" class="section level2">
+<h2><strong>Class Materials and Resources</strong></h2>
+<p><br></p>
+<div id="class-website" class="section level3">
+<h3>Class Website</h3>
+<p>The syllabus, tentative topics schedule, lecture slides, assignments,
+and all other class materials are posted on the <a href="">course
+website</a> - the website can be viewed in Teams.</p>
+<p><br></p>
+</div>
+<div id="lectures-and-labs-structure" class="section level3">
+<h3>Lectures and Labs Structure</h3>
+<p>Lectures will occur synchronously during their scheduled time. The
+first 30 minutes of class will be a lecture/presentation followed by an
+activity with a mini-assignment.</p>
+<p>Labs will occur synchronously in some Fridays. The session will be
+going through R coding demonstrations and answering problems in the lab
+assignment.</p>
+<p><br></p>
+</div>
+<div id="mini-assignments" class="section level3">
+<h3>Mini-Assignments</h3>
+<p>The course is structured with Mini-Assignments due at end-of-class or
+end-of-day. All completed mini-assignments are submitted through Teams
+Assignments. Mini-Assignments are low-stakes assignments but try to
+complete all of them for a maximized learning experience.
+Mini-Assignments are posted - or will be posted - in R Studio Cloud.</p>
+<p><br></p>
+</div>
+<div id="lab-assigments" class="section level3">
+<h3>Lab Assigments</h3>
+<p>Labs are structured to contain both statistical concepts and
+substantial applications using R. These labs are high-stakes and must be
+taken seriously. It is recommended that you start your labs early and
+not wait at the last minute. Lab assignments are due every two weeks.
+Lab Assignments are posted - or will be posted - in R Studio Cloud.</p>
+<p><br></p>
+</div>
+<div id="project" class="section level3">
+<h3>Project</h3>
+<p>The final project is a group research project that demonstrates a
+comprehensive understanding of basic data analysis, statistical
+modeling, and inference. Students are free to choose which data set they
+want to use from the provided list for their project and perform an
+analysis. The timeline of the final report is done in five phases:</p>
+<ul>
+<li><p>Phase 1: Group formation.</p></li>
+<li><p>Phase 2: Data selection, data exploration, and framing research
+questions.</p></li>
+<li><p>Phase 3: Hypothesis formulation, study design, more data
+exploration, and testing out methods as appropriate.</p></li>
+<li><p>Phase 4: Testing out the methods, methods fine-tuning, and
+writing the interpretation and discussion of the results in the context
+of the data.</p></li>
+<li><p>Phase 5: Generate conclusions while putting the entire report
+together as one scientific narrative and creating a 10-minute
+presentation.</p></li>
+</ul>
+<p>Each phase has its own due date on when these tasks should be done
+and written (see project rubric for more details).</p>
+<p><br></p>
+</div>
+<div id="textbook" class="section level3">
+<h3>Textbook</h3>
+<p>The main textbook is <a href="https://www.openintro.org/book/os/"
+target="_blank">OpenIntro Statistics (4th edition)</a> by David Diez,
+Mine Cetinkaya-Rundel, and Christopher Barr. The textbook is free and
+open-source. You can also purchase a physical copy at the <a
+href="https://uportland.bncollege.com/">UP Bookstore</a>.</p>
+<p>If you have already purchased the physical copy of the 3rd edition of
+the textbook, you can either keep it or return/exchange it for the 4th
+edition.</p>
+<p>We will also use other supplementary books and resources throughout
+the course (please see the Topics Schedule).</p>
+<p><br></p>
+</div>
+<div id="computing" class="section level3">
+<h3>Computing</h3>
+<div id="r-studio-cloud" class="section level4">
+<h4>R Studio Cloud</h4>
+<p>This class will use the R programming language and the R Studio
+Integrated Development Environment (IDE). There are several ways to use
+R and R Studio. However, we will use the R Studio Cloud service, an
+online R Studio environment for easy access and usage.</p>
+<ul>
+<li><em>Accessing R Studio Cloud.</em> TBA</li>
+</ul>
+<p><br></p>
+</div>
+<div id="getting-a-computer" class="section level4">
+<h4>Getting a Computer</h4>
+<p>If you need a computer, you can borrow computers - please see the <a
+href="https://library.up.edu/services/laptops.html"
+target="_blank">Clark Library Laptop Borrowing</a> webpage. For more
+information and resources, visit the <a
+href="https://library.up.edu/services/services-students.html"
+target="_blank">Clark Library Student Services</a>.</p>
+<ul>
+<li><em>Clark Library Digital labs.</em> On campus, there are two
+computer labs that are located in Shiley Hall room 208 and the Clark
+Library. When you log-in into the lab computers using your UP
+credentials, use a browser to access R Studio Cloud.</li>
+</ul>
+<p><br></p>
+</div>
+<div id="other-installing-r-and-r-studio." class="section level4">
+<h4>Other: Installing R and R Studio.</h4>
+<p>This course requires you to use the R studio Cloud because the
+assignments are mostly posted there. However, you can install R and R
+Studio in your own machine.</p>
+<ul>
+<li><em>Downloading and Installing on your own computer.</em> First, you
+need to install R; <a href="https://www.r-project.org/"
+target="_blank">r-project.org</a>. Next, you can install R Studio; <a
+href="https://www.rstudio.com/products/rstudio/download/"
+target="_blank">rstudio download</a>.</li>
+</ul>
+<p><br></p>
+</div>
+</div>
+<div id="microsoft-teams" class="section level3">
+<h3>Microsoft Teams</h3>
+<p>We will be using Teams <a
+href="https://teams.microsoft.com/l/team/19%3aVHaf9on4w352ST4xnIjKJzKfnU6V7vGqLxmdOh8EOxk1%40thread.tacv2/conversations?groupId=2da29649-c261-42c8-b545-b05f8829edcf&amp;tenantId=ea8f3949-231c-40b6-a33f-56873af96f87"
+target="_blank">MTH-361AB-sp23</a> as the main real-time communication
+tool for general announcements, assignment submissions,
+question-answering discussions, and direct messages. I added you to the
+Teams page already so you just need to log in using your UP credentials.
+If not, then send a request when you log in. Let me know if you need any
+assistance. If you need the Teams code for this class, use
+<strong>ciyapht</strong>.</p>
+<p>Please check the class Teams regularly. If you need to have Teams
+notifications sent to your email, please set up your email preferences
+within Teams.</p>
+<p>If you prefer communicating through email, note that I had set up an
+email filter for this course and you must put the “MTH 361” keyword in
+your subject line. It is easy for me to get notice of your email if you
+put the keyword in the subject line. Concise and specific messages are
+helpful so I know how I can best help you.</p>
+<p><br></p>
+</div>
+</div>
+<div id="class-assessment" class="section level2">
+<h2><strong>Class Assessment</strong></h2>
+<p><br></p>
+<div id="assessment-disclosure-statement" class="section level3">
+<h3>Assessment Disclosure Statement</h3>
+<p>Student work products for this course may be used by the University
+for educational quality assurance purposes.</p>
+<p><br></p>
+</div>
+<div id="attendance-and-participation" class="section level3">
+<h3>Attendance and Participation</h3>
+<p>It is strongly recommended that you attend all classes and arrive
+promptly. Participation is an important part of learning. Be prepared to
+participate in the discussion by doing the assigned readings every week
+and submitting mini-assignments during class.</p>
+<p><br></p>
+</div>
+<div id="grading-and-feedback" class="section level3">
+<h3>Grading and Feedback</h3>
+<p>Each assignment will be graded according to the general grading guide
+detailed below. Each student will be given feedback on their assignment
+and learning process to improve their performance. Note that each
+assignment has its own rubric guided by these general guidelines and the
+assignment’s learning objectives.</p>
+<p>Grading guide for conceptual or mathematical questions:</p>
+<ul>
+<li><p><em>Outstanding</em>; showed full understanding of the material.
+Congratulations!</p></li>
+<li><p><em>Excellent</em>; showed approximate understanding but with
+minor errors. Well done!</p></li>
+<li><p><em>Acceptable</em>; showed some understanding but okay despite a
+few errors. Good!</p></li>
+<li><p><em>Needs Improvement</em>; showed some potential but it needs
+more work. Okay!</p></li>
+<li><p><em>Needs Major Improvement</em>; at least you tried, E for
+effort!</p></li>
+<li><p><em>Incorrect or no submission</em>; meh.</p></li>
+</ul>
+<p>Note that these are categorical grades (not scores).</p>
+<p><br></p>
+</div>
+<div id="final-grades" class="section level3">
+<h3>Final Grades</h3>
+<p>The computation of a student’s final grade is based on the
+following:</p>
+<ul>
+<li>To get a minimum passing grade (C) for the course, you need at least
+%80 <em>Acceptable</em> grades of mini-assignments, %60
+<em>Acceptable</em> grades of lab assignments, and an
+<em>Acceptable</em> grade for the final project.</li>
+<li>To get a maximum passing grade (A) for the course, you need at least
+%80 <em>Outstanding</em> grades of mini-assignments, %60
+<em>Outstanding</em> grades of lab assignments, and an
+<em>Excellent</em> individual grade for the final group project.</li>
+<li>Getting either -/+ on your grade depends on your group grade for the
+final project.</li>
+</ul>
+<p>Note that these are not absolutes and subject to change based on
+circumstances. To give you a point of reference, there are 38
+mini-assignments and 5 Lab assignments.</p>
+<p><br></p>
+</div>
+<div id="corrections-and-resubmissions" class="section level3">
+<h3>Corrections and Resubmissions</h3>
+<p>You can resubmit an assignment with your corrections for a one-level
+up grade. For example, if you have a <em>Needs Improvement</em> grade on
+an assignment, you can resubmit it with your detailed corrections - it
+must be mostly correct - to make the grade <em>Acceptable</em>. You can
+only resubmit once for each mini-assignment and twice for labs by the
+last day of class.</p>
+<p><br></p>
+</div>
+<div id="extra-credit" class="section level3">
+<h3>Extra Credit</h3>
+<p>Throughout the course, there will be opportunities for extra credit.
+You can submit at most two extra credit assignments at the last day of
+class. Extra credit can be from any of these two categories:</p>
+<ul>
+<li><p><em>A critique on the statistical method, visualization, and/or
+analysis from a chosen article or news source</em>, which involves
+writing a critical essay (2-3 pages and single-spaced) regarding the
+probability or statistical analysis of a chosen scientific article or
+news source. The essay must include a summary of the article, a
+description of the data used, and statistical method used, and a
+description of a better statistical method, a better way to visualize
+the results, or a comment on statistical errors/pitfalls if it
+exists.</p></li>
+<li><p><em>Create an informative and visually appealing visualization of
+complex data</em>, which involves creating a visualization of a chosen
+data set. You can use tools (R, Python, etc.) to create the
+visualization. The resulting visualization must include a half-page
+description of how to read/interpret it and what are its
+weaknesses.</p></li>
+</ul>
+<p><br></p>
+</div>
+<div id="late-assignments-and-incompletes" class="section level3">
+<h3>Late Assignments and Incompletes</h3>
+<p>You are expected to turn in all completed assignments on time.
+Circumstances that may disallow you to turn in your work on time – such
+as a medical reason – are understandable. Please let the instructor know
+if you are unable to submit your work and have missed the deadline way
+beyond its original posted date. Because every assignment is an
+important aspect of your learning in this class, we will discuss when
+you will turn in the assignment as well as decide upon an acceptable
+consequence for your turning it in late. I am committed to successfully
+helping you learn from this course.</p>
+<p><br></p>
+</div>
+</div>
+<div id="class-expectations" class="section level2">
+<h2><strong>Class Expectations</strong></h2>
+<p><br></p>
+<div id="classroom-norms" class="section level3">
+<h3>Classroom Norms</h3>
+<ul>
+<li><p>Follow assignment submission guidelines.</p></li>
+<li><p>Give your undivided attention to the class discussions.</p></li>
+<li><p>If you don’t agree with what someone else has to say, you are
+encouraged to express your point of view, but do so respectfully, and
+support your claims with textual evidence.</p></li>
+<li><p>Everyone has the right to be heard. Maintain confidentiality if a
+person decides to share a personal experience.</p></li>
+<li><p>No name calling and respect each person’s identity.</p></li>
+<li><p>One person speaks at a time. Give chances for other people to
+speak.</p></li>
+<li><p>Maintain the highest standards of excellence for both you and
+others.</p></li>
+<li><p>Possess the humility to understand that you are not an expert in
+everything and that everyone has room for improvement.</p></li>
+<li><p>Realize that each person will start with a distinct set of
+skills.</p></li>
+<li><p>Take care of yourself. If you need to step out of the classroom
+to have a moment to yourself - or go the bathroom - feel free to do
+so.</p></li>
+</ul>
+<p><br></p>
+</div>
+<div id="non-violence-statement" class="section level3">
+<h3>Non-Violence Statement</h3>
+<p>The University of Portland is committed to fostering a community free
+from all forms of violence in which all members feel safe and respected.
+Violence of any kind, and in particular acts of power-based personal
+violence, are inconsistent with our mission. Together, we take a stand
+against violence. Join us in learning more about campus and community
+resources, UP’s prevention strategy, and reporting options on the Green
+Dot website, <a href="www.up.edu/greendot"
+target="_blank">www.up.edu/greendot</a> or the Title IX website, <a
+href="www.up.edu/titleix" target="_blank">www.up.edu/titleix</a>.</p>
+<p><br></p>
+</div>
+<div id="academic-honor-principle" class="section level3">
+<h3>Academic Honor Principle</h3>
+<p>Academic integrity is openness and honesty in all scholarly
+endeavors. The University of Portland is a scholarly community dedicated
+to the discovery, investigation, and dissemination of truth, and to the
+development of the whole person. Membership in this community is a
+privilege, requiring each person to practice academic integrity at its
+highest level, while expecting and promoting the same in others.
+Breaches of academic integrity will not be tolerated and will be
+addressed by the community with all due gravity.</p>
+<p>In your written work, follow the conventions of an appropriate
+citation using the APA, MLA, CSE, or SIAM styles. Please consult with
+the instructor - or <a
+href="https://libguides.up.edu/guides/gethelp">Clark Library Research
+Guides</a> if you have questions about proper citations.</p>
+<p><br></p>
+</div>
+<div id="inclusion-and-diversity" class="section level3">
+<h3>Inclusion and Diversity</h3>
+<p>The natural and mathematical sciences are often viewed as objective
+disciplines. Science is a method for us to understand how the world
+works. However, it is historically built from a small set of privileged
+populations that often ignores the biases. I acknowledge that there may
+be some parts in this course that have overt and covert biases. Science
+is a human endeavor, and the pursuit of knowledge and skill must
+incorporate a diverse set of experiences.</p>
+<p>I value all students regardless of their background, country of
+origin, race, religion, ethnicity, sexual orientation, disability
+status, etc. I am are committed to providing a climate of excellence and
+inclusiveness within all aspects of this course. If you have any
+concerns, issues, or challenges, you are encouraged to discuss with the
+instructor (set up a meeting by email or a direct message in Teams) with
+the assurance of full confidentiality except for academic integrity code
+violations or sexual harassment (which I am obligated by law to
+report).</p>
+<p><br></p>
+</div>
+<div id="mental-health-statement" class="section level3">
+<h3>Mental Health Statement</h3>
+<p>As a college student, you may sometimes experience problems with your
+mental health that interfere with academic experiences and negatively
+impact daily life. If you or someone you know experiences mental health
+challenges at UP, please contact the University of Portland Health and
+Counseling Center in Orrico Hall (down the hill from Franz Hall and near
+Mehling Hall) at 503-943-7134 or <a href="mailto:hcc@up.edu"
+class="email">hcc@up.edu</a>. Their services are free and confidential,
+and if necessary they can provide same day appointments. In addition,
+phone counseling is available by calling 503-943-7134 and pressing 3.
+The University of Portland Campus Safety Department (503-943-4444) also
+has personnel trained to respond sensitively to mental health
+emergencies at all hours. Remember that getting help is a smart and
+courageous thing to do – for yourself, for those you care about, and for
+those who care about you.</p>
+<p><br></p>
+</div>
+<div id="covid-19-related-statements" class="section level3">
+<h3>COVID-19 Related Statements</h3>
+<p>Generally, students are expected to attend all class sessions
+according to the instructor’s direction. Students who feel unwell or
+have a temperature above 100 degrees should NOT attend class in person.
+These students should inform their instructor as soon as possible.</p>
+<p>Students who must be in isolation due to COVID-19 symptoms or a
+positive test should also contact their instructor as soon as possible
+to work out details for keeping up with the course material while in
+isolation.</p>
+<p>Should the instructor test positive for COVID-19, even without
+symptoms, the course will be temporarily conducted remotely. Should the
+instructor be unable to teach for an extended period of time, the
+respective department or unit will find a substitute to continue the
+course.</p>
+<p>Following current guidance from our county and state health
+authorities, face coverings are highly recommended in the classroom and
+all indoor spaces. As we move through the semester, however, classroom
+rules and procedures may change. All students and instructors must
+follow any University-wide COVID-19 rules and procedures that might be
+in put place at any given time during the semester for classrooms, labs,
+and all common areas of academic buildings. Such rules and procedures
+may include required face coverings, suggested distancing protocols and
+directions, and limitations on eating and drinking in the classroom,
+among other things. Failure to follow any of the COVID-19 classroom
+rules in place at the time could result in a student’s removal from the
+course and/or a report filed with the Office of Student Conduct.</p>
+<p><br></p>
+</div>
+<div id="ethics-of-information" class="section level3">
+<h3>Ethics of Information</h3>
+<p>The University of Portland is a community dedicated to the
+investigation and discovery of processes for thinking ethically and
+encouraging the development of ethical reasoning in the formation of the
+whole person. Using information ethically, as an element in open and
+honest scholarly endeavors, involves moral reasoning to determine the
+right way to access, create, distribute, and employ information
+including: considerations of intellectual property rights, fair use,
+information bias, censorship, and privacy. More information can be found
+in the Clark Library’s guide to the Ethical Use of Information at <a
+href="libguides.up.edu/ethicaluse"
+target="_blank">libguides.up.edu/ethicaluse</a>.</p>
+<p><br></p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

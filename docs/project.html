@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Project Guidelines</title>
+
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">MTH-361</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="syllabus.html">Syllabus</a>
+</li>
+<li>
+  <a href="topics.html">Topics</a>
+</li>
+<li>
+  <a href="project.html">Project</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="tba.html">Quick Notes</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore"><strong>Project Guidelines</strong></h1>
+
+</div>
+
+
+<p><br></p>
+<div id="group-lists" class="section level2">
+<h2><strong>Group Lists</strong></h2>
+<p><br></p>
+<ul>
+<li>Section A (11:25 AM - 12:20 PM) TBD</li>
+<li>Section B (12:30 PM - 1:25 PM) TBD</li>
+</ul>
+<p><br></p>
+</div>
+<div id="timeline" class="section level2">
+<h2><strong>Timeline</strong></h2>
+<p><br></p>
+<table>
+<colgroup>
+<col width="4%" />
+<col width="91%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Phase</th>
+<th align="center">Description</th>
+<th align="center">Due</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">Group Formation</td>
+<td align="center">2/1</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">Data selection, study design, data exploration, and
+framing research questions</td>
+<td align="center">2/22</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">Hypothesis formulation, more data exploration, and
+testing out methods as appropriate</td>
+<td align="center">3/22</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">Testing out the methods, methods fine-tuning, and
+writing the interpretation and discussion of the results in the context
+of the data.</td>
+<td align="center">4/19</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">Generate conclusions while putting the entire report
+together as one scientific narrative and creating a 10-minute
+presentation.</td>
+<td align="center">4/26</td>
+</tr>
+</tbody>
+</table>
+<p>Final Project Presentations:</p>
+<ul>
+<li>Section A: Tu 5/2, 10:30 AM - 12:30 PM, Franz 205 <br></li>
+<li>Section B: W 5/3, 1:30 PM - 3:30 PM, Franz 205 <br></li>
+</ul>
+<p><br></p>
+</div>
+<div id="purpose" class="section level2">
+<h2><strong>Purpose</strong></h2>
+<p><br></p>
+<p>Writing a scientific report/paper is essential for any researcher.
+Your project is a way for you to get exposure to the rigors of writing a
+paper that involves data exploration and statistical analysis.</p>
+<p><br></p>
+</div>
+<div id="submission-requirement" class="section level2">
+<h2><strong>Submission Requirement</strong></h2>
+<p><br></p>
+<p>The most important aspect of your project is that you must write a
+reproducible report. That means that you must include code into your
+report - similar to your lab assignments. This can be done easily using
+RMarkdown. Your submission should be a pdf file with the names of your
+group members.</p>
+<p><br></p>
+</div>
+<div id="project-phases" class="section level2">
+<h2><strong>Project Phases</strong></h2>
+<p><br></p>
+<p><strong>Phase 1 - Group Formation:</strong> Each group should consist
+of 3-4 people. For people who want to form their own groups, please send
+a list of names for your group by the due date. The rest will be
+randomly assigned. Final group formations will be announced.</p>
+<p><strong>Phase 2 - Data selection, study design, data exploration, and
+framing research questions:</strong> The first part of your project
+involves exploring your chosen dataset. Your dataset must be rich enough
+with information that you can ask questions and perform statistical
+analysis. A rich data set involves many rows and columns with a mixture
+of numerical and categorical variables. Your first project report
+document must include these three parts.</p>
+<ul>
+<li><p><em>Dataset:</em> Put together your first data frame. What is it?
+Where does it come from? What is the description of each variable? What
+are the types of variables? What kind of sampling strategy (or data
+collection) was used?</p></li>
+<li><p><em>Exploration:</em> Exploring the dataset involves creating
+plots such as scatterplots, barplots, boxplots, histograms, etc. Once
+you see what you are interested in, pick plots that are relevant to your
+research questions.</p></li>
+<li><p><em>Research questions:</em> Formulate your research question and
+include relevant background research.</p></li>
+</ul>
+<p><strong>Phase 3 - Hypothesis formulation, more data exploration, and
+testing out methods as appropriate:</strong> This phase of your project
+involves more data exploration, testing out methods that we discussed in
+class, and formulating your hypothesis, which includes statements and
+mathematical symbols. Make sure you make action items that address the
+comments provided to you in your Phase 2 submission.</p>
+<ul>
+<li><p><em>More Exploration:</em> In order to create a hypothesis, you
+need to explore more and consider different ways to look at your data.
+What other variables can you include in your analysis? What are your
+observations of the data?</p></li>
+<li><p><em>Hypothesis Formulation:</em> Based on your research
+questions, formulate a hypothesis - or hypotheses. The hypothesis
+statements must be full sentences with its corresponding mathematical
+notations.</p></li>
+<li><p><em>Trying Out Statistical Methods:</em> Depending on the
+hypothesis, what statistical method can you apply in order to answer
+your research question (randomization, bootstrapping, etc.)? Are you
+using proportions, means, difference in proportions, difference in
+means, etc? What are your point estimates? What are your initial
+results/findings/observations?</p></li>
+</ul>
+<p><strong>Phase 4 - Methods fine-tuning, and writing the interpretation
+and discussion of the results in the context of the data.</strong> This
+phase of your project involved carrying out the method you described
+from phase 3 and addressing the feedback comments.</p>
+<ul>
+<li><p><em>Performing the statistical analysis:</em> Rigorously perform
+the appropriate statistical method to your data.</p></li>
+<li><p><em>Interpret the results and discuss your conclusions:</em>
+Write at least two paragraphs detailing the results of your analysis.
+What insights and conclusions can you write based on your results? How
+does your results support your hypothesis? Are your research questions
+answered or supported?</p></li>
+</ul>
+<p><strong>Phase 5 - Generate conclusions while putting the entire
+report together as one scientific narrative and creating a 10-minute
+presentation.</strong></p>
+<ul>
+<li><em>Put your report together as one scientific narrative:</em> Your
+final report should contain these three parts below. Note that you
+already wrote most of these from Phases 2-4. You just need to organize
+them in a more scientific narrative fashion.
+<ul>
+<li><em>Introduction:</em> This section should include your background
+research, research questions, hypothesis statements, and data
+description.</li>
+<li><em>Data Exploration:</em> This section should include your
+exploration of your data that leads to your question and hypotheses.
+Include details on how you wrangle your data or if made additional
+computations.</li>
+<li><em>Methods:</em> This section should include the processes you took
+on performing your statistical method.</li>
+<li><em>Results and Discussions.</em> This section should include the
+results of your statistical analysis and discuss them in context of your
+research question. You can still include figures and tables here.</li>
+<li><em>Conclusions:</em> This is a summary of your argument or
+experiment/research, and it should be related to the introduction.</li>
+</ul></li>
+<li><em>Create a 10-minute Presentation:</em> There will be a final
+presentation on the day of the “final exam”. Your talk should highlight
+and be organized around these following points.
+<ul>
+<li><em>Motivation:</em> What is the problem? Why should the audience
+tune in to this talk? Why is this an interesting problem?</li>
+<li><em>Key Ideas:</em> What is your dataset? What statistical methods
+did you use? What are the strengths and weaknesses of the method you
+used? What are the results? What are your key conclusions?</li>
+</ul></li>
+</ul>
+<p><br></p>
+</div>
+<div id="datasets" class="section level2">
+<h2><strong>Datasets</strong></h2>
+<p><br></p>
+<p>Each group must choose a dataset or multiple related datasets from
+the list below for their project. If you need/want to have additional
+related data sets that are not listed but can help with your project,
+please let the instructor know for a discussion.</p>
+<p>TBD</p>
+<p><br></p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
