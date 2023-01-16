@@ -176,9 +176,9 @@ We will also use other supplementary books and resources throughout the course (
 
 #### R Studio Cloud
 
-This class will use the R programming language and the R Studio Integrated Development Environment (IDE). There are several ways to use R and R Studio. However, we will use the Posit R Studio Cloud service, an online R Studio environment for easy access and usage.
+This class will use the R programming language and the R Studio Integrated Development Environment (IDE). There are several ways to use R and R Studio. However, we will use the Posit R Studio Cloud service, an online R Studio environment, for all of the assignments in this class.
 
-* *Accessing R Studio Cloud.* Create a free account at [Posit Cloud Sign-Up](https://posit.cloud/plans/free){target="_blank"} using your UP email. Note that you must use your UP email for me to add you into the course's R Studio workspace in Posit Cloud. You will receive an email inviting you into the workspace.
+* *Accessing R Studio Cloud.* Create a free account at [Posit Cloud Sign-Up](https://posit.cloud/plans/free){target="_blank"} using your UP email. Note that you must use your UP email for me to add you into the course's R Studio workspace in Posit Cloud. You will receive an email inviting you into the workspace soon.
 
 <br>
 
@@ -200,11 +200,11 @@ This course requires you to use the R studio Cloud because the assignments are m
 
 ### Microsoft Teams
 
-We will be using Teams [MTH-361AB-sp23](https://teams.microsoft.com/l/team/19%3aVHaf9on4w352ST4xnIjKJzKfnU6V7vGqLxmdOh8EOxk1%40thread.tacv2/conversations?groupId=2da29649-c261-42c8-b545-b05f8829edcf&tenantId=ea8f3949-231c-40b6-a33f-56873af96f87){target="_blank"} as the main real-time communication tool for general announcements, assignment submissions, question-answering discussions, and direct messages. I added you to the Teams page already so you just need to log in using your UP credentials. If not, then send a request when you log in. Let me know if you need any assistance. If you need the Teams code for this class, use **ciyapht**.
+We will be using Teams [MTH-361AB-sp23](https://teams.microsoft.com/l/team/19%3aVHaf9on4w352ST4xnIjKJzKfnU6V7vGqLxmdOh8EOxk1%40thread.tacv2/conversations?groupId=2da29649-c261-42c8-b545-b05f8829edcf&tenantId=ea8f3949-231c-40b6-a33f-56873af96f87){target="_blank"} as the main real-time communication tool for general announcements, assignment submissions, question-answering discussions, and direct messages. I added you to the Teams page already, so you just need to log in using your UP credentials. If not, then send a request when you log in. Let me know if you need any assistance. If you need the Teams code for this class, use **ciyapht**.
 
 Please check the class Teams regularly. If you need to have Teams notifications sent to your email, please set up your email preferences within Teams.
 
-If you prefer communicating through email, note that I had set up an email filter for this course and you must put the “MTH 361” keyword in your subject line. It is easy for me to get notice of your email if you put the keyword in the subject line. Concise and specific messages are helpful so I know how I can best help you.
+If you prefer communicating through email, note that I have set up an email filter for this course, and you must put the “MTH 361” keyword in your subject line. It is easy for me to get notice of your email if you put the keyword in the subject line. Concise and specific messages are helpful, so I know how I can best help you.
 
 <br>
 
