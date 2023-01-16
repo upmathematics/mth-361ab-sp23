@@ -65,7 +65,7 @@ We will also use other supplementary books and resources throughout the course (
 
 #### R Studio Cloud
 
-This class will use the R programming language and the R Studio Integrated Development Environment (IDE). There are several ways to use R and R Studio. However, we will use the R Studio Cloud service, an online R Studio environment for easy access and usage.
+This class will use the R programming language and the R Studio Integrated Development Environment (IDE). There are several ways to use R and R Studio. However, we will use the Posit R Studio Cloud service, an online R Studio environment for easy access and usage.
 
 * *Accessing R Studio Cloud.* Create a free account at [Posit Cloud Sign-Up](https://posit.cloud/plans/free){target="_blank"} using your UP email. Note that you must use your UP email for me to add you into the course's R Studio workspace in Posit Cloud. You will receive an email inviting you into the workspace.
 
