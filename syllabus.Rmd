@@ -250,7 +250,7 @@ Note that these are categorical grades (not scores).
 
 The computation of a student's final grade is based on the following:
 
-  * To get a minimum passing grade (C) for the course, you need at least \%80 *Acceptable* grades of mini-assignments, \%60 *Acceptable* grades of lab assignments, and an *Acceptable* grade for the final project.
+  * To get a minimum passing grade (C) for the course, you need at least \%80 *Acceptable* grades of mini-assignments, \%60 *Acceptable* grades of lab assignments, and an *Acceptable* individual grade for the final group project..
   * To get a maximum passing grade (A) for the course, you need at least \%80 *Outstanding* grades of mini-assignments, \%60 *Outstanding* grades of lab assignments, and an *Excellent* individual grade for the final group project.
   * Getting either -/+ on your grade depends on your group grade for the final project.
 
