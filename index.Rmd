@@ -1,6 +1,6 @@
 ---
 title: "**Welcome!** <br><br> **MTH 361: Applied Statistics I**"
-subtitle: "Fall 2022 - University of Portland"
+subtitle: "Spring 2023 - University of Portland"
 ---
 
 <br>
