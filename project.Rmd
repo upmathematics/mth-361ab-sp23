@@ -97,6 +97,6 @@ The most important aspect of your project is that you must write a reproducible 
 
 Each group must choose a dataset or multiple related datasets from the list below for their project. If you need/want to have additional related data sets that are not listed but can help with your project, please let the instructor know for a discussion.
 
-TBD
+TBA
 
 <br>

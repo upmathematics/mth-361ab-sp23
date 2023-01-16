@@ -120,7 +120,7 @@ The University of Portland endeavors to make its courses and services fully acce
 
 ### Class Website
 
-The syllabus, tentative topics schedule, lecture slides, assignments, and all other class materials are posted on the [course website]() - the website can be viewed in Teams.
+The syllabus, tentative topics schedule, lecture slides, assignments, and all other class materials are posted on the [course website](https://upmathematics.github.io/mth-361ab-sp23) - the website can be viewed in Teams.
 
 <br>
 
@@ -178,7 +178,7 @@ We will also use other supplementary books and resources throughout the course (
 
 This class will use the R programming language and the R Studio Integrated Development Environment (IDE). There are several ways to use R and R Studio. However, we will use the R Studio Cloud service, an online R Studio environment for easy access and usage.
 
-* *Accessing R Studio Cloud.* TBA
+* *Accessing R Studio Cloud.* Create a free account at [Posit Cloud Sign-Up](https://posit.cloud/plans/free){target="_blank"} using your UP email. Note that you must use your UP email for me to add you into the course's R Studio workspace in Posit Cloud. You will receive an email inviting you into the workspace.
 
 <br>
 
