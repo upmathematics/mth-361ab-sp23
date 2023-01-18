@@ -1,5 +1,5 @@
 ---
-title: "Orientation and Introduction <br><br> MATH 361: Applied Statistics I <br> Spring 2023"
+title: "Orientation and Introduction <br><br> MTH 361 A/B <br> Applied Statistics I <br> Spring 2023"
 author: University of Portland
 date: "2022-01-18"
 output: slidy_presentation
