@@ -24,7 +24,7 @@ The “[\*]” column in the table below contains a number on which it refers to
 |:--------:|:-------:|:---------------------------------------------:|:-------------:|:-------------------:|:---------:|:-----------:|
 |   **1**  |  M 1/16 |                   _No Class_                  |       -       |          -          |     -     |      -      |
 |          |  W 1/18 |          [Orientation \& Introduction](lectures/1-orientation-and-introduction.html){target="_blank"}          |       Syllabus       |         -         |     -     |      -      |
-|          |  F 1/20 |             R Studio \& R Markdown            |       -       |         TBA         |     -     |      -      |
+|          |  F 1/20 |             R Studio \& R Markdown            |       -       |         [rstudio-and-rmarkdown](https://posit.cloud/spaces/326046/content/5260284){target="_blank"}         |     -     |      -      |
 |   **2**  |  M 1/23 | Data Basics, Sampling Principles \& Strategies |   1.2 \& 1.3  |         TBA         |     -     |      -      |
 |          |  W 1/25 |                  Experiments                  |      1.4      |         TBA         |     -     |      -      |
 |          |  F 1/27 |                Case Study: TBA                |      TBA      |         TBA         |     -     |      -      |
