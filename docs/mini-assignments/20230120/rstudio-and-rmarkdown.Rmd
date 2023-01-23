@@ -1,6 +1,6 @@
 ---
 title: '**R Studio \& R Markdown**'
-subtitle: "Mini-Assignment 2023-01-20 - MTH 361 - Fall 2023"
+subtitle: "Mini-Assignment 2023-01-20 - MTH 361 - Spring 2023"
 header-includes: |
   \usepackage{fancyhdr}
   \pagestyle{fancy}
