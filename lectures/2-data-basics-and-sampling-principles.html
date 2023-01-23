@@ -680,21 +680,21 @@ is already part of the base R installation.</p>
 <span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(simple_random_sample)</span></code></pre></div>
 <pre><code>## Rows: 100
 ## Columns: 15
-## $ name              &lt;chr&gt; &quot;Huerfano County&quot;, &quot;Dane County&quot;, &quot;Washington County…
-## $ state             &lt;fct&gt; Colorado, Wisconsin, Maine, Arizona, Wisconsin, Conn…
-## $ pop2000           &lt;dbl&gt; 7862, 426526, 33941, 3072149, 19105, 182193, 108473,…
-## $ pop2010           &lt;dbl&gt; 6711, 488073, 32856, 3817117, 19051, 189927, 106331,…
-## $ pop2017           &lt;int&gt; 6662, 536416, 31593, 4307033, 18760, 182177, 103198,…
-## $ pop_change        &lt;dbl&gt; 3.21, 5.27, -2.12, 7.51, -0.67, -2.61, -1.74, 0.38, …
-## $ poverty           &lt;dbl&gt; 14.8, 12.4, 18.2, 15.7, 11.4, 6.8, 15.0, 16.7, 21.5,…
-## $ homeownership     &lt;dbl&gt; 72.1, 62.1, 76.2, 66.3, 76.3, 78.7, 71.2, 76.5, 77.9…
-## $ multi_unit        &lt;dbl&gt; 8.6, 38.3, 8.0, 25.1, 12.4, 21.7, 17.6, 9.2, 5.5, 10…
-## $ unemployment_rate &lt;dbl&gt; 5.74, 2.40, 4.91, 4.17, 3.77, 4.31, 5.00, 3.54, 9.57…
-## $ metro             &lt;fct&gt; no, yes, no, yes, no, no, yes, no, no, yes, no, no, …
-## $ median_edu        &lt;fct&gt; some_college, some_college, hs_diploma, some_college…
-## $ per_capita_income &lt;dbl&gt; 26082.41, 37771.91, 24753.18, 29379.27, 26871.67, 40…
-## $ median_hh_income  &lt;int&gt; 35801, 67631, 40328, 58580, 50276, 76438, 47905, 440…
-## $ smoking_ban       &lt;fct&gt; partial, none, none, partial, none, partial, none, n…</code></pre>
+## $ name              &lt;chr&gt; &quot;Brewster County&quot;, &quot;Vigo County&quot;, &quot;Livingston County…
+## $ state             &lt;fct&gt; Texas, Indiana, New York, California, North Dakota, …
+## $ pop2000           &lt;dbl&gt; 8866, 105848, 64328, 163256, 25303, 48499, 67367, 79…
+## $ pop2010           &lt;dbl&gt; 9232, 107848, 65393, 177223, 27471, 49793, 69967, 88…
+## $ pop2017           &lt;int&gt; 9337, 107516, 63799, 179921, 30796, 49587, 71704, 85…
+## $ pop_change        &lt;dbl&gt; 0.51, -0.55, -1.37, 0.83, 6.46, 1.01, 1.66, -2.11, -…
+## $ poverty           &lt;dbl&gt; 10.9, 19.9, 14.6, 18.1, 7.9, 17.8, 15.2, 19.0, 14.7,…
+## $ homeownership     &lt;dbl&gt; 60.6, 65.8, 75.7, 66.0, 79.2, 68.8, 74.9, 77.9, 67.8…
+## $ multi_unit        &lt;dbl&gt; 11.7, 20.5, 17.2, 16.0, 17.1, 12.7, 7.6, 5.5, 11.9, …
+## $ unemployment_rate &lt;dbl&gt; 3.49, 4.25, 5.08, 5.80, 3.04, 4.20, 5.02, 6.81, 3.95…
+## $ metro             &lt;fct&gt; no, yes, yes, yes, yes, no, yes, no, no, no, no, yes…
+## $ median_edu        &lt;fct&gt; some_college, some_college, some_college, some_colle…
+## $ per_capita_income &lt;dbl&gt; 24729.31, 23665.00, 27778.57, 26106.02, 39350.45, 23…
+## $ median_hh_income  &lt;int&gt; 38906, 42030, 53654, 47258, 65385, 42198, 47147, 360…
+## $ smoking_ban       &lt;fct&gt; none, none, none, none, none, none, none, none, none…</code></pre>
 </div>
 <div id="stratified-random-sampling" class="slide section level1">
 <h1>Stratified Random Sampling</h1>
@@ -717,16 +717,16 @@ observations in each level of the <code>metro</code> variable.</p>
 <pre><code>## # A tibble: 200 × 15
 ##    name    state pop2000 pop2010 pop2017 pop_c…¹ poverty homeo…² multi…³ unemp…⁴
 ##    &lt;chr&gt;   &lt;fct&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;int&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
-##  1 Northa… Virg…   13093   12389   11846   -1.48    20.3    71.1     5.5    5.85
-##  2 Randol… Alab…   22380   22913   22670    0.55    18.7    75.9     4.8    4.4 
-##  3 Avoyel… Loui…   41481   42073   40980   -0.75    23.7    69.4     9.4    6.16
-##  4 Ketchi… Alas…   14070   13477   13856    1.27    10.6    59.1    36.7    6.31
-##  5 Rabun … Geor…   15050   16276   16602    2.46    20.3    73       8.8    4.99
-##  6 Perry … Indi…   18899   19338   19081   -1.74    14.5    78.2     9.3    3.81
-##  7 Erath … Texas   33001   37890   41969    5.18    22.6    62      13.5    3.41
-##  8 Dickin… Kans…   19344   19754   18902   -2.7     11.6    73.9     8.6    3.83
-##  9 Taylor… Iowa     6958    6317    6178   -0.77    11      80.5     6.2    2.26
-## 10 Sierra… New …   13270   11988   11116   -3.54    21.2    78.3     6.2    7.91
+##  1 Perry … Indi…   18899   19338   19081   -1.74    14.5    78.2     9.3    3.81
+##  2 Traill… Nort…    8477    8121    8013   -2.1      6.9    75      17.3    2.41
+##  3 Carrol… Virg…   29245   30042   29708   -0.67    14.6    76.2     3.5    4.65
+##  4 Wolfe … Kent…    7065    7355    7264   -0.23    36.9    75.9     6.3    9   
+##  5 Sherid… Wyom…   26560   29116   30210    1.6      6.8    70.4    14.4    3.97
+##  6 Stone … Miss…   13622   17786   18112    0.87    17.3    77.4     4.1    6.06
+##  7 Dougla… Oreg…  100399  107667  109405    2.67    17      70.6    12.1    5.35
+##  8 Washin… Maine   33941   32856   31593   -2.12    18.2    76.2     8      4.91
+##  9 Coffee… Alab…   43615   49948   51874    2.42    16.1    69.7    13.6    4.39
+## 10 Taylor… Kent…   22927   24512   25472    1.28    23.1    68.8    14.6    4.68
 ## # … with 190 more rows, 5 more variables: metro &lt;fct&gt;, median_edu &lt;fct&gt;,
 ## #   per_capita_income &lt;dbl&gt;, median_hh_income &lt;int&gt;, smoking_ban &lt;fct&gt;, and
 ## #   abbreviated variable names ¹​pop_change, ²​homeownership, ³​multi_unit,
@@ -741,20 +741,20 @@ randomly sample 10 clusters.</p>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>states_sample <span class="ot">&lt;-</span> <span class="fu">sample</span>(states,n_clusters) <span class="co"># sample the states</span></span>
 <span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>county <span class="sc">%&gt;%</span> <span class="fu">filter</span>(state<span class="sc">==</span>states_sample) <span class="co"># get the rows with corresponding states that are sampled.</span></span></code></pre></div>
-<pre><code>## # A tibble: 63 × 15
+<pre><code>## # A tibble: 51 × 15
 ##    name    state pop2000 pop2010 pop2017 pop_c…¹ poverty homeo…² multi…³ unemp…⁴
 ##    &lt;chr&gt;   &lt;fct&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;int&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
-##  1 Denali… Alas…    1893    1826    2074    7.35    15.5    60.7    14.1    9.38
-##  2 Nome C… Alas…    9196    9492    9921    0.78    24.9    56.2    17.4   12.6 
-##  3 Marico… Ariz… 3072149 3817117 4307033    7.51    15.7    66.3    25.1    4.17
-##  4 Allen … Indi…  331849  355329  372877    2.67    14.7    70.6    21.4    3.31
-##  5 Crawfo… Indi…   10743   10713   10566   -0.51    17.8    83.8     3.3    4.43
-##  6 Gibson… Indi…   32500   33503   33576    0.28    10.7    77.7    10.3    2.95
-##  7 Jeffer… Indi…   31705   32428   32089   -0.97    13.7    71.8    14.3    3.73
-##  8 Monroe… Indi…  120563  137974  146986    3.6     24.7    55.2    34.7    3.65
-##  9 Porter… Indi…  146798  164343  168404    1.15    11      77.9    16.1    4.06
-## 10 Sulliv… Indi…   21751   21475   20746   -1.86    15.6    77.1     8.1    4.43
-## # … with 53 more rows, 5 more variables: metro &lt;fct&gt;, median_edu &lt;fct&gt;,
+##  1 Carrol… Arka…   25357   27446   27944    0.62    15.7    69.5    11.6    3.29
+##  2 Critte… Arka…   50866   50902   48750   -1.97    23.5    58.2    23.1    4.29
+##  3 Hot Sp… Arka…   30353   32923   33574    0.2     15.8    76       4.4    3.69
+##  4 Little… Arka…   13628   13171   12359   -3       18.8    71.2     9.4    4.79
+##  5 Ouachi… Arka…   28790   26120   23868   -4.3     26      69.8    10.5    4.57
+##  6 Saline… Arka…   83529  107118  119323    5.34     8      77.7     7.8    3   
+##  7 Woodru… Arka…    8741    7260    6571   -6.54    26      61.5    12.9    4.85
+##  8 Boyle … Kent…   27697   28432   29924    1.17    15.5    69      18.9    5.02
+##  9 Carter… Kent…   26889   27720   27144   -1.61    21.5    77.9     5.5    9.57
+## 10 Fayett… Kent…  260512  295803  321959    4.33    18.6    56.9    33.5    3.65
+## # … with 41 more rows, 5 more variables: metro &lt;fct&gt;, median_edu &lt;fct&gt;,
 ## #   per_capita_income &lt;dbl&gt;, median_hh_income &lt;int&gt;, smoking_ban &lt;fct&gt;, and
 ## #   abbreviated variable names ¹​pop_change, ²​homeownership, ³​multi_unit,
 ## #   ⁴​unemployment_rate</code></pre>
