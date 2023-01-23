@@ -680,21 +680,21 @@ is already part of the base R installation.</p>
 <span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(simple_random_sample)</span></code></pre></div>
 <pre><code>## Rows: 100
 ## Columns: 15
-## $ name              &lt;chr&gt; &quot;Brewster County&quot;, &quot;Vigo County&quot;, &quot;Livingston County…
-## $ state             &lt;fct&gt; Texas, Indiana, New York, California, North Dakota, …
-## $ pop2000           &lt;dbl&gt; 8866, 105848, 64328, 163256, 25303, 48499, 67367, 79…
-## $ pop2010           &lt;dbl&gt; 9232, 107848, 65393, 177223, 27471, 49793, 69967, 88…
-## $ pop2017           &lt;int&gt; 9337, 107516, 63799, 179921, 30796, 49587, 71704, 85…
-## $ pop_change        &lt;dbl&gt; 0.51, -0.55, -1.37, 0.83, 6.46, 1.01, 1.66, -2.11, -…
-## $ poverty           &lt;dbl&gt; 10.9, 19.9, 14.6, 18.1, 7.9, 17.8, 15.2, 19.0, 14.7,…
-## $ homeownership     &lt;dbl&gt; 60.6, 65.8, 75.7, 66.0, 79.2, 68.8, 74.9, 77.9, 67.8…
-## $ multi_unit        &lt;dbl&gt; 11.7, 20.5, 17.2, 16.0, 17.1, 12.7, 7.6, 5.5, 11.9, …
-## $ unemployment_rate &lt;dbl&gt; 3.49, 4.25, 5.08, 5.80, 3.04, 4.20, 5.02, 6.81, 3.95…
-## $ metro             &lt;fct&gt; no, yes, yes, yes, yes, no, yes, no, no, no, no, yes…
-## $ median_edu        &lt;fct&gt; some_college, some_college, some_college, some_colle…
-## $ per_capita_income &lt;dbl&gt; 24729.31, 23665.00, 27778.57, 26106.02, 39350.45, 23…
-## $ median_hh_income  &lt;int&gt; 38906, 42030, 53654, 47258, 65385, 42198, 47147, 360…
-## $ smoking_ban       &lt;fct&gt; none, none, none, none, none, none, none, none, none…</code></pre>
+## $ name              &lt;chr&gt; &quot;Wilson County&quot;, &quot;St. Helena Parish&quot;, &quot;Franklin Coun…
+## $ state             &lt;fct&gt; Texas, Louisiana, Florida, Tennessee, Texas, Oklahom…
+## $ pop2000           &lt;dbl&gt; 32408, 10525, 11057, 569891, 43080, 10227, 5998, 959…
+## $ pop2010           &lt;dbl&gt; 42918, 11203, 11549, 626681, 78337, 9446, 6499, 9208…
+## $ pop2017           &lt;int&gt; 49304, 10363, 11727, 691243, 96788, 8893, 5938, 8795…
+## $ pop_change        &lt;dbl&gt; 9.01, -3.79, 1.81, 4.75, 14.27, -4.76, 3.58, -2.16, …
+## $ poverty           &lt;dbl&gt; 10.2, 26.4, 20.1, 16.9, 5.8, 23.9, 24.5, 16.4, 17.0,…
+## $ homeownership     &lt;dbl&gt; 84.5, 78.8, 65.6, 57.6, 84.3, 66.4, 67.4, 82.6, 82.9…
+## $ multi_unit        &lt;dbl&gt; 3.7, 2.3, 15.2, 37.2, 6.8, 7.4, 8.9, 3.7, 5.2, 4.3, …
+## $ unemployment_rate &lt;dbl&gt; 3.46, 6.57, 3.58, 2.75, 3.31, 5.37, 2.70, 7.21, 4.08…
+## $ metro             &lt;fct&gt; yes, yes, no, yes, yes, no, no, no, no, no, no, yes,…
+## $ median_edu        &lt;fct&gt; hs_diploma, hs_diploma, hs_diploma, some_college, so…
+## $ per_capita_income &lt;dbl&gt; 28941.89, 20496.92, 27243.91, 32091.67, 38227.36, 23…
+## $ median_hh_income  &lt;int&gt; 71942, 35254, 41267, 53419, 93269, 38191, 32500, 409…
+## $ smoking_ban       &lt;fct&gt; none, partial, partial, none, none, none, partial, n…</code></pre>
 </div>
 <div id="stratified-random-sampling" class="slide section level1">
 <h1>Stratified Random Sampling</h1>
@@ -714,19 +714,25 @@ each state in the data frame.</p>
 <pre><code>## [1] 0.5</code></pre>
 <p><em>Example 2:</em> Suppose we want to sample exactly 100
 observations in each level of the <code>metro</code> variable.</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>stratified_sample <span class="ot">&lt;-</span> county <span class="sc">%&gt;%</span> </span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">group_by</span>(metro) <span class="sc">%&gt;%</span><span class="co"># group by metro (metro - yes or no - as strata)</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">sample_n</span>(<span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="co"># randomly sample 100 observations in each strata</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>                     ungroup</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>stratified_sample</span></code></pre></div>
 <pre><code>## # A tibble: 200 × 15
 ##    name    state pop2000 pop2010 pop2017 pop_c…¹ poverty homeo…² multi…³ unemp…⁴
 ##    &lt;chr&gt;   &lt;fct&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;int&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
-##  1 Perry … Indi…   18899   19338   19081   -1.74    14.5    78.2     9.3    3.81
-##  2 Traill… Nort…    8477    8121    8013   -2.1      6.9    75      17.3    2.41
-##  3 Carrol… Virg…   29245   30042   29708   -0.67    14.6    76.2     3.5    4.65
-##  4 Wolfe … Kent…    7065    7355    7264   -0.23    36.9    75.9     6.3    9   
-##  5 Sherid… Wyom…   26560   29116   30210    1.6      6.8    70.4    14.4    3.97
-##  6 Stone … Miss…   13622   17786   18112    0.87    17.3    77.4     4.1    6.06
-##  7 Dougla… Oreg…  100399  107667  109405    2.67    17      70.6    12.1    5.35
-##  8 Washin… Maine   33941   32856   31593   -2.12    18.2    76.2     8      4.91
-##  9 Coffee… Alab…   43615   49948   51874    2.42    16.1    69.7    13.6    4.39
-## 10 Taylor… Kent…   22927   24512   25472    1.28    23.1    68.8    14.6    4.68
+##  1 Lauren… Geor…   44874   48434   47330   -0.72    27.3    67.6    11.8    5.92
+##  2 Cumber… Tenn…   46802   56053   59078    3.06    16      79.1     9.7    4.6 
+##  3 Lincol… Miss…   33166   34869   34347   -1.06    23.6    77.5     7.5    5.21
+##  4 San Sa… Texas    6186    6131    5959    4.73    17.4    77.7     3.4    3.19
+##  5 Rockbr… Virg…   20808   22307   22659    1.49    15.6    76.4     5      4.09
+##  6 Bent C… Colo…    5998    6499    5938    3.58    24.5    67.4     8.9    2.7 
+##  7 Mussel… Mont…    4497    4538    4639   -0.56    17.4    76.7     5      4.44
+##  8 Bath C… Virg…    5048    4731    4297   -6.34     9.3    87       0.9    3.3 
+##  9 Lamoil… Verm…   23233   24475   25337    1.11    14      69      19.7    3.96
+## 10 Cullma… Alab…   77483   80406   82755    2.58    16.4    74.7     8.5    3.71
 ## # … with 190 more rows, 5 more variables: metro &lt;fct&gt;, median_edu &lt;fct&gt;,
 ## #   per_capita_income &lt;dbl&gt;, median_hh_income &lt;int&gt;, smoking_ban &lt;fct&gt;, and
 ## #   abbreviated variable names ¹​pop_change, ²​homeownership, ³​multi_unit,
@@ -736,25 +742,25 @@ observations in each level of the <code>metro</code> variable.</p>
 <h1>Clustered Random Sampling</h1>
 <p><em>Example:</em> Suppose we consider each state as a cluster, and we
 randomly sample 10 clusters.</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>n_clusters <span class="ot">&lt;-</span> <span class="dv">10</span> <span class="co"># number of clusters to randomly sample</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>states <span class="ot">&lt;-</span> <span class="fu">levels</span>(county<span class="sc">$</span>state) <span class="co"># get list of states</span></span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>states_sample <span class="ot">&lt;-</span> <span class="fu">sample</span>(states,n_clusters) <span class="co"># sample the states</span></span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>county <span class="sc">%&gt;%</span> <span class="fu">filter</span>(state<span class="sc">==</span>states_sample) <span class="co"># get the rows with corresponding states that are sampled.</span></span></code></pre></div>
-<pre><code>## # A tibble: 51 × 15
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>n_clusters <span class="ot">&lt;-</span> <span class="dv">10</span> <span class="co"># number of clusters to randomly sample</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>states <span class="ot">&lt;-</span> <span class="fu">levels</span>(county<span class="sc">$</span>state) <span class="co"># get list of states</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>states_sample <span class="ot">&lt;-</span> <span class="fu">sample</span>(states,n_clusters) <span class="co"># sample the states</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>county <span class="sc">%&gt;%</span> <span class="fu">filter</span>(state<span class="sc">==</span>states_sample) <span class="co"># get the rows with corresponding states that are sampled.</span></span></code></pre></div>
+<pre><code>## # A tibble: 36 × 15
 ##    name    state pop2000 pop2010 pop2017 pop_c…¹ poverty homeo…² multi…³ unemp…⁴
 ##    &lt;chr&gt;   &lt;fct&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;int&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
-##  1 Carrol… Arka…   25357   27446   27944    0.62    15.7    69.5    11.6    3.29
-##  2 Critte… Arka…   50866   50902   48750   -1.97    23.5    58.2    23.1    4.29
-##  3 Hot Sp… Arka…   30353   32923   33574    0.2     15.8    76       4.4    3.69
-##  4 Little… Arka…   13628   13171   12359   -3       18.8    71.2     9.4    4.79
-##  5 Ouachi… Arka…   28790   26120   23868   -4.3     26      69.8    10.5    4.57
-##  6 Saline… Arka…   83529  107118  119323    5.34     8      77.7     7.8    3   
-##  7 Woodru… Arka…    8741    7260    6571   -6.54    26      61.5    12.9    4.85
-##  8 Boyle … Kent…   27697   28432   29924    1.17    15.5    69      18.9    5.02
-##  9 Carter… Kent…   26889   27720   27144   -1.61    21.5    77.9     5.5    9.57
-## 10 Fayett… Kent…  260512  295803  321959    4.33    18.6    56.9    33.5    3.65
-## # … with 41 more rows, 5 more variables: metro &lt;fct&gt;, median_edu &lt;fct&gt;,
+##  1 Dillin… Alas…    4922    4847    4932   -0.98    16.6    60.7    14.1    9.29
+##  2 North … Alas…    7385    9430    9782    0.06    10.2    48.3    24.9    7.44
+##  3 Alamed… Cali… 1443741 1510271 1663190    5.07    11.3    55.1    38      3.64
+##  4 Glenn … Cali…   26453   28122   28094    0.82    19.6    67.5    11.4    7.46
+##  5 Merced… Cali…  210554  255793  272673    3.79    23.3    55.9    17.3    9.3 
+##  6 Sacram… Cali… 1223499 1418788 1530615    4.87    16.7    59.5    26.9    4.64
+##  7 Shasta… Cali…  163256  177223  179921    0.83    18.1    66      16      5.8 
+##  8 Tuolum… Cali…   54501   55365   54248    0.43    13.6    70.2     8.6    5.39
+##  9 Archul… Colo…    9898   12084   13315    9.09    11.6    82.9    17      3   
+## 10 Custer… Colo…    3503    4255    4874   14.3     15.7    80.5     4.7    3.03
+## # … with 26 more rows, 5 more variables: metro &lt;fct&gt;, median_edu &lt;fct&gt;,
 ## #   per_capita_income &lt;dbl&gt;, median_hh_income &lt;int&gt;, smoking_ban &lt;fct&gt;, and
 ## #   abbreviated variable names ¹​pop_change, ²​homeownership, ³​multi_unit,
 ## #   ⁴​unemployment_rate</code></pre>

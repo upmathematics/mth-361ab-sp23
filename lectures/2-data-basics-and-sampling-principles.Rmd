@@ -128,7 +128,7 @@ nso/nto
 
 *Example 2:* Suppose we want to sample exactly 100 observations in each level of the `metro` variable.
 
-```{r}
+```{r echo=TRUE}
 stratified_sample <- county %>% 
                      group_by(metro) %>%# group by metro (metro - yes or no - as strata)
                      sample_n(100) %>% # randomly sample 100 observations in each strata
