@@ -15,7 +15,7 @@ library(tidyverse)
 library(openintro)
 ```
 
- <font size="5"> **MTH 361 A/B**: [**Lab 1 R Studio Cloud**](https://posit.cloud/spaces/326046/content/5275208){target="_Blank'} </font>
+ <font size="5"> **MTH 361 A/B** (University of Portland): [**Lab 1 R Studio Cloud**](https://posit.cloud/spaces/326046/content/5275208){target="_Blank'} </font>
 
 Some define statistics as the field that focuses on turning information into knowledge.
 The first step in that process is to summarize and describe the raw information -- the data.
@@ -44,7 +44,7 @@ In RStudio, go to New File -\> R Markdown... Then, choose From Template and then
 
 See the following video describing how to get started with creating these reports for this lab, and all future labs:
 
-[**Basic R Markdown with an OpenIntro Lab**](https://www.youtube.com/watch?v=Pdc368lS2hk) <iframe width="560" height="315" src="https://www.youtube.com/embed/Pdc368lS2hk" frameborder="0" allowfullscreen></iframe>
+[**Basic R Markdown with an OpenIntro Lab**](https://www.youtube.com/watch?v=Pdc368lS2hk)
 
 ### The data
 

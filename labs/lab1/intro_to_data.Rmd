@@ -44,7 +44,7 @@ In RStudio, go to New File -\> R Markdown... Then, choose From Template and then
 
 See the following video describing how to get started with creating these reports for this lab, and all future labs:
 
-[**Basic R Markdown with an OpenIntro Lab**](https://www.youtube.com/watch?v=Pdc368lS2hk) <iframe width="560" height="315" src="https://www.youtube.com/embed/Pdc368lS2hk" frameborder="0" allowfullscreen></iframe>
+[**Basic R Markdown with an OpenIntro Lab**](https://www.youtube.com/watch?v=Pdc368lS2hk)
 
 ### The data
 
