@@ -15,7 +15,13 @@ library(tidyverse)
 library(openintro)
 ```
 
- <font size="5"> **MTH 361 A/B** (University of Portland): [**Lab 1 R Studio Cloud**](https://posit.cloud/spaces/326046/content/5275208){target="_Blank'} </font>
+---
+
+<font size="4"> **MTH 361 A/B SP23** (University of Portland): [**Lab 1 R Studio Cloud**](https://posit.cloud/spaces/326046/content/5275208){target="_Blank'} </font>
+
+**Content Source:** [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
+
+---
 
 Some define statistics as the field that focuses on turning information into knowledge.
 The first step in that process is to summarize and describe the raw information -- the data.

@@ -1,0 +1,58 @@
+---
+title: '**Experiments**'
+subtitle: "Mini-Assignment 2023-01-25 - MTH 361 - Spring 2023"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 361A - Spring 2023}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+urlcolor: blue
+link-citations: yes
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+
+## I. 
+
+### Materials
+
+
+
+\
+
+### Exercises
+
+1. 
+
+
+\newpage
+
+## References {#ref}
+
+<div id="refs"></div>
