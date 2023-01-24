@@ -15,7 +15,7 @@ library(tidyverse)
 library(openintro)
 ```
 
-**MTH 361 A/B**: [**Lab 1 R Studio Cloud Link**](https://posit.cloud/spaces/326046/content/5275208){target="_Blank'}
+ <font size="5"> **MTH 361 A/B** (University of Portland): [**Lab 1 R Studio Cloud**](https://posit.cloud/spaces/326046/content/5275208){target="_Blank'} </font>
 
 Some define statistics as the field that focuses on turning information into knowledge.
 The first step in that process is to summarize and describe the raw information -- the data.
