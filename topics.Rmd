@@ -7,12 +7,12 @@ subtitle: "Spring 2023 - University of Portland"
 
 <center>**- See Books & Online Resources List for the reading materials -**</center>
 <center><span style="color:red">**The readings are not mandatory but it is encouraged.**</span></center>
-<center><span style="color:red">**Lecture slides and Mini-Assignments will be available the day before class.**</span></center>
+<center><span style="color:red">**Lecture slides and Mini-Assignments will be available on the day of class.**</span></center>
 <center><span style="color:red">**Labs will be available two weeks before the deadline.**</span></center>
 
 <br>
 
-The “[\*]” column in the table below contains a number on which it refers to a numbered item in the Books & Online Resources List. For example “[OIS]” refers to the first item in the list, which is our main text book titled “OpenInto: Statistics 4th Edition”.
+The “[\*]” column in the table below contains a number on which it refers to a numbered item in the Books & Online Resources List. For example “[OIS]” refers to the first item in the list, which is our main text book titled “OpenIntro: Statistics 4th Edition”.
 
 <br>
 

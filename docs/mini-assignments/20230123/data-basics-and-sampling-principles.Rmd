@@ -63,4 +63,4 @@ There are five columns and 150 rows in the iris dataset.
     b. Using the species as strata, sampling 30% of observation from each species.
     c. Using the species as clusters, sample one species.
 
-3. Using the `Petal.Length` variable in the `iris` dataset, perform a sampling procedure where you sample 10 observations and compute its mean. Repeat this procedure for 1000 trials while recording the means. Plot the distribution of the means. What is the shape of the distribution? Repeat the procedure but with 100 observations per sample and 2000 trials. Plot the distribution of the means. Is the distribution much more refined from the previous plot?
+3. (Outstanding Question) Using the `Petal.Length` variable in the `iris` dataset, perform a sampling procedure where you sample 10 observations and compute its mean. Repeat this procedure for 1000 trials while recording the means. Plot the distribution of the means. What is the shape of the distribution? Repeat the procedure but with 100 observations per sample and 2000 trials. Plot the distribution of the means. Is the distribution much more refined from the previous plot?
