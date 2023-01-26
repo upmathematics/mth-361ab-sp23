@@ -30,19 +30,19 @@ The “[\*]” column in the table below contains a number on which it refers to
 |          |  F 1/27 |                Case Study: Using Stents to Prevent Strokes                |      1.1      |         TBA         |     -     |      -      |
 |   **3**  |  M 1/30 |            Examining Numerical Data           |      2.1      |         TBA         |     -     |      -      |
 |          |  W 2/1  |          Considering Categorical Data         |      2.2      |         TBA         | - | - |
-|          |  F 2/3  |                Case Study: TBA                |      TBA      |         TBA         |     Lab 1 Due     |      Phase 1 Due      |
+|          |  F 2/3  |                Case Study: Malaria Vaccine                |      2.3      |         TBA         |     Lab 1 Due     |      Phase 1 Due      |
 |   **4**  |  M 2/6  |            Basic Probability Theory           |      3.1      |         TBA         |     -     |      -      |
 |          |  W 2/8  |            Conditional Probability            |      3.2      |         TBA         |     -     |      -      |
 |          |  F 2/10 | Random Variables \& Probability Distributions |    3.4, 3.5   |         TBA         |     -     |      -      |
 |   **5**  |  M 2/13 |             Binomial Distribution             |      4.3      |         TBA         |     -     |      -      |
 |          |  W 2/15 |              Normal Distribution              |      4.1      |         TBA         |     -     |      -      |
-|          |  F 2/17 |                Case Study: TBA                |      TBA      |         TBA         |     -     |      -      |
+|          |  F 2/17 |                Case Study: Unbalanced Coins \& Loaded Dice                |      TBA      |         TBA         |     -     |      -      |
 |   **6**  |  M 2/20 |       Foundations of Inference Part 1/2       |       -       |         TBA         |     -     |      -      |
 |          |  W 2/22 |       Foundations of Inference Part 2/2       |       -       |         TBA         | - | - |
 |          |  F 2/24 |    Point Estimates and Sampling Variability   |      5.1      |         TBA         | Lab 2 Due     |      Phase 2 Due      |
 |   **7**  |  M 2/27 |              Confidence Intervals             |      5.2      |         TBA         |     -     |      -      |
 |          |  W 3/1  |                Decision Errors                |      5.3      |         TBA         |     -     |      -      |
-|          |  F 3/3  |                Case Study: TBA                |      TBA      |         TBA         |     -     |      -      |
+|          |  F 3/3  |                Case Study: False Positives/Negatives                |      TBA      |         TBA         |     -     |      -      |
 |   **8**  |  M 3/6  |                   _No Class_                  |       -       |          -          |     -     |      -      |
 |          |  W 3/8  |                   _No Class_                  |       -       |          -          |     -     |      -      |
 |          |  F 3/10 |                   _No Class_                  |       -       |          -          |     -     |      -      |
