@@ -1,0 +1,197 @@
+---
+title: "Data Basics & Sampling Principles <br><br> MTH 361 A/B <br> Applied Statistics I <br> Spring 2023"
+author: University of Portland
+date: "2022-01-23"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+# R Packages {.bigger}
+
+```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=TRUE}
+library(tidyverse)
+library(openintro)
+```
+
+R packages are groups of R functions, compiled code, and example data. In the R environment, they are saved in the `library` directory. R installs a set of packages by default after installation. More packages will be added later if they are required for a specific purpose. When we launch the R console, just the default packages are available. Other packages that are already installed must be explicitly loaded before they may be utilized by the R application.
+
+Throughout this presentation, we are using the [`county`](https://www.openintro.org/data/index.php?data=county){target="_blank"} dataset.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+# remove NAs in teh county dataframe
+county <- county %>% na.omit()
+```
+
+# Loading Datasets {.bigger}
+
+```{r loading-data-from-package, message=FALSE, echo=TRUE}
+# selecting only 3 rows to display from the county dataframe
+county %>%
+  slice(1:3)
+```
+
+Examples of variable types.
+
+1. `name` - nominal categorical variable
+2. `state` - nominal categorical variable
+3. `pop2000` - discrete numerical variable
+4. `pop_change` - continuous numerical variable
+5. `median_edu` - ordinal categorical variable
+
+# Accessing Rows and Columns {.bigger}
+
+  * Using brackets to access **specific indices** of the data frame with the first 3 rows.
+```{r rows-and-columns-1, message=FALSE, echo=TRUE}
+# accessing only the 1st 3 rows and 1st 5 columns of the county dataframe
+county[1:3,1:5]
+```
+
+  * Using brackets to access **specific column labels** of the data frame with the first 3 rows.
+```{r rows-and-columns-2, message=FALSE, echo=TRUE}
+# accessing only the 1st 3 rows and four specific variables 
+#   from the county dataframe
+county[1:3,c("name","state","pop2000","pop2010")]
+```
+
+# Accessing Entire Columns {.bigger}
+
+  * Using the `$` command to access a **specific column label** of the data.
+```{r rows-and-columns-3, message=FALSE, echo=TRUE}
+# accessing all rows of the pop2000 variable from the county dataframe
+glimpse(county$pop2000)
+```
+
+  * Using brackets to access **entire columns** using **specific column labels**.
+```{r rows-and-columns-4, message=FALSE, echo=TRUE}
+# accessing all rows of three specific variables  from the county dataframe
+glimpse(county[,c("pop2000","pop2010","pop2017")])
+```
+
+# Basic Descriptive Statistics {.bigger}
+
+  * Using `$` command to **summarize one column**.
+```{r summarize-data-1, message=FALSE, echo=TRUE}
+# computing basic statistics of the pop2000 variable from the county dataframe
+summary(county$pop2000)
+```
+
+  * Using brackets to **summarize multiple columns**.
+```{r summarize-data-2, message=FALSE, echo=TRUE}
+# computing basic statistics of three specific columns from the county dataframe
+summary(county[,c("pop2000","pop2010","pop2017")])
+```
+
+  * Computing **Mean and Standard Deviation of one column**.
+```{r means-and-standard-deviations-1, message=FALSE, echo=TRUE}
+# computing the mean and standard deviation of the pop2000 variable 
+#   from the county dataframe
+mean(county$pop2010)
+sd(county$pop2010)
+```
+
+# Histograms {.bigger}
+
+```{r basic-data-visualization-1, echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
+# plot a histogram of the pop2000 variable 
+#   from the county dataframe
+ggplot(data = county, aes(x = pop2000)) + geom_histogram(bins=60)
+```
+
+# Scatterplots {.bigger}
+
+```{r basic-data-visualization-2, echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
+# plot a scatter plot of the variables unemployment_rate and poverty
+#   from the the county dataframe
+ggplot(data = county, aes(x = unemployment_rate, y = poverty)) + geom_point()
+```
+
+# Simple Random Sampling {.bigger}
+
+*Example:* Suppose we want to randomly sample 100 observations (rows) from the data frame.
+
+```{r echo=TRUE}
+# number of samples
+n <- 100
+
+# pick random row indices from the data frame
+#   the replace=FALSE means that we sampling without replacement
+rand_index <- sample.int(dim(county)[1],n, replace = FALSE)
+
+# select rows using the random indices
+simple_random_sample <- county %>% slice(rand_index)
+
+# take a glimpse of the random sample
+glimpse(simple_random_sample)
+```
+
+# Stratified Random Sampling {.bigger}
+
+*Example 1:* Suppose we want to sample 50\% of observations of each state in the data frame.
+
+```{r echo=TRUE}
+strat_sample_frac <- county %>%
+                     # group by state (states as strata)
+                     group_by(state) %>%
+                     # create new column that counts 
+                     #    the number of observations in each strata
+                     mutate(num_rows=n()) %>% 
+                     # randomly sample 50% of observations in each strata
+                     sample_frac(0.50, weight=num_rows) %>% 
+                     # make data frame ungrouped
+                     ungroup()
+
+# take a glimpse of the random sample
+glimpse(strat_sample_frac)
+```
+
+Now, let's check if the code did it right.
+
+```{r echo=TRUE}
+# checking number of total observations
+nto <- dim(county %>% filter(state == "California"))[1]
+# checking number of sample observations
+nso <- dim(strat_sample_frac %>% filter(state == "California"))[1]
+
+# ratio
+nso/nto # the ratio should be 0.50
+```
+
+*Example 2:* Suppose we want to sample exactly 100 observations in each level of the `metro` variable.
+
+```{r echo=TRUE}
+stratified_sample <- county %>% 
+                     # group by metro (metro - yes or no - as strata)
+                     group_by(metro) %>% 
+                     # randomly sample 100 observations in each strata
+                     sample_n(100) %>% 
+                     # make data frame ungrouped
+                     ungroup()
+
+# take a glimpse of the random sample
+glimpse(stratified_sample)
+```
+
+# Clustered Random Sampling {.bigger}
+
+*Example:* Suppose we consider each state as a cluster, and we randomly sample 10 clusters.
+
+```{r echo=TRUE}
+# number of clusters to randomly sample
+n_clusters <- 10
+
+# get list of states
+states <- levels(county$state)
+
+# sample the states
+states_sample <- sample(states,n_clusters)
+
+# get the rows with corresponding states that are sampled.
+cluster_sample <- county %>% filter(state==states_sample) 
+
+# take a glimpse of the random sample
+glimpse(cluster_sample)
+```
