@@ -13,6 +13,9 @@ output:
     toc: no
     number_section: no
 urlcolor: blue
+link-citations: yes
+bibliography: references.bib
+csl: apa.csl
 ---
 
 ```{r setup, include=FALSE}
@@ -43,8 +46,47 @@ The exercises below are derived from the textbook [OpenIntro Statistics (4th edi
 
 ### Exercises
 
-1. 
+1. **Views on immigration.** 910 randomly sampled registered voters from Tampa, FL were asked if they thought workers who have illegally entered the US should be (i) allowed to keep their jobs and apply for US citizenship, (ii) allowed to keep their jobs as temporary guest workers but not allowed to apply for US citizenship, or (iii) lose their jobs and have to leave the country. The results of the survey by political ideology are shown below. [@survey:immigFL:2012]
 
-2.
+    ```{=latex}
+    \begin{center}
+    \begin{tabular}{l l c c c c}
+                        &                           & \multicolumn{3}{c}{\textit{Political ideology}} \\
+    \cline{3-5}
+                        &                           & Conservative  & Moderate  & Liberal   & Total \\
+    \cline{2-6}
+                        & (i) Apply for citizenship & 57            & 120       & 101       & 278 \\
+                        & (ii) Guest worker         & 121           & 113       & 28        & 262 \\
+    \raisebox{1.5ex}[0pt]{\emph{Response}} & (iii) Leave the country    & 179       & 126       & 45        & 350 \\ 
+                        & (iv) Not sure             & 15            & 4         & 1         & 20\\
+    \cline{2-6}
+                        & Total                     & 372           & 363       & 175       & 910
+    \end{tabular}
+    \end{center}
+    ```
+
+    a. What percent of these Tampa, FL voters identify themselves as conservatives?
+    b. What percent of these Tampa, FL voters are in favor of the citizenship option?
+    c. What percent of these Tampa, FL voters identify themselves as conservatives and are in favor of the citizenship option?
+    d. What percent of these Tampa, FL voters who identify themselves as conservatives are also in favor of the citizenship option? What percent of moderates share this view? What percent of liberals share this view?
+    e. Do political ideology and views on immigration appear to be independent? Explain your reasoning.
+
+2. **Views on the DREAM Act.** A random sample of registered voters from Tampa, FL were asked if they support the DREAM Act, a proposed law which would provide a path to citizenship for people brought illegally to the US as children. The survey also collected information on the political ideology of the respondents. Based on the mosaic plot shown below, do views on the DREAM Act and  political ideology appear to be independent? Explain your reasoning. [@survey:immigFL:2012]
+
+    ```{r dream-act-mosaic, echo=FALSE, fig.align="center", fig.pos="H", out.width = '90%'}
+    knitr::include_graphics("dream_act_mosaic.pdf")
+    ```
       
-3. (Outstanding Question) 
+\newpage
+      
+3. (Outstanding Question) **Raise taxes.** A random sample of registered voters nationally were asked whether they think it's better to raise taxes on the rich or raise taxes on the poor. The survey also collected information on the political party affiliation of the respondents. Based on the mosaic plot shown below, do views on raising taxes and  political affiliation appear to be independent? Explain your reasoning. [@survey:raiseTaxes:2015]
+
+    ```{r raise-taxes-mosaic, echo=FALSE, fig.align="center", fig.pos="H", out.width = '90%'}
+    knitr::include_graphics("raise_taxes_mosaic.pdf")
+    ```
+
+\newpage
+
+## References {#ref}
+
+<div id="refs"></div>
