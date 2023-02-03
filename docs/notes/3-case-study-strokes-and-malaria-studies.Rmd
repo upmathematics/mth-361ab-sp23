@@ -1,7 +1,7 @@
 ---
 title: "Case Study: Strokes and Malaria Studies"
 author: University of Portland
-date: "2022-02-2023"
+date: "2022-02-03"
 output: slidy_presentation
 ---
 
@@ -185,6 +185,8 @@ One way to test these two competing claims is through randomization/simulations.
 ```{r randomization-heart-transplants-mosaic, echo=FALSE, fig.align="center", fig.pos="H", out.width = '60%'}
     knitr::include_graphics("files/fig-sims-malaria.png")
 ```
+
+# Case Study: Malaria Vaccine {.bigger}
 
 The difference of 64.3\% being a rare event suggests two possible interpretations of the results of the study:
 
