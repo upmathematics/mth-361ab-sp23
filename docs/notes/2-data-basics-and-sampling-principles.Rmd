@@ -9,7 +9,6 @@ output: slidy_presentation
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-
 # R Packages {.bigger}
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE, echo=TRUE}
