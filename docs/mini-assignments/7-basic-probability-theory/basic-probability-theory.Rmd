@@ -1,0 +1,76 @@
+---
+title: '**Basic Probability Theory**'
+subtitle: "Mini-Assignment - MTH 361 A/B - Spring 2023"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 361 A/B}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+  \usepackage{multirow}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+urlcolor: blue
+link-citations: yes
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+
+## I. Probability Rules and Independent Events
+
+### Materials
+
+The exercises below are derived from the textbook [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
+
+### Exercises
+
+1. **Four games, one winner.** Below are four versions of the same game. Your archnemesis gets to pick the version of the game, and then you get to choose how many times to flip a coin: 10 times or 100 times. Identify how many coin flips you should choose for each version of the game. It costs \$1 to play each game. Explain your reasoning.
+
+    a. If the proportion of heads is larger than 0.60, you win \$1.
+    b. If the proportion of heads is larger than 0.40, you win \$1.
+    c. If the proportion of heads is between 0.40 and 0.60, you win \$1.
+    d. If the proportion of heads is smaller than 0.30, you win \$1.
+
+2. **Coin flips** If you flip a fair coin 10 times, what is the probability of
+
+    a. getting all tails? 
+    b. getting all heads? 
+    c. getting at least one tails?
+    
+3. (Outstanding Question) **Poverty and language** The American Community Survey is an ongoing survey that provides data every year to give communities the current information they need to plan investments and services. The 2010 American Community Survey estimates that 14.6\% of Americans live below the poverty line, 20.7\% speak a language other than English (foreign language) at home, and 4.2\% fall into both categories. [@poorLang]
+
+    a. Are living below the poverty line and speaking a foreign language at home disjoint?
+    b. Draw a Venn diagram summarizing the variables and their associated probabilities.
+    c. What percent of Americans live below the poverty line and only speak English at home?
+    d. What percent of Americans live below the poverty line or speak a foreign language at home?
+    e. What percent of Americans live above the poverty line and only speak English at home? 
+    f. Is the event that someone lives below the poverty line independent of the event that the person speaks a foreign language at home?
+
+\newpage
+
+## References {#ref}
+
+<div id="refs"></div>

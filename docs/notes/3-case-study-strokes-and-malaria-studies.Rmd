@@ -123,7 +123,7 @@ This is important for two reasons.
 
 * It is contrary to what doctors expected, which was that stents would reduce the rate of strokes. 
 
-* It leads to a statistical question: do the data show a "real" difference between the groups?
+* It leads to a statistical question: Do the data show a "real" difference between the groups?
 
 # Case Study: Using Stents to Prevent Strokes {.bigger}
 
@@ -155,7 +155,8 @@ kable(table(malaria))
 Discussion Questions: 
 
 1. Is this an observational study or an experiment? 
-2. What implications does the study type have on what can be inferred from the results?
+2. What implications does the study have?
+3. what can be inferred from the results?
 
 # Case Study: Malaria Vaccine {.bigger}
 
@@ -176,7 +177,7 @@ malaria %>%
 Discussion Questions: 
 
 1. What is the difference in proportions we should use in order to test our hypothesis?
-2. What what is the meaning of this difference under the independence assumption?
+2. what is the meaning of this difference under the independence assumption?
 
 # Case Study: Malaria Vaccine {.bigger}
 
