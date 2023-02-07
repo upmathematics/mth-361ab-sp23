@@ -20,9 +20,7 @@ Each group are assigned with a name. ^[Group names are inspired by Star Wars X-w
       - Echo: Tamsen D., Anna S., Samone W., Ndemoh S.
       - Jade: Jas R., Santiago X.
       - Phantom: Niklas M., Milton N.
-  
- 
-  
+
 <br>
 
 ## **Timeline**
@@ -65,6 +63,10 @@ The most important aspect of your project is that you must write a reproducible 
 <br>
 
 **Phase 1 - Group Formation:** Each group should consist of 2-4 people. For people who want to form their own groups, please send a list of names for your group by the due date. The rest will be randomly assigned. Final group formations will be announced.
+
+* *Amendment 1:* If a group must be disbanded for any reason, students need to discuss their disbandment to me - as soon as possible - for a detailed plan on how to move forward.
+* *Amendment 2:* If two groups must be combined for any reason, the new group must inform me about the union as soon as possible.
+* *Amendment 3:* Group disbandment or union are allowed up to Phase 3 of the project. Special cases are considered.
 
 **Phase 2 - Data selection, study design, data exploration, and framing research questions:** The first part of your project involves exploring your chosen dataset. Your dataset must be rich enough with information that you can ask questions and perform statistical analysis. A rich data set involves many rows and columns with a mixture of numerical and categorical variables. Your first project report document must include these three parts.
 
