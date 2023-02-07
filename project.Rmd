@@ -8,8 +8,20 @@ title: "**Project Guidelines**"
 
 <br>
 
-  * Section A (11:25 AM - 12:20 PM) TBD
-  * Section B (12:30 PM - 1:25 PM) TBD
+Each group are assigned with a name. ^[Group names are inspired by Star Wars X-wing Squadrons.]
+
+  * Section A (11:25 AM - 12:20 PM)
+      - Corona: Audrey S., Shane M., Annie W.
+      - Meteor: Colleen S., Dylan P., Sophie O.
+      - Red: Ella S., Anabel H., Mia A.
+      - Yellow: Luke k., Alex H., Vincent R.
+  * Section B (12:30 PM - 1:25 PM)
+      - Blue: Caden D., Devam P, Alec U.
+      - Echo: Tamsen D., Anna S., Samone W., Ndemoh S.
+      - Jade: Jas R., Santiago X.
+      - Phantom: Niklas M., Milton N.
+  
+ 
   
 <br>
 
@@ -52,7 +64,7 @@ The most important aspect of your project is that you must write a reproducible 
 
 <br>
 
-**Phase 1 - Group Formation:** Each group should consist of 3-4 people. For people who want to form their own groups, please send a list of names for your group by the due date. The rest will be randomly assigned. Final group formations will be announced.
+**Phase 1 - Group Formation:** Each group should consist of 2-4 people. For people who want to form their own groups, please send a list of names for your group by the due date. The rest will be randomly assigned. Final group formations will be announced.
 
 **Phase 2 - Data selection, study design, data exploration, and framing research questions:** The first part of your project involves exploring your chosen dataset. Your dataset must be rich enough with information that you can ask questions and perform statistical analysis. A rich data set involves many rows and columns with a mixture of numerical and categorical variables. Your first project report document must include these three parts.
 
