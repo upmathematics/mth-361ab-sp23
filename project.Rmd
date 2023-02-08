@@ -114,3 +114,9 @@ Each group must choose a dataset or multiple related datasets from the list belo
 TBA
 
 <br>
+
+## **Example Projects**
+
+* [Infant and Maternal Mortality](project/project-examples/infant-and-maternal-mortality.pdf){target="_blank"}
+
+* [Statistical Analysis of Personal and Economic Freedom](project/project-examples/statistical-analyses-of-personal-and-economic-freedom.pdf){target="_blank"}
