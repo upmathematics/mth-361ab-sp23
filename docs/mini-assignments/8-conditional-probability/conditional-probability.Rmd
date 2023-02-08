@@ -1,0 +1,69 @@
+---
+title: '**Conditional Probability**'
+subtitle: "Mini-Assignment - MTH 361 A/B - Spring 2023"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 361 A/B}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+  \usepackage{multirow}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+
+## I. Dependent Events
+
+### Materials
+
+The exercises below are derived from the textbook [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
+
+### Exercises
+
+1. **Joint and conditional probabilities.** $P(A) = 0.3$, $P(B) = 0.7$
+
+    a. Can you compute $P(A \cap B)$ if you only know $P(A)$ and $P(B)$?
+    b. Assuming that events A and B arise from independent random processes,
+        i. what is $P(A \cap B)$?
+        ii. what is $P(A \cup B)$?
+        iii. what is $P(A|B)$?
+    c. If we are given that $P(A \cap B) = 0.1$, are the random variables giving rise to events $A$ and $B$ independent?
+    d. If we are given that $P(A \cap B) = 0.1$, what is $P(A|B)$?
+
+2. **Balls and Jars.** You have two jars with 3 red and 4 blue balls in jar 1, and 2 red and 2 blue balls in jar 2. You draw three balls without replacement. Compute the following probabilities. Write your solutions in standard probability notations.
+
+    a. Drawing at least 2 reds given that you draw from jar 1.
+    b. Drawing at most 2 blues given that you draw from jar 2.
+    c. Drawing at exactly 2 reds from jar 1 or jar 2.
+    d. Drawing at exactly 2 blues from jar 1 or jar 2.
+    
+3. (Outstanding Question) **Drawing four cards.** Consider an experiment where you draw four cards from a standard deck without replacement. Compute the probability of the following events. Write your solutions in standard probability notations.
+
+    a. Draw a king in the second draw.
+    b. Draw a queen in the first draw.
+    c. Draw a queen in the third draw given that queens are drawn in the first and second draws.
+    d. Draw a king in the third draw given that any face card are drawn in the first and second draw.
