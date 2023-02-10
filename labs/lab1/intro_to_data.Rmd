@@ -1,5 +1,5 @@
 ---
-title: "Introduction to data"
+title: "Introduction to Data"
 output:
   html_document:
     theme: cerulean
@@ -23,13 +23,7 @@ library(openintro)
 
 ---
 
-Some define statistics as the field that focuses on turning information into knowledge.
-The first step in that process is to summarize and describe the raw information -- the data.
-In this lab we explore flights, specifically a random sample of domestic flights that departed from the three major New York City airports in 2013.
-We will generate simple graphical and numerical summaries of data on these flights and explore delay times.
-Since this is a large data set, along the way you'll also learn the indispensable skills of data processing and subsetting.
-
-## Getting started
+# Getting started
 
 ### Load packages
 
@@ -51,6 +45,16 @@ In RStudio, go to New File -\> R Markdown... Then, choose From Template and then
 See the following video describing how to get started with creating these reports for this lab, and all future labs:
 
 [**Basic R Markdown with an OpenIntro Lab**](https://www.youtube.com/watch?v=Pdc368lS2hk)
+
+[**Basic R Markdown with an OpenIntro Lab**](https://www.youtube.com/watch?v=Pdc368lS2hk) <iframe width="560" height="315" src="https://www.youtube.com/embed/Pdc368lS2hk" frameborder="0" allowfullscreen></iframe>
+
+# I. Introduction to Data
+
+Some define statistics as the field that focuses on turning information into knowledge.
+The first step in that process is to summarize and describe the raw information -- the data.
+In this lab we explore flights, specifically a random sample of domestic flights that departed from the three major New York City airports in 2013.
+We will generate simple graphical and numerical summaries of data on these flights and explore delay times.
+Since this is a large data set, along the way you'll also learn the indispensable skills of data processing and subsetting.
 
 ### The data
 

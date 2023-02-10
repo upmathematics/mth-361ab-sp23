@@ -1,5 +1,5 @@
 ---
-title: "Introduction to data"
+title: "Introduction to Data"
 output:
   html_document:
     theme: cerulean
@@ -22,6 +22,8 @@ library(openintro)
 **Content Source:** [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
 
 ---
+
+# I. Introduction to Data
 
 Some define statistics as the field that focuses on turning information into knowledge.
 The first step in that process is to summarize and describe the raw information -- the data.
