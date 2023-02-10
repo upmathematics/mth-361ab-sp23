@@ -13,7 +13,6 @@ output:
 knitr::opts_chunk$set(eval = TRUE, results = FALSE, fig.show = "hide", message = FALSE)
 library(tidyverse)
 library(openintro)
-library(vembedr)
 ```
 
 ---
@@ -45,11 +44,7 @@ In RStudio, go to New File -\> R Markdown... Then, choose From Template and then
 
 See the following video describing how to get started with creating these reports for this lab, and all future labs:
 
-[**Basic R Markdown with an OpenIntro Lab**](https://www.youtube.com/watch?v=Pdc368lS2hk)
-
-```{r echo=FALSE}
-embed_youtube("Pdc368lS2hk")
-```
+![**Basic R Markdown with an OpenIntro Lab**](https://www.youtube.com/watch?v=Pdc368lS2hk){width="560" height="315"}
 
 # I. Introduction to Data
 
