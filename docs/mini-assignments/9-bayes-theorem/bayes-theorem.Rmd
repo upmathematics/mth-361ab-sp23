@@ -1,0 +1,120 @@
+---
+title: '**Bayes Theorem**'
+subtitle: "Mini-Assignment - MTH 361 A/B - Spring 2023"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 361 A/B}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+  \usepackage{multirow}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+urlcolor: blue
+link-citations: yes
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+
+## I. Bayes Rule and the Law of Total Probability
+
+### Materials
+
+The exercises below are derived from the textbook [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
+
+### Exercises
+
+1. **Global warming.** A Pew Research poll asked  1,306 Americans ``From what you've read and heard, is there solid evidence that  the average temperature on earth has been getting warmer over the past few decades, or not?". The table below shows the distribution of responses by party  and ideology, where the counts have been replaced with relative frequencies. [@globalWarming]
+
+    ```{=latex}
+    \begin{center}
+    \begin{tabular}{ll  ccc c} 
+                        &                           & \multicolumn{3}{c}{\textit{Response}} \\
+    \cline{3-5}
+                        &                           & Earth is  & Not       & Don't Know    &   \\
+                        &                           & warming   & warming   & Refuse        & Total\\
+    \cline{2-6}
+                        & Conservative Republican   & 0.11      & 0.20      & 0.02      & 0.33  \\
+    \textit{Party and}  & Mod/Lib Republican        & 0.06      & 0.06      & 0.01      & 0.13 \\
+    \textit{Ideology}   & Mod/Cons Democrat         & 0.25      & 0.07      & 0.02      & 0.34 \\
+                        & Liberal Democrat          & 0.18      & 0.01      & 0.01      & 0.20\\
+    \cline{2-6}
+                        &Total                      & 0.60      & 0.34      & 0.06      & 1.00
+    \end{tabular}
+    \end{center}
+    ```
+
+    a. What is the probability that a randomly chosen respondent believes the  earth is warming or is a liberal Democrat?
+    b. What is the probability that a randomly chosen respondent believes the  earth is warming given that he is a liberal Democrat?
+    c. What is the probability that a randomly chosen respondent believes the  earth is warming given that he is a conservative Republican?
+    d. What is the probability that a randomly chosen respondent is a  moderate/liberal Republican given that he does not believe that the earth is warming?
+
+2. **Assortative mating.** Assortative mating is a nonrandom mating pattern where individuals with similar genotypes and/or phenotypes mate with one another more frequently than what would be expected under a random mating pattern. Researchers studying this topic collected data on eye colors of 204 Scandinavian men and their female partners. The table below summarizes the results. [@Laeng:2007]
+
+    ```{=latex}
+    \begin{center}
+    \begin{tabular}{ll  ccc c} 
+                                            &           & \multicolumn{3}{c}{\textit{Partner (female)}} \\
+    \cline{3-5}
+                                            &           & Blue  & Brown     & Green     & Total \\
+    \cline{2-6}
+                                            & Blue      & 78    & 23        & 13        & 114 \\
+    \multirow{2}{*}{\textit{Self (male)}}   & Brown     & 19    & 23        & 12        & 54 \\
+                                            & Green     & 11    & 9         & 16        & 36 \\
+    \cline{2-6}  
+                                            & Total     & 108   & 55        & 41        & 204
+    \end{tabular}
+    \end{center}
+    ```
+
+    a. What is the probability that a randomly chosen male respondent or his partner has blue eyes?
+    b. What is the probability that a randomly chosen male respondent with blue eyes has a partner with blue eyes? What is the probability that a randomly chosen male respondent with brown eyes has a partner with blue eyes? What about the probability of a randomly chosen male respondent with green eyes having a partner with blue eyes?
+    c. Given that you observed a male repondent to have blue eyes, what is the probability the female partner have green eyes?
+    d. Given that you observed a female repondent to have green eyes, what is the probability the male partner have blue eyes?
+    
+\newpage
+
+3. (Outstanding Question) **Balls in Urns.** Consider a scenario where you have *two* urns with contents shown in a table below.
+
+    <center>
+    |       | **Red** | **Black** |
+    |:-------:|:-----:|:-------:|
+    | **Urn 1** | 3   | 3     |
+    | **Urn 2** | 4   | 2     |
+    </center>
+
+    One jar is chosen at random and *three* balls are selected. Compute the following probabilities. Make sure you use standard probability notations.
+
+    a. If the balls are two blacks and one red, what is the probability that it came from Urn 1?
+    b. If the balls are one black and two reds, what is the probability that it came from Urn 2?
+    c. If the balls are all blacks, what is the probability that it came from Urn 1?
+    d. If the balls are all reds, what is the probability that it came from Urn 2?
+
+\newpage
+
+## References {#ref}
+
+<div id="refs"></div>
