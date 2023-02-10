@@ -13,6 +13,7 @@ output:
 knitr::opts_chunk$set(eval = TRUE, results = FALSE, fig.show = "hide", message = FALSE)
 library(tidyverse)
 library(openintro)
+library(vembedr)
 ```
 
 ---
@@ -46,7 +47,9 @@ See the following video describing how to get started with creating these report
 
 [**Basic R Markdown with an OpenIntro Lab**](https://www.youtube.com/watch?v=Pdc368lS2hk)
 
-[**Basic R Markdown with an OpenIntro Lab**](https://www.youtube.com/watch?v=Pdc368lS2hk) <iframe width="560" height="315" src="https://www.youtube.com/embed/Pdc368lS2hk" frameborder="0" allowfullscreen></iframe>
+```{r echo=FALSE}
+embed_youtube("Pdc368lS2hk")
+```
 
 # I. Introduction to Data
 
