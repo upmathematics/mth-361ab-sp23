@@ -23,20 +23,7 @@ library(openintro)
 
 ---
 
-# I. Probability
-
-## The Hot Hand
-
-Basketball players who make several baskets in succession are described as having a *hot hand*.
-Fans and players have long believed in the hot hand phenomenon, which refutes the assumption that each shot is independent of the next.
-However, [a 1985 paper](http://www.sciencedirect.com/science/article/pii/0010028585900106) by Gilovich, Vallone, and Tversky collected evidence that contradicted this belief and showed that successive shots are independent events.
-This paper started a great controversy that continues to this day, as you can see by Googling *hot hand basketball*.
-
-We do not expect to resolve this controversy today.
-However, in this lab we'll apply one approach to answering questions like this.
-The goals for this lab are to (1) think about the effects of independent and dependent events, (2) learn how to simulate shooting streaks in R, and (3) to compare a simulation to actual data in order to determine if the hot hand phenomenon appears to be real.
-
-## Getting Started
+# Getting Started
 
 ### Load packages
 
@@ -53,6 +40,19 @@ library(openintro)
 ### Creating a reproducible lab report
 
 To create your new lab report, in RStudio, go to New File -\> R Markdown... Then, choose From Template and then choose `Lab Report for OpenIntro Statistics Labs` from the list of templates.
+
+# I. Probability
+
+## The Hot Hand
+
+Basketball players who make several baskets in succession are described as having a *hot hand*.
+Fans and players have long believed in the hot hand phenomenon, which refutes the assumption that each shot is independent of the next.
+However, [a 1985 paper](http://www.sciencedirect.com/science/article/pii/0010028585900106) by Gilovich, Vallone, and Tversky collected evidence that contradicted this belief and showed that successive shots are independent events.
+This paper started a great controversy that continues to this day, as you can see by Googling *hot hand basketball*.
+
+We do not expect to resolve this controversy today.
+However, in this lab we'll apply one approach to answering questions like this.
+The goals for this lab are to (1) think about the effects of independent and dependent events, (2) learn how to simulate shooting streaks in R, and (3) to compare a simulation to actual data in order to determine if the hot hand phenomenon appears to be real.
 
 ### Data
 
