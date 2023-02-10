@@ -64,30 +64,29 @@ The most important aspect of your project is that you must write a reproducible 
 
 **Phase 1 - Group Formation:** Each group should consist of 2-4 people. For people who want to form their own groups, please send a list of names for your group by the due date. The rest will be randomly assigned. Final group formations will be announced.
 
-* *Amendment 1:* If a group must be disbanded for any reason, students need to discuss their disbandment to me - as soon as possible - for a detailed plan on how to move forward.
-* *Amendment 2:* If two groups must be combined for any reason, the new group must inform me about the union as soon as possible.
-* *Amendment 3:* Group disbandment or union are allowed up to Phase 3 of the project. Special cases are considered.
+*Amendment 1:* If a group must be disbanded for any reason, students need to discuss their disbandment to me - as soon as possible - for a detailed plan on how to move forward.
+
+*Amendment 2:* If two groups must be combined for any reason, the new group must inform me about the union as soon as possible.
+
+*Amendment 3:* Group disbandment or union are allowed up to Phase 3 of the project. Special cases are considered.
 
 **Phase 2 - Data selection, study design, data exploration, and framing research questions:** The first part of your project involves exploring your chosen dataset. Your dataset must be rich enough with information that you can ask questions and perform statistical analysis. A rich data set involves many rows and columns with a mixture of numerical and categorical variables. Your first project report document must include these three parts.
 
+*Amendment 1:* Each group should have unique datasets.
+
   * *Dataset:* Put together your first data frame. What is it? Where does it come from? What is the description of each variable? What are the types of variables? What kind of sampling strategy (or data collection) was used?
-  
   * *Exploration:* Exploring the dataset involves creating plots such as scatterplots, barplots, boxplots, histograms, etc. Once you see what you are interested in, pick plots that are relevant to your research questions.
-  
   * *Research questions:* Formulate your research question and include relevant background research.
   
 **Phase 3 - Hypothesis formulation, more data exploration, and testing out methods as appropriate:** This phase of your project involves more data exploration, testing out methods that we discussed in class, and formulating your hypothesis, which includes statements and mathematical symbols. Make sure you make action items that address the comments provided to you in your Phase 2 submission.
   
   * *More Exploration:* In order to create a hypothesis, you need to explore more and consider different ways to look at your data. What other variables can you include in your analysis? What are your observations of the data?
-
   * *Hypothesis Formulation:* Based on your research questions, formulate a hypothesis - or hypotheses. The hypothesis statements must be full sentences with its corresponding mathematical notations.
-
   * *Trying Out Statistical Methods:* Depending on the hypothesis, what statistical method can you apply in order to answer your research question (randomization, bootstrapping, etc.)? Are you using proportions, means, difference in proportions, difference in means, etc? What are your point estimates? What are your initial results/findings/observations?
   
 **Phase 4 - Methods fine-tuning, and writing the interpretation and discussion of the results in the context of the data.** This phase of your project involved carrying out the method you described from phase 3 and addressing the feedback comments.
 
   * *Performing the statistical analysis:* Rigorously perform the appropriate statistical method to your data.
-  
   * *Interpret the results and discuss your conclusions:* Write at least two paragraphs detailing the results of your analysis. What insights and conclusions can you write based on your results? How does your results support your hypothesis? Are your research questions answered or supported?
 
 **Phase 5 - Generate conclusions while putting the entire report together as one scientific narrative and creating a 10-minute presentation.**
@@ -98,25 +97,91 @@ The most important aspect of your project is that you must write a reproducible 
       - *Methods:* This section should include the processes you took on performing your statistical method.
       - *Results and Discussions.* This section should include the results of your statistical analysis and discuss them in context of your research question. You can still include figures and tables here.
       - *Conclusions:* This is a summary of your argument or experiment/research, and it should be related to the introduction.
-      
   * *Create a 10-minute Presentation:* There will be a final presentation on the day of the "final exam". Your talk should highlight and be organized around these following points.
       - *Motivation:* What is the problem? Why should the audience tune in to this talk? Why is this an interesting problem?
       - *Key Ideas:* What is your dataset? What statistical methods did you use? What are the strengths and weaknesses of the method you used? What are the results? What are your key conclusions?
 
 <br>
 
-## **Datasets**
+## **Suggested Project Datasets**
 
 <br>
 
-Each group must choose a dataset or multiple related datasets from the list below for their project. If you need/want to have additional related data sets that are not listed but can help with your project, please let the instructor know for a discussion.
+Each group must choose a dataset or multiple related datasets from the list below for their project. If you need/want to have additional related data sets that are not listed but can help with your project, please let the instructor know for a discussion. Note that each group should have a unique dataset.
 
-TBA
+<br>
 
+#### **OpenIntro**
+
+The data sets in this list are used in the course textbook, [OpenIntro: Introduction to Modern Statistics (2021)](https://www.openintro.org/book/ims/){target="_blank"} by Mine Çetinkaya-Rundel and Johanna Hardin, First Edition.
+  
+  * [Survey of Duke Students on GPA, Studying, and More](https://www.openintro.org/data/index.php?data=gpa){target="_blank"}
+  * [Fatal Police Shootings Data](https://www.openintro.org/data/index.php?data=fatal_police_shootings){target="_blank"}
+  * [Housing prices in Ames, Iowa](https://www.openintro.org/data/index.php?data=ames){target="_blank"}
+  * [Youth Risk Behavior Surveillance System (YRBSS)](https://www.openintro.org/data/index.php?data=yrbss){target="_blank"}
+  * [Wii Mario Kart auctions from Ebay](https://www.openintro.org/data/index.php?data=mariokart){target="_blank"}
+  * [Professor evaluations and beauty](https://www.openintro.org/data/index.php?data=evals){target="_blank"}
+  * [US Military Demographics](https://www.openintro.org/data/index.php?data=military){target="_blank"}
+
+<br>
+
+#### **External (with CSV or R package)**
+
+The following data sets are selected from various online sources with available csv files or R packages. You might need to process and organize these data sets to convert them into a nice dataframe.
+
+  * [Aids](https://think.cs.vt.edu/corgis/csv/aids/){target="_blank"}
+  * [Cancer](https://think.cs.vt.edu/corgis/csv/cancer/){target="_blank"}
+  * [Classics](https://think.cs.vt.edu/corgis/csv/classics/){target="_blank"}
+  * [Student Performance Data Set](https://archive.ics.uci.edu/ml/datasets/Student+Performance){target="_blank"}
+  * [Greenhouse Gas Emmisions](https://corgis-edu.github.io/corgis/csv/emissions/){target="_blank"}
+  * [COVID-19 World Cases and Deaths](https://corgis-edu.github.io/corgis/csv/covid/){target="_blank"}
+  * [Starwars](https://dplyr.tidyverse.org/reference/starwars.html){target="_blank"}
+  * [Star Trek](https://leonawicz.github.io/rtrek/){target="_blank"}
+  * [Avatar: The Last Airbender](https://github.com/averyrobbins1/appa){target="_blank"}
+  * [Google Ngram](https://github.com/seancarmody/ngramr){target="_blank"}
+  * [Religious Texts](https://github.com/andrewheiss/scriptuRs){target="_blank"}
+  * [A Million News Headlines](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/SYBGZL){target="_blank"}
+  * [RuPaul's Drag Race](https://cran.r-project.org/web/packages/dragracer/readme/README.html){target="_blank"}
+  * [Survivor](https://github.com/doehm/survivoR){target="_blank"}
+  * [Bachelor and Bachelorette](https://www.kaggle.com/datasets/fivethirtyeight/fivethirtyeight-bachelorette-dataset){target="_blank"}
+
+<br>
+  
+#### **External (without CSV or package)**
+
+The following data sets are selected from various online sources. These data sets are in formats other than a csv file. You might need to do more work to process and organize these data sets.
+
+  * [Cost of Living](https://dasl.datadescription.com/datafile/col-worldwide-2020/){target="_blank"}
+  * [LAPD Crime Data 2010](https://apps.gis.ucla.edu/geodata/dataset/lapd-crime-data-2010){target="_blank"}
+  * [Absenteeism at work Data Set](https://archive.ics.uci.edu/ml/datasets/Absenteeism+at+work){target="_blank"}
+  * [Heart failure clinical records Data Set](https://archive.ics.uci.edu/ml/datasets/Heart+failure+clinical+records){target="_blank"}
+  * [Energy efficiency Data Set](https://archive.ics.uci.edu/ml/datasets/Energy+efficiency){target="_blank"}
+  * [Spambase Data Set](https://archive.ics.uci.edu/ml/datasets/Spambase){target="_blank"}
+  * [User Knowledge Modeling Data Set](https://archive.ics.uci.edu/ml/datasets/User+Knowledge+Modeling){target="_blank"}
+  * [Drug consumption (quantified) Data Set](https://archive.ics.uci.edu/ml/datasets/Drug+consumption+%28quantified%29){target="_blank"}
+
+<br>
+
+#### **Data Set Search Engines**
+
+This is a list of websites that you can explore data sets other than what is listed above. You may need to search for the original source of a data set. Consult with the instructor if have questions about a data set.
+
+  * [Oregon Open Data](https://data.oregon.gov/){target="_blank"}
+  * [California Open Data](https://data.ca.gov/){target="_blank"}
+  * [Washington Open Data](https://data.wa.gov/){target="_blank"}
+  * [US Open Data](https://data.gov/){target="_blank"}
+  * [US CDC Public Data Sets](https://data.cdc.gov/){target="_blank"}
+  * [CORGIS (The Collection of Really Great, Interesting, Situated Datasets)](https://corgis-edu.github.io/corgis/){target="_blank"}
+  * [UCI (University of California Irvine) Machine Learning Repository](https://archive.ics.uci.edu/ml/){target="_blank"}
+  * [Kaggle Data Sets](https://www.kaggle.com/datasets){target="_blank"}
+  * [Harvard Dataverse](https://dataverse.harvard.edu/){target="_blank"}
+  * [data.world](https://data.world/){target="_blank"}
+  
 <br>
 
 ## **Example Projects**
 
-* [Infant and Maternal Mortality](project/project-examples/infant-and-maternal-mortality.pdf){target="_blank"}
+<br>
 
+* [Infant and Maternal Mortality](project/project-examples/infant-and-maternal-mortality.pdf){target="_blank"}
 * [Statistical Analysis of Personal and Economic Freedom](project/project-examples/statistical-analyses-of-personal-and-economic-freedom.pdf){target="_blank"}
