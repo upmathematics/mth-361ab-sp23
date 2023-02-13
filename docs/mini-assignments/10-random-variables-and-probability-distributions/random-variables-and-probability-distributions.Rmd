@@ -1,0 +1,92 @@
+---
+title: '**Random Variables \& Probability Distributions**'
+subtitle: "Mini-Assignment - MTH 361 A/B - Spring 2023"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 361 A/B}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+  \usepackage{multirow}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+urlcolor: blue
+link-citations: yes
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+
+## I. Random Variables
+
+### Materials
+
+A random variable is a variable that can take on different values randomly or uncertainly. The values of a random variable are determined by the outcomes of a random process, such as the roll of a dice, the flip of a coin, or the result of a survey.
+
+There are two types of random variables: discrete and continuous. Discrete random variables are variables that can take on a finite or countably infinite number of distinct values. Continuous random variables are variables that can take on any value within a specified range.
+
+### Exercises
+
+1. **Discrete versus Continuous.** Given the descriptions below determine whether they are a continuous or discrete random variables. Explain why.
+
+    a. The number of heads in a sequence of coin tosses.
+    b. The number of students in a classroom who own a smartphone.
+    c. The time it takes for a sprinter to run 100 meters.
+    d. The number of vehicles passing a certain point on a highway in a given time period.
+    e. The temperature of a room.
+    f. The height of an adult human.
+
+2. **Expected Values and Variance.**
+
+    a. A company produces light bulbs and wants to know the average lifespan of their light bulbs compared to what's known. They know that the expected lifespan of modern lightbulbs is 17,500 hours. They randomly select a sample of 100 light bulbs and record the number of days each light bulb lasts, and they determined that the average lifespan is 10,000 hours with standard deviation of 100 hours. Let X be the random variable that represents the lifespan of a light bulb produced by the company. What type of random variable is X? What is the expected value? What is the sample mean and variance?
+    b. A bakery wants to know the number of chocolate chips in a batch of cookies this year. Last year they have an average of 10 chips per cookie. This year, they randomly select a sample of 100 cookies and count the number of chocolate chips in each cookie, and computed an average of 2.8284 chips per cookie with a standard deviation of 2. Let X be the random variable that represents the number of chocolate chips in a cookie. What type of random variable is X? What is the expected value? What is the sample mean and variance?
+    c. A school wants to know the number of books read by its students in a month. They randomly select a sample of 100 students and ask each student how many books they have read this month. Let Y be the random variable that represents the number of books read by a student in a month. Suppose that last month the students in this school read about 5 books with standard deviation of 1.7321. What type of random variable is X? What is the expected value? What is the sample mean and variance?
+
+3. (Outstanding Question) **Marbles in Bags.** Suppose you have a bag containing 5 red marbles, 3 blue marbles, and 2 green marbles. You randomly select a marble from the bag, note its color, and then return it to the bag before selecting another marble.
+
+    a. Define a random variable X to represent the number of red marbles selected in two draws from the bag.
+    b. Compute the possible values of X and their corresponding probabilities.
+    c. Find the expected value of X.
+    d. Explain why the expected value of X represents the average number of red marbles that you would expect to draw in two independent draws from the bag.
+
+\newpage
+
+## II. Probability Distributions
+
+### Materials
+
+The exercises below are derived from the textbook [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
+
+### Exercises
+
+1. 
+
+2. 
+
+3. (Outstanding Question)
+
+## References {#ref}
+
+<div id="refs"></div>
