@@ -14,9 +14,6 @@ output:
     toc: no
     number_section: no
 urlcolor: blue
-link-citations: yes
-bibliography: references.bib
-csl: apa.csl
 ---
 
 ```{r setup, include=FALSE}
@@ -39,13 +36,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \newpage
 
-## I. Random Variables
+## I. Random Variables and Expecated Values
 
 ### Materials
 
-A random variable is a variable that can take on different values randomly or uncertainly. The values of a random variable are determined by the outcomes of a random process, such as the roll of a dice, the flip of a coin, or the result of a survey.
+A random variable is a variable that can take on different values randomly or uncertainly. The values of a random variable are determined by the outcomes of a random process, such as the roll of a dice, the flip of a coin, or the result of a survey. There are two types of random variables: discrete and continuous. 
 
-There are two types of random variables: discrete and continuous. Discrete random variables are variables that can take on a finite or countably infinite number of distinct values. Continuous random variables are variables that can take on any value within a specified range.
+  * Discrete random variables are variables that can take on a finite or countably infinite number of distinct values. 
+  * Continuous random variables are variables that can take on any value within a specified range.
+
+The expected value and sample mean are related concepts in statistics, but they refer to different things.
+  
+  * The expected value, also known as the mathematical expectation, is a population parameter that represents the average or long-run value of a random variable. In other words, it's the weighted average of all possible outcomes of a random event, where the weights are the probabilities of those outcomes.
+  * On the other hand, the sample mean is a statistic that is calculated from a sample of data, rather than the entire population. It is an estimate of the population mean and provides information about the typical value of a variable in a sample. The sample mean is calculated by summing the values of all the observations in the sample and dividing by the total number of observations.
 
 ### Exercises
 
@@ -64,29 +67,11 @@ There are two types of random variables: discrete and continuous. Discrete rando
     b. A bakery wants to know the number of chocolate chips in a batch of cookies this year. Last year they have an average of 10 chips per cookie. This year, they randomly select a sample of 100 cookies and count the number of chocolate chips in each cookie, and computed an average of 2.8284 chips per cookie with a standard deviation of 2. Let X be the random variable that represents the number of chocolate chips in a cookie. What type of random variable is X? What is the expected value? What is the sample mean and variance?
     c. A school wants to know the number of books read by its students in a month. They randomly select a sample of 100 students and ask each student how many books they have read this month. Let Y be the random variable that represents the number of books read by a student in a month. Suppose that last month the students in this school read about 5 books with standard deviation of 1.7321. What type of random variable is X? What is the expected value? What is the sample mean and variance?
 
+\newpage
+
 3. (Outstanding Question) **Marbles in Bags.** Suppose you have a bag containing 5 red marbles, 3 blue marbles, and 2 green marbles. You randomly select a marble from the bag, note its color, and then return it to the bag before selecting another marble.
 
     a. Define a random variable X to represent the number of red marbles selected in two draws from the bag.
     b. Compute the possible values of X and their corresponding probabilities.
     c. Find the expected value of X.
     d. Explain why the expected value of X represents the average number of red marbles that you would expect to draw in two independent draws from the bag.
-
-\newpage
-
-## II. Probability Distributions
-
-### Materials
-
-The exercises below are derived from the textbook [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
-
-### Exercises
-
-1. 
-
-2. 
-
-3. (Outstanding Question)
-
-## References {#ref}
-
-<div id="refs"></div>
