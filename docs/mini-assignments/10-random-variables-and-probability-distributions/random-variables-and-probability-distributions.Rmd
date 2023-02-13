@@ -36,7 +36,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \newpage
 
-## I. Random Variables and Expecated Values
+## I. Random Variables and Expected Values
 
 ### Materials
 
@@ -63,9 +63,9 @@ The expected value and sample mean are related concepts in statistics, but they 
 
 2. **Expected Values and Variance.**
 
-    a. A company produces light bulbs and wants to know the average lifespan of their light bulbs compared to what's known. They know that the expected lifespan of modern lightbulbs is 17,500 hours. They randomly select a sample of 100 light bulbs and record the number of days each light bulb lasts, and they determined that the average lifespan is 10,000 hours with standard deviation of 100 hours. Let X be the random variable that represents the lifespan of a light bulb produced by the company. What type of random variable is X? What is the expected value? What is the sample mean and variance?
+    a. A company produces light bulbs and wants to know the average lifespan of their light bulbs compared to what's known. They know that the expected lifespan of modern lightbulbs is 17,500 hours. They randomly select a sample of 100 light bulbs and record the hours each light bulb lasts, and they determined that the average lifespan is 10,000 hours with standard deviation of 100 hours. Let X be the random variable that represents the lifespan of a light bulb produced by the company. What type of random variable is X? What is the expected value? What is the sample mean and variance?
     b. A bakery wants to know the number of chocolate chips in a batch of cookies this year. Last year they have an average of 10 chips per cookie. This year, they randomly select a sample of 100 cookies and count the number of chocolate chips in each cookie, and computed an average of 2.8284 chips per cookie with a standard deviation of 2. Let X be the random variable that represents the number of chocolate chips in a cookie. What type of random variable is X? What is the expected value? What is the sample mean and variance?
-    c. A school wants to know the number of books read by its students in a month. They randomly select a sample of 100 students and ask each student how many books they have read this month. Let Y be the random variable that represents the number of books read by a student in a month. Suppose that last month the students in this school read about 5 books with standard deviation of 1.7321. What type of random variable is X? What is the expected value? What is the sample mean and variance?
+    c. A school wants to know the number of books read by its students in a month. They randomly select a sample of 100 students and ask each student how many books they have read this month. Let Y be the random variable that represents the number of books read by a student in a month. Suppose that last month the students in this school read about 5 books with standard deviation of 1.7321. What type of random variable is Y? What is the expected value? What is the sample mean and variance?
 
 \newpage
 

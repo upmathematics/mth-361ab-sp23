@@ -18,8 +18,8 @@ Each group are assigned with a name. ^[Group names are inspired by Star Wars X-w
   * Section B (12:30 PM - 1:25 PM)
       - Blue: Caden D., Devam P, Alec U.
       - Echo: Tamsen D., Anna S., Samone W., Ndemoh S.
-      - Jade: Jas R., Santiago X.
-      - Phantom: Niklas M., Milton N.
+      - Jade: Jas R.
+      - Phantom: Niklas M., Milton N., Xavier S.
 
 <br>
 
