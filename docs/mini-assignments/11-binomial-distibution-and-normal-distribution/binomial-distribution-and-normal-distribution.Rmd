@@ -1,0 +1,70 @@
+---
+title: '**Binomial Distribution \& Normal Distribution**'
+subtitle: "Mini-Assignment - MTH 361 A/B - Spring 2023"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 361 A/B}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+  \usepackage{multirow}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+
+## I. Binomial and Standard Normal Distributions
+
+### Materials
+
+The exercises below are derived from the textbook [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
+
+### Exercises
+
+1. **Arachnophobia.**
+A Gallup Poll found that 7\% of teenagers (ages 13 to 17) suffer from arachnophobia and are extremely afraid of spiders. At a summer camp there are 10 teenagers sleeping in each tent.
+Assume that these 10 teenagers are independent of each other.
+
+    a. Calculate the probability that at least one of them suffers from arachnophobia.
+    b. Calculate the probability that exactly 2 of them suffer from arachnophobia.
+    c. Calculate the probability that at most 1 of them suffers from arachnophobia. 
+    d. If the camp counselor wants to make sure no more than 1 teenager in each tent is afraid of spiders, does it seem reasonable for him to randomly assign teenagers to tents?
+
+2. **GRE scores, Part I.** Sophia who took the Graduate Record  Examination (GRE) scored 160 on the Verbal Reasoning section and 157 on the  Quantitative Reasoning section. The mean score for Verbal Reasoning section  for all test takers was 151 with a standard deviation of 7, and the mean  score for the Quantitative Reasoning was 153 with a standard deviation of  7.67. Suppose that both distributions are nearly normal. 
+
+    a. Write down the short-hand for these two normal distributions.
+    b. What is  Sophia's Z-score on the Verbal Reasoning section? On the Quantitative Reasoning section? Draw a standard normal distribution curve and mark these two Z-scores.
+    c. What do these Z-scores tell you?
+    d. Relative to others, which section did she do better on?
+    e. Find her percentile scores for the two exams.
+    f. What percent of the test takers did better than her on the Verbal  Reasoning section? On the Quantitative Reasoning section?
+    g. Explain why simply comparing raw scores from the two sections could lead  to an incorrect conclusion as to which section a student did better on.
+    h. If the distributions of the scores on these exams are not nearly  normal, would your answers to parts (b) - (f) change? Explain your reasoning.
+
+3. (Outstanding Question) **GRE scores, Part II.** In the previous exercise, we saw two distributions for GRE scores: $N(\mu=151, \sigma=7)$ for the verbal part of the exam and $N(\mu=153, \sigma=7.67)$ for the quantitative part. Use this information to compute each of the following:
+
+    a. The score of a student who scored in the $80^{th}$ percentile on the Quantitative Reasoning section.
+    b. The score of a student who scored worse than 70\% of the test takers in the Verbal Reasoning section.
