@@ -2,6 +2,7 @@
 docs/roster/
 docs/mini-assignments/*/solutions*
 docs/labs/*/solutions*
+labs/*/solutions*
 
 .Rproj.user
 .Rhistory
