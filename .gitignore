@@ -1,6 +1,7 @@
 # directories
 docs/roster/
 docs/mini-assignments/*/solutions*
+docs/labs/*/solutions*
 
 .Rproj.user
 .Rhistory
