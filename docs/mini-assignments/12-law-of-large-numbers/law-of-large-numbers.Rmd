@@ -1,0 +1,209 @@
+---
+title: '**Law of Large Numbers**'
+subtitle: "Mini-Assignment - MTH 361 A/B - Spring 2023"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 361 A/B}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+  \usepackage{multirow}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+ 
+**R Packages:**
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(openintro)
+```
+
+\newpage
+
+## I. N-Games of Rock-Paper-Scissors
+
+### Materials
+
+**Purpose:** By playing Rock-Paper-Scissors game and evaluating the likelihood of each decision, students will learn the following:
+
+  * probability, independent and dependent events, 
+  * the law of large numbers, and
+  * simulating random processes using R.
+    
+**Description:** Students will compete in two rounds of Rock-Paper-Scissors - one with eyes open and the other with eyes closed. Play each round $40$ times with a partner and note the results.
+
+**Rules of the Game:** The idea behind this game is that each player can use rock, paper, or scissors hand signs to play. The concept is that rock beats scissors, scissors beat paper, and paper beats rock. When both players raise their hands, they can use the same hand motion to lose, win, or tie. See Figure \@ref(fig:rock-paper-scissors-diagram). 
+
+```{r rock-paper-scissors-diagram, echo=FALSE, fig.align="center", fig.cap="Rock-Paper-Scissors Game Hand Gestures and Rules. This diagram is from ", out.width = '40%'}
+knitr::include_graphics("1024px-Rock-paper-scissors.svg.png")
+```
+ 
+If a player wins, they gain one point, and if a player loses they lose 1 point. Each player starts with 0 points. Below is a table that summarizes the point system of the game.
+
+|      **A/B**     | **Rock (R)** | **Paper (P)** | **Scissors (S)** |
+|:----------------:|:------------:|:-------------:|:----------------:|
+|   **Rock (R)**   |      0/0     |      -1/1     |       1/-1       |
+|   **Paper (P)**  |     1/-1     |      0/0      |       -1/1       |
+| **Scissors (S)** |     -1/1     |      1/-1     |        0/0       |
+
+The theoretical probabilities for each pair of R-P-S are shown in the table below. Notice that all pairs are equally likely.
+
+|      **A/B**     | **Rock (R)** | **Paper (P)** | **Scissors (S)** |
+|:----------------:|:------------:|:-------------:|:----------------:|
+|   **Rock (R)**   |      1/9     |      1/9      |        1/9       |
+|   **Paper (P)**  |      1/9     |      1/9      |        1/9       |
+| **Scissors (S)** |      1/9     |      1/9      |        1/9       |
+
+\newpage
+
+### Exercises
+
+1. **Theoretical Probabilities.** Use the tables above to answer the following questions. Use standard probability notations.
+
+    a. What is the probability that player A wins for one trial? What is the probability that player B wins for one trial?
+    
+    b. What is the expected value after 40 trials for player A? What is the expected value after 40 trials for player B? Using these expected values, what is the expected points in each player. Note that a player's win is the other player's loss.
+    
+    c. Modify the example R code below. Use the `dbinom` function in R to produce a probability distribution plot of the number of wins in 40 trials for each player. Note that the `dbinom` function is the Binomial Probability Mass Function. You will notice that each player have the same probability distributions. Explain why.
+    
+    ```{r fig.align="center", message=FALSE, warning=FALSE, out.width='100%'}
+    ## ---Modify these variables---
+    p_A <- 1/3 # Player A probability of winning
+    p_B <- 1/3 # Player B probability of winning
+    n <- 40 # number of trials
+    ## ----------------------------
+    
+    # all possible outcomes
+    x <- 0:n
+    
+    # compute probabilities using Binomial PDF
+    prob_A <- dbinom(x,n,p_A) # player A
+    prob_B <- dbinom(x,n,p_B) # player B
+    
+    # plotting
+    df <- tibble(n_wins = c(x,x), 
+                 probabilities = c(prob_A,prob_B), 
+                 player = rep(c("A","B"),each=length(x)))
+    ggplot(data = df, aes(x = n_wins, y = probabilities, color = player)) + 
+      geom_point(size=3) +
+      labs(x = "number of wins", y = "probability")
+    ```
+        
+    d. Compute the probability that player A win at least the expected value?
+    
+    e. Compute the probability that player A win at most the expected value?
+    
+    f. Explain the meaning of the probabilities that you computed in (d) and (e) in terms of thelLaw of large numbers.
+
+\newpage
+
+2. **Empirical Data.**
+
+    a. *Round 1.* With your partner, play 40 times of Rock-Paper-Scissors with your eyes *open* and record each outcome. Try to strategize in order to win. Use the table below to summarize your results - replace "X" with the number of observations of that particular outcome of R-P-S pair.
+    
+        |      **A/B**     | **Rock (R)** | **Paper (P)** | **Scissors (S)** |
+        |:----------------:|:------------:|:-------------:|:----------------:|
+        |   **Rock (R)**   |      X       |      X        |        X         |
+        |   **Paper (P)**  |      X       |      X        |        X         |
+        | **Scissors (S)** |      X       |      X        |        X         |
+    
+    b. *Round 2.* With your partner, play 40 times of Rock-Paper-Scissors with your eyes *closed* and record each outcome. Use the table below to summarize your results - replace "X" with the number of observations of that particular outcome of R-P-S pair.
+    
+        |      **A/B**     | **Rock (R)** | **Paper (P)** | **Scissors (S)** |
+        |:----------------:|:------------:|:-------------:|:----------------:|
+        |   **Rock (R)**   |      X       |      X        |        X         |
+        |   **Paper (P)**  |      X       |      X        |        X         |
+        | **Scissors (S)** |      X       |      X        |        X         |
+    
+    c. Now, compare the two rounds (1a) and (1b) by computing the proportion of the number of wins. Use the tables below to record the win proportions and the points. Do you see any evidence of dependence between the variables (rounds and players)? Explain your reasoning.
+    
+        | Win Proporions | **Round 1** | **Round 2** |
+        |:--------------:|:-----------:|:-----------:|
+        |     **A**      |      X      |      X      |
+        |     **B**      |      X      |      X      |
+        
+        |     Points     | **Round 1** | **Round 2** |
+        |:--------------:|:-----------:|:-----------:|
+        |     **A**      |      X      |      X      |
+        |     **B**      |      X      |      X      |
+        
+    d. In theory, each player has equally likely to win and has the expected value of winnings to be the same. Based on the results, which round do you think was played more fairly? Explain your reasoning.
+
+\newpage
+
+3. **N-Games of Rock-Paper-Scissors.** We can simulate a fair game of Rock-Paper-Scissors using R. Below is an R function that simulates 1 trial of the game. The function can then be used to simulate N trials of Rock-Paper-Scissors.
+
+    ```{r message=FALSE, warning=FALSE}
+    source("rps_simulator.R")
+    
+    # one trial of R-P-S
+    N <- 1
+    rps(k=N)
+    ```
+    
+    Modify the example code below to simulate 100 trials. Make sure you update the theoretical probability of winning you computed in (1a). The code then visualizes the simulations which shows $N$ (the number of trials) as the x-axis and the the proportion of wins as the y-axis. What can you say about the proportions as $N$ approaches infinity? Explain your reasoning in terms of the law of large numbers.
+    
+    ```{r fig.align="center", message=FALSE, warning=FALSE, out.width='100%'}
+    # N trials of R-P-S
+    ## ---Modify these variables---
+    N <- 40 # number of trials
+    theo_prob <- 1/2 # the theoretical probability of winning
+    ## ----------------------------
+    
+    # simulations
+    trials_vect <- 1:N
+    df_raw <- tibble(N = integer(),
+                     winner = character())
+    for(i in trials_vect){
+      # simulate the games
+      rps_sims <- rps(k=i)
+      
+      df_raw <- df_raw %>% add_row(N = rep(i,i),
+                                   winner = rps_sims$winner)
+    }
+    
+    df_props <- df_raw %>%
+      group_by(N) %>%
+      count(winner) %>%
+      mutate(prop_wins = n/N)
+
+    ggplot(data = df_props, aes(x = N, y = prop_wins, color = winner)) + 
+      geom_line() + 
+      geom_hline(aes(yintercept = theo_prob, linetype="theoretical probability"), 
+                 color = "black")
+    ```
+    
+\newpage
+
+## II. A Preview to the Central Limit Theorem
+
+### Materials
+
+Use the results from Part I, to answer the exercise below.
+
+### Exercises
+    
+1. (Outstanding Question) 
