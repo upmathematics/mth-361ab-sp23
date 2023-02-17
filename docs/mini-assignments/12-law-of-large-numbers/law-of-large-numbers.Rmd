@@ -91,9 +91,9 @@ The theoretical probabilities for each pair of R-P-S are shown in the table belo
     
     ```{r fig.align="center", message=FALSE, warning=FALSE, out.width='100%'}
     ## ---Modify these variables---
-    p_A <- 1/3 # Player A probability of winning
-    p_B <- 1/3 # Player B probability of winning
-    n <- 40 # number of trials
+    p_A <- 1/2 # Player A probability of winning
+    p_B <- 1/4 # Player B probability of winning
+    n <- 10 # number of trials
     ## ----------------------------
     
     # all possible outcomes
@@ -116,7 +116,7 @@ The theoretical probabilities for each pair of R-P-S are shown in the table belo
     
     e. Compute the probability that player A win at most the expected value?
     
-    f. Explain the meaning of the probabilities that you computed in (d) and (e) in terms of thelLaw of large numbers.
+    f. Explain the meaning of the probabilities that you computed in (d) and (e) in terms of the law of large numbers.
 
 \newpage
 
@@ -139,6 +139,11 @@ The theoretical probabilities for each pair of R-P-S are shown in the table belo
         | **Scissors (S)** |      X       |      X        |        X         |
     
     c. Now, compare the two rounds (1a) and (1b) by computing the proportion of the number of wins. Use the tables below to record the win proportions and the points. Do you see any evidence of dependence between the variables (rounds and players)? Explain your reasoning.
+ 
+        |   Win Numbers  | **Round 1** | **Round 2** |
+        |:--------------:|:-----------:|:-----------:|
+        |     **A**      |      X      |      X      |
+        |     **B**      |      X      |      X      |
     
         | Win Proporions | **Round 1** | **Round 2** |
         |:--------------:|:-----------:|:-----------:|
@@ -154,7 +159,7 @@ The theoretical probabilities for each pair of R-P-S are shown in the table belo
 
 \newpage
 
-3. **N-Games of Rock-Paper-Scissors.** We can simulate a fair game of Rock-Paper-Scissors using R. Below is an R function that simulates 1 trial of the game. The function can then be used to simulate N trials of Rock-Paper-Scissors.
+3. **N-Games of Rock-Paper-Scissors.** The law of large numbers is a fundamental theorem in probability theory that states that as the number of independent trials or observations increases, the average of the results obtained from these trials will converge to the expected value of the underlying random variable. We can simulate a fair game of Rock-Paper-Scissors using R. Below is an R function that simulates 1 trial of the game. The function can then be used to simulate N trials of Rock-Paper-Scissors.
 
     ```{r message=FALSE, warning=FALSE}
     source("rps_simulator.R")
@@ -164,9 +169,9 @@ The theoretical probabilities for each pair of R-P-S are shown in the table belo
     rps(k=N)
     ```
     
-    Modify the example code below to simulate 100 trials. Make sure you update the theoretical probability of winning you computed in (1a). The code then visualizes the simulations which shows $N$ (the number of trials) as the x-axis and the the proportion of wins as the y-axis. What can you say about the proportions as $N$ approaches infinity? Explain your reasoning in terms of the law of large numbers.
+    Modify the example code below to simulate 100 trials. Make sure you update the theoretical probability of winning that you computed in (1a).
     
-    ```{r fig.align="center", message=FALSE, warning=FALSE, out.width='100%'}
+    ```{r message=FALSE, warning=FALSE}
     # N trials of R-P-S
     ## ---Modify these variables---
     N <- 40 # number of trials
@@ -181,15 +186,22 @@ The theoretical probabilities for each pair of R-P-S are shown in the table belo
       # simulate the games
       rps_sims <- rps(k=i)
       
+      # record the results
       df_raw <- df_raw %>% add_row(N = rep(i,i),
                                    winner = rps_sims$winner)
     }
     
+    # compute the proportion of wins
     df_props <- df_raw %>%
       group_by(N) %>%
       count(winner) %>%
       mutate(prop_wins = n/N)
-
+    ```
+    
+    The code then visualizes the simulations which shows $N$ (the number of trials) as the x-axis and the the proportion of wins as the y-axis. What can you say about the proportions as $N$ approaches infinity? Explain your reasoning in terms of the law of large numbers.
+    
+    ```{r fig.align="center", message=FALSE, warning=FALSE, out.width='100%'}
+    # plot the simulations
     ggplot(data = df_props, aes(x = N, y = prop_wins, color = winner)) + 
       geom_line() + 
       geom_hline(aes(yintercept = theo_prob, linetype="theoretical probability"), 
@@ -198,12 +210,78 @@ The theoretical probabilities for each pair of R-P-S are shown in the table belo
     
 \newpage
 
-## II. A Preview to the Central Limit Theorem
+4. (Outstanding Question) **Multiple Rounds.** Suppose that we repeat the Rock-Paper-Scissors game $X$ times with $40$ trials each. The law of large numbers tells us that if we repeat an experiment many times, the average result of those experiments will tend to get closer and closer to the true or expected value of the experiment. In this case, we repeat the same number of trials $X$ times and record the number of wins in each player.
 
-### Materials
+    Modify the example code below, to simulate 500 games with 40 trials in each game. Make sure you update the empirical win numbers you computed in (2c). Note that these simulations are under the assumption of a fair game of R-P-S.
 
-Use the results from Part I, to answer the exercise below.
-
-### Exercises
+    ```{r}
+    # X games and N trials of R-P-S
+    ## ---Modify these variables---
+    X <- 50 # number of games
+    N <- 40 # number of trials
+    empirical_a_round1 <- 10 # player A empirical number of wins of round 1
+    empirical_b_round1 <- 10 # player B empirical number of wins of round 1
+    empirical_a_round2 <- 10 # player A empirical number of wins of round 2
+    empirical_b_round2 <- 10 # player B empirical number of wins of round 2
+    ## ----------------------------
     
-1. (Outstanding Question) 
+    # expected value of wins if N*p for binomial
+    expected_value <- N*theo_prob
+    
+    # games
+    x_vect <- 1:X
+    df_raw <- tibble(X = integer(),
+                     winner = character())
+    for(x in x_vect){
+      # simulate the games
+      rps_sims <- rps(k=N)
+      
+      # record the results
+      df_raw <- df_raw %>% add_row(X = rep(x,N),
+                                   winner = rps_sims$winner)
+    }
+    
+    # compute ties
+    n_ties <- df_raw %>%
+      filter(winner == "Tie") %>%
+      group_by(X) %>%
+      summarise(n_ties = n())
+      
+    # compute the proportion of wins and the total scores
+    df_wins <- df_raw %>%
+      filter(winner != "Tie") %>% 
+      group_by(X) %>%
+      count(winner) %>%
+      left_join(n_ties, by = c("X" = "X")) %>%
+      mutate(prop_wins = n/N,
+             total_score = n - (N - n - n_ties))
+    
+    # data for lines
+    lines <- tibble(label = c("Expected # of Wins","A # of Wins","B # of Wins"),
+                    lines_r1 = c(expected_value,empirical_a_round1,empirical_b_round1),
+                    lines_r2 = c(expected_value,empirical_a_round2,empirical_b_round2))
+    ```
+
+    a. Observe the figure below. Does the distribution of wins closely similar to the theoretical distribution shown in (1c)?
+
+    ```{r fig.align="center", message=FALSE, warning=FALSE, out.width='100%'}
+    # plot results for round 1
+    ggplot(data = df_wins, aes(x = n, fill = winner)) +
+      geom_bar(position = "identity", alpha = 0.50) + 
+      lims(x = c(0,N)) +
+      labs(x = "number of wins", y = "frequency", title = "Round 1 Simulations") +
+      geom_vline(data = lines, aes(xintercept = lines_r1, linetype =label, color = label))
+    ```
+
+    b. Recall that Round 1 of the game is when your eyes are open and was encourage to strategize. Using the figure in (4a), compare your empirical number of wins of round 1 computed in (2c) to the expected number of wins. How far are these numbers from the theoretical mean? Explain your reasoning.
+    
+    c. Recall that Round 2 of the game is when your eyes are closed. Use the figure below to compare it to the figure in (1a). How far are the empirical numer of wins of round 2 computed in (2c) to the expected number of wins? Compare these results in (b). Is there evidence of dependence between when eyes are open and eyes are closed? Explain your reasoning.
+
+    ```{r fig.align="center", message=FALSE, warning=FALSE, out.width='100%'}
+    # plot results for round 2
+    ggplot(data = df_wins, aes(x = n, fill = winner)) +
+      geom_bar(position = "identity", alpha = 0.50) + 
+      lims(x = c(0,N)) +
+      labs(x = "number of wins", y = "frequency", title = "Round 2 Simulations") +
+      geom_vline(data = lines, aes(xintercept = lines_r2, linetype =label, color = label))
+    ```
