@@ -272,6 +272,8 @@ You can resubmit an assignment with your corrections for a one-level up grade. F
 
 *Amendment 2:* If an assignment is at least 24 hours late, you may still submit your assignment for up to *Excellent* grade, but resubmissions are not allowed.
 
+*Amendment 3:* If an assignment is submitted on time and you have an *Incomplete or No Submission* grade, you can resubmit for a regrade for up to *Excellent* grade, but resubmissions are not allowed.
+
 <br>
 
 ### Extra Credit
