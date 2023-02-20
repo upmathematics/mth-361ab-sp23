@@ -47,12 +47,31 @@ library(openintro)
 
 ### Materials
 
+The Central Limit Theorem (CLT) is a fundamental concept in statistics that states that the sum of a large number of independent and identically distributed random variables will tend towards a normal distribution, regardless of the underlying distribution of the variables.
 
+We will explore this theorem in more detail using a simulated population dataset generated using the code below. This is pretending that this is the population we take samples from.
+
+```{r}
+set.seed(42)
+n <- 10000 # number of item in the population
+rate <- 1/2 # probability
+population <- tibble(x = rexp(n,rate)) # population distribution
+```
+
+Suppose that the population has an underlying distribution taken from an exponential distribution with a true mean and median computed as follows.
+
+```{r}
+population_mean <- mean(population$x) # mean of the population
+population_mean
+
+population_median <- median(population$x) # median of the population
+population_median
+```
 
 ### Exercises
 
-1. 
+1. Using the `population` variable, plot the distribution of the simulated population data. Use the `ggplot` functions to create the distribution. Describe the distribution. 
 
-2. 
+2. Create an R code that takes a simple random sample of size $n$ from the population data - with replacement - and compute its mean $N$ times. Plot the distribution of means. Repeat the same procedure for median. Describe the resulting distributions and compare it to the population distribution and the population mean. As $N$ get very large (try $N = 10$, $N = 100$, and $N = 1000$), what happens the mean (and median) of the means (and medians).
 
-3. (Outstanding Question) 
+3. (Outstanding Question) Repeat (2) but - instead of using the mean and median as statistics - use the variance and the interquartile range (IQR). Does the central limit theorem still apply to these statistics?
