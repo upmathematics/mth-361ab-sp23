@@ -70,8 +70,8 @@ population_median
 
 ### Exercises
 
-1. Using the `population` variable, plot the distribution of the simulated population data. Use the `ggplot` functions to create the distribution. Describe the distribution. 
+1. Using the `population` dataframe, plot the distribution of the simulated population data. Use the `ggplot` functions to create the distribution. Describe the distribution.
 
-2. Create an R code that takes a simple random sample of size $n$ from the population data - with replacement - and compute its mean $N$ times. Plot the distribution of means. Repeat the same procedure for median. Describe the resulting distributions and compare it to the population distribution and the population mean. As $N$ get very large (try $N = 10$, $N = 100$, and $N = 1000$), what happens the mean (and median) of the means (and medians).
+2. Create an R code that takes a simple random sample of size $n$ from the population data - with replacement - and compute its mean $N$ times. Plot the distribution of means. Repeat the same procedure for median. Describe the resulting distributions and compare it to the population distribution and the population mean (median). As $N$ gets very large (try $N = 10$, $N = 100$, and $N = 1000$), what happens to the mean (and median) of the means (and medians)?
 
 3. (Outstanding Question) Repeat (2) but - instead of using the mean and median as statistics - use the variance and the interquartile range (IQR). Does the central limit theorem still apply to these statistics?
