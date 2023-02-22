@@ -1,0 +1,79 @@
+---
+title: '**Hypothesis Testing**'
+subtitle: "Mini-Assignment - MTH 361 A/B - Spring 2023"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 361 A/B}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+  \usepackage{multirow}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+ 
+**R Packages:**
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(openintro)
+```
+
+\newpage
+
+## I. Population Parameters and Sample Statistics
+
+### Materials
+
+The exercises below are derived from the textbook [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
+
+### Exercises
+
+1. **Identify the parameter, Part I.** For each of the following situations, state  whether the parameter of interest is a mean or a proportion. It may be helpful  to examine whether individual responses are numerical or categorical.
+
+    a. In a survey, one hundred college students are asked how many hours per week they spend on the Internet.
+    b. In a survey, one hundred college students are asked: ``What percentage of the time you spend on the Internet is part of your course work?"
+    c. In a survey, one hundred college students are asked whether or not they cited information from Wikipedia in their papers.
+    d. In a survey, one hundred college students are asked what percentage of their total weekly spending is on alcoholic beverages.
+    e. In a sample of one hundred recent college graduates, it is found that 85 percent expect to get a job within one year of their graduation date.
+
+2. **Identify the parameter, Part II.** For each of the following situations, state whether the parameter of interest is a mean or a proportion. 
+
+    a. A poll shows that 64\% of Americans personally worry a great deal about  federal spending and the budget deficit.
+    b. A survey reports that local TV news has shown a 17\% increase in revenue  within a two year period while newspaper revenues decreased by 6.4\% during this  time period.
+    c. In a survey, high school and college students are asked whether or not  they use geolocation services on their smart phones.
+    d. In a survey, smart phone users are asked whether or not they use a web-based taxi service.
+    e. In a survey, smart phone users are asked how many times they used a web-based taxi service over the last year.
+
+3. (Outstanding Question) **Quality control.** As part of a quality control process for computer chips, an engineer at a factory randomly samples 212 chips during a week of production to test the current rate of chips with severe defects. She finds that 27 of the chips are defective.
+
+    a. What population is under consideration in the data set?
+    b. What parameter is being estimated?
+    c. What is the point estimate for the parameter?
+    d. What is the name of the statistic we use to measure the uncertainty of the point estimate?
+    e. Compute the value from part (d) for this context.
+    f. The historical rate of defects is 10\%. Should the engineer be surprised by the observed rate of defects during the current week?
+    g. Suppose the true population value was found to be 10\%.
+    If we use this proportion to recompute the value in part (e) using $p = 0.1$ instead of $\hat{p}$, does the resulting value change much?
