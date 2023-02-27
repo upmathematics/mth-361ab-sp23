@@ -71,7 +71,7 @@ H_A&: \hat{p} > 0.7
     a. Indicate any errors you see and provide a corrected hypothesis in mathematical notations.
     b. What is the null value and the point estimate of the parameter?
     c. What are the null and sampling distributions? What are their centers? Explain your reasoning.
-    d. Measure the uncertainty of the point estimate and measure the uncertainty of the null value.
-    e. Compare the values computed in (d) and (e). Are there any significant differences in these values? Explain your reasoning.
-    f. Compute the Z-score of the point estimate under the assumption that the null hypthesis is true. Should you be surprised by the data?
+    d. Measure the uncertainty of the point estimate.
+    e. Compute the Z-score of the point estimate under the assumption that the null hypthesis is true.
+    f. Compute the p-value and explain what this means in context of the problem.
     
