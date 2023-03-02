@@ -1,0 +1,67 @@
+---
+title: '**Decision Errors**'
+subtitle: "Mini-Assignment - MTH 361 A/B - Spring 2023"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 361 A/B}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+  \usepackage{multirow}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+
+## I. Statistical Decision Errors
+
+### Materials
+
+The exercises below are derived from the textbook [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
+
+### Exercises
+
+1. **Testing for Fibromyalgia.** A patient named Diana was diagnosed with Fibromyalgia, a long-term syndrome of body pain, and was prescribed anti-depressants. Being the skeptic that she is, Diana didn't initially believe that anti-depressants would help her symptoms. However after a couple months of being on the medication she decides that the anti-depressants are working, because she feels like her symptoms are in fact getting better.
+
+    a. Write the hypotheses in words for Diana's skeptical position when she started taking the anti-depressants.
+    b. What is a Type I Error in this context?
+    c. What is a Type II Error in this context?
+
+2. **Testing for food safety.** A food safety inspector is called upon to investigate a restaurant with a few customer reports of poor sanitation practices. The food safety inspector uses a hypothesis testing framework to evaluate whether regulations are not being met. If he decides the restaurant is in gross violation, its license to serve food will be revoked.
+
+    a. Write the hypotheses in words.
+    b. What is a Type I Error in this context?
+    c. What is a Type II Error in this context?
+    d. Which error is more problematic for the restaurant owner? Why?
+    e. Which error is more problematic for the diners? Why?
+    f. As a diner, would you prefer that the food safety inspector requires strong evidence or very strong evidence of health concerns before revoking a  restaurant's license? Explain your reasoning.
+
+3. (Outstanding Question) **A new drug.** A pharmaceutical company is testing a new drug for a rare disease that affects 1 in 10,000 people. The drug is designed to reduce the incidence of the disease by 80\%. The company has conducted a clinical trial on 500 patients with the disease, randomly assigning 250 of them to receive the new drug and the other 250 to receive a placebo. The company will approve the drug for market if they can demonstrate that it significantly reduces the incidence of the disease. The company has decided to use a significance level of $0.05$ for their hypothesis test. Assume that the true incidence of the disease among the placebo group is 1 in 10,000, and that the true incidence of the disease among the treatment group is 1 in 50,000.
+
+    a. What is the probability of a Type I error in this study?
+    b. What is the probability of a Type II error in this study?
+    c. If the true incidence of the disease in the treatment group were 1 in 100,000, how would the probabilities of Type I and Type II errors change?
+    
