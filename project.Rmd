@@ -90,7 +90,7 @@ The most important aspect of your project is that you must write a reproducible 
 
 **Phase 5 - Generate conclusions while putting the entire report together as one scientific narrative and creating a 10-minute presentation.**
 
-*Amendment 1:* The final report must include all relevant R codes that generated all figures and statistical analysis. R codes can be also be included in the Appendix section of your report if you choose. The R Code must be properly documented/commented.
+*Amendment 1:* The final report must include all relevant R codes that generated all figures and statistical analysis. R codes can be also be included in the Appendix section of your report if you choose. The R Code must be properly documented or with comments.
 
   * *Put your report together as one scientific narrative:* Your final report should contain these three parts below. Note that you already wrote most of these from Phases 2-4. You just need to organize them in a more scientific narrative fashion.
       - *Introduction:* This section should include your background research, research questions, hypothesis statements, and data description.
