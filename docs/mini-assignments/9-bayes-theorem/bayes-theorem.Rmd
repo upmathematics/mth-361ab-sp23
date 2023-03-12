@@ -92,8 +92,8 @@ The exercises below are derived from the textbook [OpenIntro Statistics (4th edi
 
     a. What is the probability that a randomly chosen male respondent or his partner has blue eyes?
     b. What is the probability that a randomly chosen male respondent with blue eyes has a partner with blue eyes? What is the probability that a randomly chosen male respondent with brown eyes has a partner with blue eyes? What about the probability of a randomly chosen male respondent with green eyes having a partner with blue eyes?
-    c. Given that you observed a male repondent to have blue eyes, what is the probability the female partner have green eyes?
-    d. Given that you observed a female repondent to have green eyes, what is the probability the male partner have blue eyes?
+    c. Given that you observed a male respondent to have blue eyes, what is the probability the female partner have green eyes?
+    d. Given that you observed a female respondent to have green eyes, what is the probability the male partner have blue eyes?
     
 \newpage
 

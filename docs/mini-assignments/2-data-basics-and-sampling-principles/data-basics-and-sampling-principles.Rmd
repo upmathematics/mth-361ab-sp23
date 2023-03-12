@@ -33,7 +33,7 @@ knitr::opts_chunk$set(echo = TRUE)
  
  * If you have questions or concerns, please feel free to ask the instructor.
  
-**Libraries**
+**R Packages:**
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE}
 library(tidyverse)

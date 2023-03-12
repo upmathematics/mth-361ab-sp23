@@ -33,6 +33,13 @@ knitr::opts_chunk$set(echo = TRUE)
  * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
  
  * If you have questions or concerns, please feel free to ask the instructor.
+ 
+**R Packages:** 
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(openintro)
+```
 
 \newpage
 
