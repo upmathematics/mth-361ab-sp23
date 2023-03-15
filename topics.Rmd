@@ -23,6 +23,8 @@ The "[\*]" column in the table below contains a number on which it refers to a n
 
 <br>
 
+<center>
+
 | **Week** | **Day** |                        **Topic**                        |   **[OIS]**   |                                      Notes                                       |                                                 **Mini-Assignment**                                                  |                                     **Lab**                                      | **Project** |
 |:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
 |  **1**   | M 1/16  |                       *No Class*                        |      \-       |                                        \-                                        |                                                          \-                                                          |                                        \-                                        |     \-      |
@@ -72,6 +74,8 @@ The "[\*]" column in the table below contains a number on which it refers to a n
 |          | F 4/28  |                     Project Period                      |      \-       |                                        \-                                        |                                                          \-                                                          |                                    Lab 5 Due                                     | Phase 5 Due |
 |  **-**   | Tu 5/2  |             Section A Project Presentations             |      \-       |                                        \-                                        |                                                          \-                                                          |                                        \-                                        |     \-      |
 |          |  W 5/3  |             Section B Project Presentations             |      \-       |                                        \-                                        |                                                          \-                                                          |                                        \-                                        |     \-      |
+
+</center>
 
 <br>
 
