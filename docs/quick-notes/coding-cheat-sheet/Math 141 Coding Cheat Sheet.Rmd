@@ -1,0 +1,356 @@
+---
+title: "Math 141 Coding Cheat Sheet"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include = TRUE}
+# Don't delete this code! It should exist at the start of every Rmd file.
+# It makes sure that your images knit correctly, and that your code chunks by default
+# show up in the PDF, and don't get unhelpful warnings/messages.
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+```{r libraries and functions!, echo = FALSE}
+library(tidyverse)
+library(readr)
+library(ggplot2)
+library(here)
+library(tools)
+
+library(readr)
+X116_cong <- read_csv(file_path_as_absolute("116_cong.csv"))
+
+library(readr)
+mariokart <- read_csv(file_path_as_absolute("mariokart.csv"))
+```
+
+
+### Using R
+
+## The file pane (what does the ~ mean? importing data?)
+- The file pane is on the lower right of your RStudio screen, and has all of the files you've saved onto the online RStudio portal saved there! By default, the files will open up to the *home* screen (unless you have a project from a previous class loaded!). If not, you can click the "home" button at the top near the house to go back to the home screen. 
+- Additionally, you could click the three little dots on the top left and type in the tilde (this guy: *~*, press shift then the button above tab on the keyboard) to go back to your home screen.
+- As a shortcut to load data files from your file pane into an RStudio code chunk:
+  - Click on the name of the file
+  - From the pop-up menu, hit "Import Dataset..."
+    
+```{r importing data shortcut, echo = FALSE, out.width="40%", out.height="25%"}
+knitr::include_graphics(file_path_as_absolute('importing_datasets_2.png'))
+```
+
+Then, select the first two lines of code (with `library()` and the `read_csv()` functions. `View()` is useful, but only to pull up your dataframe in a separate tab in RStudio). Hit cancel, then go back to your code chunk and paste the code. Now you have a variable that contains a dataframe for the data that you uploaded into RStudio :]
+    
+```{r second importing data shortcut, echo = FALSE, out.width="40%", out.height="25%"}
+knitr::include_graphics(file_path_as_absolute('import_datasets_1.png'))
+```
+
+### The help menu
+
+Anytime you start to use a new function and want to understand what to put inside it, you can either type it in slowly and R will pull up a short yellow pop-up of optional parameters (see below for an example of the `read_csv()` function!).
+
+```{r example pop up, echo = FALSE, out.width="40%", out.height="25%"}
+knitr::include_graphics(file_path_as_absolute('ex_read_csv.png'))
+```
+
+Alternatively, go to the "Help" pane (where the Files pane is, but three tabs over!). Here, in the search bar type in any function and hit enter to pull up a handy menu of all inputs and what they mean for function. You can also run in a code chunk or the console `?name_of_any_function_here` to pull up the same help menu!
+
+## How to use RMarkdowns—Robin's tips & tricks!
+
+### Explanation of code chunks v. plain text (what are these $?)
+
+- Code chunks: these are the shaded gray areas in the RMarkdown files, distinguished by three backticks (```) at the beginning and end, with curly brackets around a lower case r {r} on the first line. See below for an example! In these areas, you can write any code you'd like to run! To the right of the lowercase r, you can name the code chunk anything you'd like, as I've done.
+
+```{r example code chunk}
+1 + 1
+```
+
+- Shortcuts for making code chunks: you can either write out all of the backticks and curly brackets everytime you want a new code chunk *or* you can hit the plus C button at the top of the screen. Then, hit the "R" option (see below)
+
+```{r using plus C, echo = FALSE, out.width="40%", out.height="25%"}
+knitr::include_graphics(file_path_as_absolute('plus_c.png'))
+```
+
+- What else can they include?
+  - Code chunks can also include messages such as `echo = FALSE`, or `message = FALSE`. These refer to the outcomes you want with your code chunk. When `echo = FALSE`, we are telling R to **not** print out the code chunk when we knit the document. `message = FALSE` tells R to not print out any long messages (such as when you load in packages). View other resources [here](https://bookdown.org/yihui/rmarkdown/r-code.html) about other things you can change! These are not required in this class, though.
+  
+#### How to change size of graphs
+
+To change the size of a graph, include the arguments `fig.width = _` and `fig.height = _`. There isn't a one-size-fits-all measurement here, so I would recommend playing around with these values until you like how your graph looks. Generally, I use `fig.width = 10`, `fig.height = 8`, if you want to start there!
+
+### Running Code
+
+- In the console: always feel free to run code in the console (lower left portion of your screen). However, this code doesn't save between sessions, and the graphs pull up on the "Plots" panel, to the right of the "Files" tab.
+- In code chunks! Click the regular green play button to run all of the code in that chunk, and the button directly to the left of it to run all code chunks before it (this is helpful if you've just reloaded RStudio and need to load your libraries again!)
+- By selecting some text in your code chunk, and hitting command + enter (or control + enter, if you have a Windows machine)! This allows you to run code line by line, or just quickly check a variable's content without writing it in a new line!
+
+### Distinction between RMarkdowns and RScripting
+
+Scripting is a helpful tool we talked about briefly in the first class! This type of coding will be useful if we ever want to just create code without interpreting it (as the only text you can include in scripts is code or comments). For instance, scripts do not handle code chunks, with separate areas for text—it's all one big code chunk. That's why hitting the run bottom runs everything in the script file, not just one part of the code!
+
+### Explanation of YAML
+
+The code at the *very beginning* of an RMarkdown document is called the YAML, and is noted by three dashes at the top (---) and at the bottom (---). Here is where you can specify info such as the title, what you want to document to output as when you knit it, and any formating pieces when you knit! For an example of what Alex wants the YAML to look like, go [here](https://reed-statistics.github.io/math141-fall2021/labs/1-Rscripting-and-Rmarkdown.html#For_PDF_File) on the website. If you're interested in learning more, view [this](https://bookdown.org/yihui/rmarkdown/pdf-document.html) resource on YAMLs for PDFs, and [this](https://bookdown.org/yihui/rmarkdown/html-document.html) resource for HTML output :]
+
+### Accessing Packages
+
+#### Installing Packages
+
+Before you can load in a package, make sure it's installed! There are a few ways to do this:
+1. Type in `library(package_name)`. If the package is not loaded in R, a yellow bar will pop up at the top of your screen, and prompt you to install the package. Click "Install."
+2. In the console, write `install.packages("your_package_name_here")` and click enter.
+3. Run the `install.packages("your_package_name_here")` in your RMarkdown. Just be sure to delete the code or comment it out before knitting!
+
+#### Loading (when/how often?)
+
+Load packages *once a session*, at the top of your RMarkdown (after the setup chunk). This is because when you knit your document, it runs the code from top to bottom, and you want to make sure that all of the libraries are loaded before it runs code that may need those packages! To load a package, use the `library()` function like so:
+
+```{r}
+library(tidyverse)
+```
+
+## Variables
+
+To assign any information/data you have *changed* to be saved to a variable (essentially a shortcut you can use to grab that changed data), use the `<-` key. For instance, if I want to rename my mariokart data to something shorter, I would write:
+
+```{r}
+m <- mariokart
+```
+
+It is important to note that you can name your variables just about anything! Make sure it makes logical sense, though, and that if you needed to grab it later you would know what you're referring to.
+
+However:
+- Your variable cannot start with a number. For instance, 2_species is not a valid name, but two_species or species_2 would be.
+- Don't write over another variable when naming things! It's likely that you'll want to refer back to old data at some point, and writing over it makes things complicated.
+- If you want to read more about naming conventions, feel free to read through [this](https://journal.r-project.org/archive/2012-2/RJournal_2012-2_Baaaath.pdf) short document!
+
+## Manipulating Data (Base R)
+
+### What are these brackets?
+- Using these brackets [] after a variable name allows you to pull out a certain value(s) from how you've stored it. If you have a vector, say `nums <- c(1, 2, 3, 4, 5)`, you can grab the second value by saying `nums[2]`. If you want to grab sequential values, you can write `nums[2:4]`. This grabs the numbers in the vector from the second value to the fourth value (2, 3, and 4).
+
+- For a dataframe, which stores data in rows and columns, we can still use brackets, but now we have to consider not just one list of vectors, but instead asking for a specific *column number* and then *row number*.
+  - This is distinguished in R by using **commas** in your brackets! The first entry [__, __] on the left side of the brackets is where you specify which *rows* you would like to grab. You can grab just one row, or can specify multiple rows using the : symbol like above! The second entry corresponds to the *columns* you would like to grab. So, if you want to grab rows 1:15 from column two, write: `data_set_name[1:15, 2]`.
+    - For context, the dataframe I'm using below is world record data for each track in different Mariokart games!
+  
+```{r}
+mariokart[1:15, 2]
+```
+  
+  - Commas can also do the really exciting work of allowing us to grab *all* rows and *all* columns if we so wish. What if we want the first 11 rows of a dataframe and all of the columns? Just write: `data_set_name[1:11,]`. To grab all of the rows but just column one, write: `data_set_name[,1]`.
+  
+```{r}
+mariokart[1:11,]
+mariokart[,1]
+```
+  
+  
+### What does the dollar sign mean?
+
+In R, you can use the dollar sign in the same way that we would grab all of the rows for a specific column. Above we talk about how to grab all of the rows for columns two through four using brackets (writing `data_set[2:4,]`). The dollar sign allows us to identify the name of a column we want to grab from the data. To call on all the rows in the third column in the `mariokart` dataframe, `Character`, we would write:
+
+```{r}
+mariokart$Character
+```
+
+This prints out all of the characters ever raced with to achieve a world record time! (Gotta go fast).
+
+However, what do we do when we want to call on multiple different columns, without using brackets? To do this, we turn to the `c()` function.
+
+### Using the combine function!
+
+This function will probably be the one you use the most, and love the most! It can combine together all sorts of different values, functions you've written, etc. all into one nice variable!
+- You may remember using this to combine multiple y values from your linear equation function in lab one. If not, never fear, I'll show some examples!
+
+```{r}
+# Adding together multiple columns
+multiple_cols <- c(mariokart$Character, mariokart$Vehicle, mariokart$Tires)
+multiple_cols
+
+# Adding together the results of multiple functions:
+FUNctions <- c(seq(0,10, length.out = 4), rep("boo", 8), rep("halloween", 13))
+FUNctions
+```
+
+## Subsetting Data (dplyr)
+
+### Loading the package
+  - First things first, you have to *load* in your package! This means run the `library()` command to grab the dplyr package from where it usually lives in the background of R to the forefront!
+  
+### The pipe, %>% 
+- There's lots of different ways to think about what the pipe does! I usually think about it in my code as indicating "and then," pointing from the line we have just written to the next line. As an example:
+
+```{r}
+# Taking my mariokart data, and renaming it to mariokart_measures. AND THEN
+mariokart_measures <- mariokart %>%
+  # Creating a new column called hello AND THEN
+  mutate(hello = "hello")
+  print(mariokart_measures)
+```
+
+### Boolean arguments, ==, |, and &, numerical < >
+- It's important to note when working in dplyr and *filtering* for certain values that we are running true/false, or boolean arguments. What this means is when we are telling R we want some rows and not others, it will run through every row and ask if that value is equal to what we've asked (TRUE) or not equal (FALSE).
+  - Some important boolean characters to know (as commas are not specific enough) is the == sign. Use this to tell R that you want your row to *equal* a value.
+  
+```{r}
+mariokart %>%
+  filter(Character == "Metal Mario")
+
+mariokart %>%
+  filter(Duration == 466)
+```
+  
+  - What if you want all of the rows where the cell *does not* contain a value? That's simple, use the not equal sign: !=
+  
+```{r}
+mariokart %>%
+  filter(Duration != 154)
+
+mariokart %>%
+  filter(Character != "Metal Mario")
+```
+  
+  - For numerical values only, you can use the greater than (>), less than (<) or greater than/equal to signs (>=, <=)!
+  
+```{r}
+mariokart %>%
+  filter(Duration > 400)
+
+mariokart %>%
+  filter(Duration <= 100)
+```
+  
+  - Lastly, there is the or | symbol, along with the and & symbol. When grabbing multiple results in one column, you'll use the or sign. When grabbing combinations of results between columns, use the and sign!
+    - If you have lots of values you want to pull from and don't want to type out the *or* sign and `column_name ==` for each occurrence, you can use the %in% to refer to a vector with all your values of interest. See below for an example!
+    
+```{r}
+mariokart %>%
+  filter(Character == "Yoshi" | Character == "Heavy Mii")
+
+mariokart %>%
+  filter(Character == "Yoshi" & Vehicle == "Egg 1")
+
+mariokart %>%
+  filter(Character %in% c("Yoshi", "Wario", "Morton"))
+```
+    
+### Each Verb's Abilities
+From the [website](https://reed-statistics.github.io/math141-fall2021/labs/2-simple-linear-regression-and-dplyr.html#Verbs):
+
+- Rows:
+  - filter() chooses rows based on column values.
+  - slice() chooses rows based on location.
+  - arrange() changes the order of the rows.
+- Columns:
+  - select() changes whether or not a column is included.
+  - rename() changes the name of columns.
+  - mutate() changes the values of columns and creates new columns.
+  - relocate() changes the order of the columns.
+- Groups of rows:
+  - summarise() collapses a group into a single row.
+  
+### Dplyr Cheat Sheet
+Visit [this link](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) to look at a cheat sheet for dplyr made by the creators of the package! It has some pretty neat visualizations, if you're more of a visual learner :)
+
+## Dataframes
+
+To print out a dataframe (or any vector/object you're working with in R), you can just write its name.
+
+```{r}
+mariokart
+```
+
+A shortcut I use to view objects as I'm coding it to select just the variable name (whether or not it is on a line with other code or not), and hit Command + Return if a Mac and Control + Enter if a Windows computer. This will run **just the code that is selected**, allowing you to view the object.
+
+## Graphs! (ggplot)
+
+I'm going to give an example of what the code looks like for a `ggplot` graph!
+
+### Syntax
+
+```{r eval = FALSE}
+ggplot(data = your_data_here, aes(x = your_x_here,
+                                  y = your_y_here_if_applicable,
+                                  color = your_color_here_if_applicable,
+                                  etc...)) +
+  geom_your_geom_here()
+```
+
+If you fill in all of the spots with your data and geoms/aesthetics of interest, you will get a `ggplot()`™!
+
+### What are these aesthetic things?
+
+Aesthetics refer to all parts of your graph that you can use to show a variable! For instance, your x and y axes are aesthetics for the variables you display on them, as is things like color and size. See the below graph for an example that uses all of these aesthetics!
+
+```{r aesthetic example, echo = FALSE, out.width="100%", out.height="100%"}
+knitr::include_graphics(file_path_as_absolute('example_aes.png'))
+```
+
+### Geoms?
+
+Geometries refer to the type of graph you want to create, or the geometry that the graph will take on. This will include points (scatterplots), bars (for histograms or bar plots), and so on and so forth. To see a comprehensive list of all the aesthetics and geometries you can manipulate in a `ggplot`, visit their cheat sheet [here](https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf)!
+
+## Functions
+
+To make a function in R, you're essentially setting side a bit of code, so you don't have to run the same code over and over again. Thus, you give the function an input and using the written code it will transform it into some sort of an output. See below for an example!
+
+```{r eval = FALSE}
+your_function_name <- function(input1, input2, ...) {
+  # Put all of the body of your code in these brackets!
+  y <- m * x + b
+  
+  # To print your output, run the variable name
+  y
+  
+  # Additionally, if you're just working with a couple of lines and do not
+  # need to save your data, you could just write
+  m * x + b
+  # for it to print your output.
+}
+```
+
+
+## Correlations
+
+Find correlations by running the `cor()` function and feeding in your dataframe! Additionally, you can feed in a data frame with all *numerical values* to the `pairs()` function to create a bunch of scatterplots. Also, the GGally library (made by Reed alum Grayson White), you can create scatterplots in ggplot!
+
+```{r}
+library(GGally)
+mariokart_numeric <- mariokart %>%
+  select_if(is.numeric)
+
+ggpairs(mariokart_numeric)
+```
+
+(The Mariokart data isn't the best example here, as there is only one numeric variable, but for other datasets such as iris and county that have lots of numeric data, this will be super useful!)
+
+## Linear models
+
+Below, I will walk through the syntax of a linear model!
+
+```{r eval = FALSE}
+# The lm stands for "linear model"
+name_of_your_model <- lm(your_response_variable ~ your_explanatory_variable,
+                         data = your_data_here)
+
+# To view info on your model, use the summary command
+summary(name_of_your_model)
+```
+
+This model will store the information required to make a line fit your data as best as possible, with the least distance from all of the points!
+
+Another way to make a linear model (though without all the details you'd get above) is to make a scatterplot and fit a `geom_smooth` line to it. See below!
+
+```{r eval = FALSE}
+ggplot(data = your_data, aes(x = your_x,
+                             y = your_y)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+
+# This same method will also create three separate linear models if you've added in 
+# another aesthetics for a new variable!
+```
+
+
+

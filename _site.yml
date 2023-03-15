@@ -13,7 +13,7 @@ navbar:
       href: project.html
   right:
     - text: "Quick Notes"
-      href: tba.html
+      href: quick-notes.html
 
 output:
   html_document:

@@ -1,0 +1,69 @@
+---
+title: '**Inference for a Single Proportion**'
+subtitle: "Mini-Assignment - MTH 361 A/B - Spring 2023"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 361 A/B}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+  \usepackage{multirow}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+urlcolor: blue
+link-citations: yes
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+
+## I. Inference for One Proportion
+
+### Materials
+
+The exercises below are derived from the textbook [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
+
+### Exercises
+
+1. **National Health Plan, Part I.** A *Kaiser Family Foundation* poll for US adults in 2019 found that 79\% of Democrats, 55\% of Independents, and 24\% of Republicans supported a generic ``National Health Plan''. There were 347 Democrats, 298 Republicans, and 617 Independents surveyed.[@data:KFF2019_nat_health_plan]
+
+    a. A political pundit on TV claims that a majority of Independents support a National Health Plan. Do these data provide strong evidence to support this type of statement?
+    b. Would you expect a confidence interval for the proportion of Independents who oppose the public option plan to include 0.5?
+    Explain.
+    
+2. **National Health Plan, Part II.** Exercise (1) presents the results of a poll evaluating support for a generic ``National Health Plan'' in the US in 2019, reporting that 55\% of Independents are supportive. If we wanted to estimate this number to within 1\% with 90\% confidence, what would be an appropriate sample size?
+    
+3. (Outstanding Question) **Is college worth it?** Among a simple random sample of 331 American adults who do not have a four-year college degree and are not currently enrolled in school, 48\% said they decided not to go to college because they could not afford school. [@data:collegeWorthIt]
+
+    a. A newspaper article states that only a minority of the Americans who decide not to go to college do so because they cannot afford it and uses the point estimate from this survey as evidence. Conduct a hypothesis test to determine if these data provide strong evidence supporting this statement.
+    b. Would you expect a confidence interval for the proportion of American adults who decide not to go to college because they cannot afford it to include 0.5? Explain.
+    c.  Calculate a 90\% confidence interval for the proportion of Americans who decide to not go to college because they cannot afford it, and interpret the interval in context.
+    d.  Suppose we wanted the margin of error for the 90\% confidence level to be about 1.5\%. How large of a survey would you recommend?
+    
+\newpage
+
+## References {#ref}
+
+<div id="refs"></div>

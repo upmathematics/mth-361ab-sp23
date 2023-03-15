@@ -11,7 +11,7 @@
 
 
 
-<title>Welcome!    MTH 361: Applied Statistics I</title>
+<title>Quick Notes</title>
 
 <script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -344,188 +344,216 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore"><strong>Welcome!</strong> <br><br>
-<strong>MTH 361: Applied Statistics I</strong></h1>
-<h3 class="subtitle">Spring 2023 - University of Portland</h3>
+<h1 class="title toc-ignore"><strong>Quick Notes</strong></h1>
 
 </div>
 
 
 <p><br></p>
-<div id="quick-content-guide" class="section level2">
-<h2><strong>Quick Content Guide</strong></h2>
+<div id="basic-statistics-reference-table" class="section level2">
+<h2><strong>Basic Statistics Reference Table</strong></h2>
 <table>
 <colgroup>
-<col width="34%" />
-<col width="65%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th>Page</th>
-<th>Contents</th>
+<th>Inference for</th>
+<th>Relevant Variables</th>
+<th>Population Parameters</th>
+<th>Sample Statistics</th>
+<th>Theoretical Conditions</th>
+<th>Degrees of Freedom</th>
+<th>Standard Error <br>(Hypothesis Testing)</th>
+<th>Test Statistic</th>
+<th>Standard Error<br>(Confidence Interval)</th>
+<th align="center">Margin of Error</th>
+<th align="center">Confidence Interval</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="index.html">Home</a></td>
+<td>One proportion</td>
+<td>One two-level categorical</td>
+<td><span class="math inline">\(p\)</span></td>
+<td><span class="math inline">\(\hat{p}\)</span></td>
+<td>1. Independent samples<br>2. Success-failure (<span
+class="math inline">\(np \ge 10\)</span> and <span
+class="math inline">\(n(1-p) \ge 10\)</span>)</td>
 <td>-</td>
+<td><span class="math inline">\(SE =
+\sqrt{\frac{p_0(1-p_0)}{n}}\)</span></td>
+<td><span class="math inline">\(Z = \frac{\hat{p} -
+p_0}{SE}\)</span></td>
+<td><span class="math inline">\(SE =
+\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\)</span></td>
+<td align="center"><span class="math inline">\(ME = z^* SE\)</span></td>
+<td align="center"><span class="math inline">\(\hat{p} \pm
+ME\)</span></td>
 </tr>
 <tr class="even">
-<td><a href="syllabus.html">Syllabus</a></td>
-<td>About the class, class materials and resources, class assessment and
-expectations</td>
+<td>Difference of two proportions</td>
+<td>Two two-level categorical</td>
+<td><span class="math inline">\(p_{A} - p_{B}\)</span></td>
+<td><span class="math inline">\(\hat{p}_{A} - \hat{p}_{B}\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr class="odd">
-<td><a href="topics.html">Topics</a></td>
-<td>Tentative topics, notes, assignments, and books and online resources
-list</td>
+<td>Two-way table</td>
+<td>Two categorical with two or more levels</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr class="even">
-<td><a href="tba.html">Project</a></td>
-<td>Group lists, project timeline and datasets</td>
+<td>One mean</td>
+<td>Response: One numerical</td>
+<td><span class="math inline">\(\mu \longrightarrow
+\text{mean}\)</span><br><span class="math inline">\(\sigma
+\longrightarrow \text{standard deviation}\)</span></td>
+<td><span class="math inline">\(\bar{x} \longrightarrow
+\text{mean}\)</span><br><span class="math inline">\(s \longrightarrow
+\text{standard deviation}\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td>Comparing two means</td>
+<td>Response: One numerical<br>Explanatory: One two-level
+categorical</td>
+<td><span class="math inline">\(\mu_{A} - \mu_{B}\)</span></td>
+<td><span class="math inline">\(\bar{x}_{A} - \bar{x}_{B}\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td>Comparing paired means</td>
+<td>Response: One numerical<br>(difference of two paired numerical)</td>
+<td><span class="math inline">\(\mu_{diff} \longrightarrow
+\text{mean}\)</span><br><span class="math inline">\(\sigma_{diff}
+\longrightarrow \text{standard deviation}\)</span></td>
+<td><span class="math inline">\(\bar{x}_{diff} \longrightarrow
+\text{mean}\)</span><br><span class="math inline">\(\sigma_{diff}
+\longrightarrow \text{standard deviation}\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td>Simple linear regression</td>
+<td>Response: One numerical<br>Explanatory: One numerical or one
+two-level categorical</td>
+<td><span class="math inline">\(y = \beta_0 + \beta_1
+x\)</span><br><span class="math inline">\(\beta_0 \longrightarrow
+\text{intercept}\)</span><br><span class="math inline">\(\beta_1
+\longrightarrow \text{slope}\)</span><br><span
+class="math inline">\(\sigma_1 \longrightarrow \text{slope standard
+deviations}\)</span></td>
+<td><span class="math inline">\(\hat{y} = b_0 + b_1 x\)</span><br><span
+class="math inline">\(b_0 \longrightarrow
+\text{intercept}\)</span><br><span class="math inline">\(b_1
+\longrightarrow \text{slope}\)</span><br><span class="math inline">\(s_1
+\longrightarrow \text{slope standard deviation}\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 </tbody>
 </table>
 <p><br></p>
 </div>
-<div id="quick-facts" class="section level2">
-<h2><strong>Quick Facts</strong></h2>
-<p><br></p>
-<div id="instructor-information" class="section level3">
-<h3>Instructor Information</h3>
+<div
+id="common-mathematical-symbols-and-their-latex-syntax-in-rmarkdown"
+class="section level2">
+<h2><strong>Common Mathematical Symbols and their LaTeX Syntax in
+RMarkdown</strong></h2>
 <ul>
-<li><strong>Instructor:</strong> <a
-href="https://www.alexjohnquijano.com/" target="_blank">Alex John
-Quijano</a> <br></li>
-<li><strong>Office:</strong> Buckley Center 279 <br></li>
-<li><strong>Email:</strong> <a href="mailto:quijano@up.edu"
-class="email">quijano@up.edu</a> <br></li>
+<li><p>Equal sign: <code>$=$</code> will render as <span
+class="math inline">\(=\)</span>.</p></li>
+<li><p>Not equal sign: <code>$\ne$</code> will render as <span
+class="math inline">\(\ne\)</span>.</p></li>
+<li><p>Lesser than sign: <code>$&lt;$</code> will render as <span
+class="math inline">\(&lt;\)</span>.</p></li>
+<li><p>Greater than sign: <code>$&lt;$</code> will render as <span
+class="math inline">\(&gt;\)</span>.</p></li>
+<li><p>Lesser than or equal to sign: <code>$\le$</code> will render as
+<span class="math inline">\(\le\)</span>.</p></li>
+<li><p>Greater than or equal to sign: <code>$\ge$</code> will render as
+<span class="math inline">\(\ge\)</span>.</p></li>
+<li><p>Using hats: <code>$\hat{p}$</code> will render as <span
+class="math inline">\(\hat{p}\)</span>.</p></li>
+<li><p>Using bars: <code>$\bar{x}$</code> will render as <span
+class="math inline">\(\bar{x}\)</span>.</p></li>
+<li><p>Greek lowercase letter mu: <code>$\mu$</code> will render as
+<span class="math inline">\(\mu\)</span>.</p></li>
+<li><p>Greek lowercase letter beta: <code>$\beta$</code> will render as
+<span class="math inline">\(\beta\)</span>.</p></li>
+<li><p>The letter p: <code>$p$</code> will render as <span
+class="math inline">\(p\)</span>.</p></li>
+<li><p>Subscripting: <code>$p_{A}$</code> will render as <span
+class="math inline">\(p_{A}\)</span>.</p></li>
+<li><p>Set union: <code>$\cup$</code> will render as <span
+class="math inline">\(\cup\)</span>.</p></li>
+<li><p>Set intersection: <code>$\cap$</code> will render as <span
+class="math inline">\(\cap\)</span>.</p></li>
+<li><p>Summation Notation: <code>$\sum_{i=0}^k$</code> will render as
+<span class="math inline">\(\sum_{i=0}^k\)</span>.</p></li>
+<li><p>Infinity: <code>$\infty$</code> will render as <span
+class="math inline">\(\infty\)</span>.</p></li>
 </ul>
 <p><br></p>
 </div>
-<div id="class-time-and-location" class="section level3">
-<h3>Class Time and Location</h3>
-<ul>
-<li>Section A: MWF, 11:25 AM - 12:20 PM, Franz 205 <br></li>
-<li>Section B: MWF, 12:30 PM - 1:25 PM, Franz 205 <br></li>
-</ul>
+<div id="r-coding-cheat-sheet" class="section level2">
+<h2><strong>R Coding Cheat Sheet</strong></h2>
+<p>This cheat sheet - a comprehensive summary of R commands and
+procedures we did during lab - will help you on your R coding tasks
+throughout the course. The R coding cheat sheet below was made and
+provided by Robin (Reed College).</p>
+<p>Download options: <a
+href="quick-notes/coding-cheat-sheet/Math-141-Coding-Cheat-Sheet.pdf"
+target="_blank">pdf</a> | <a href="quick-notes/coding-cheat-sheet.zip"
+target="_blank">Rmd</a></p>
 <p><br></p>
-</div>
-<div id="help-hours" class="section level3">
-<h3>Help Hours</h3>
-<ul>
-<li><strong>Alex John Quijano (Instructor)</strong>
-<ul>
-<li>Walk-in (Buckley Center 279)
-<ul>
-<li>MWF, 4:00 PM - 5:00 PM</li>
-</ul></li>
-<li>One-to-One (Buckley Center 279 or in Teams) <br> <a
-href="https://calendly.com/alexjohnquijano/quijano-sp23-scheduled-help-hours">[sign-up
-for a 30-minute session]</a>
-<ul>
-<li>Availability on TuTh, 11:00 AM - 4:00 PM</li>
-<li>Availability on MWF, 2:00 PM - 4:00 PM</li>
-</ul></li>
-</ul></li>
-</ul>
-<p><br></p>
-</div>
-</div>
-<div id="quick-resources" class="section level2">
-<h2><strong>Quick Resources</strong></h2>
-<p><br></p>
-<div id="textbook" class="section level3">
-<h3>Textbook</h3>
-<p>The main textbook is <a href="https://www.openintro.org/book/os/"
-target="_blank">OpenIntro Statistics (4th edition)</a> by David Diez,
-Mine Cetinkaya-Rundel, and Christopher Barr. The textbook is free and
-open-source. You can also purchase a physical copy at the <a
-href="https://uportland.bncollege.com/">UP Bookstore</a>.</p>
-<p>If you have already purchased the physical copy of the 3rd edition of
-the textbook, you can either keep it or return/exchange it for the 4th
-edition.</p>
-<p>We will also use other supplementary books and resources throughout
-the course (please see the Topics Schedule).</p>
-<p><br></p>
-</div>
-<div id="computing" class="section level3">
-<h3>Computing</h3>
-<div id="r-studio-cloud" class="section level4">
-<h4>R Studio Cloud</h4>
-<p>This class will use the R programming language and the R Studio
-Integrated Development Environment (IDE). There are several ways to use
-R and R Studio. However, we will use the Posit R Studio Cloud service,
-an online R Studio environment, for all of the assignments in this
-class.</p>
-<ul>
-<li><em>Accessing R Studio Cloud.</em> Create a free account at <a
-href="https://posit.cloud/plans/free" target="_blank">Posit Cloud
-Sign-Up</a> using your UP email. Note that you must use your UP email
-for me to add you into the course’s R Studio workspace in Posit Cloud.
-You will receive an email inviting you into the workspace soon.</li>
-</ul>
-<p><br></p>
-</div>
-<div id="getting-a-computer" class="section level4">
-<h4>Getting a Computer</h4>
-<p>If you need a computer, you can borrow computers - please see the <a
-href="https://library.up.edu/services/laptops.html"
-target="_blank">Clark Library Laptop Borrowing</a> webpage. For more
-information and resources, visit the <a
-href="https://library.up.edu/services/services-students.html"
-target="_blank">Clark Library Student Services</a>.</p>
-<ul>
-<li><em>Clark Library Digital labs.</em> On campus, there are two
-computer labs that are located in Shiley Hall room 208 and the Clark
-Library. When you log-in into the lab computers using your UP
-credentials, use a browser to access R Studio Cloud.</li>
-</ul>
-<p><br></p>
-</div>
-</div>
-<div id="microsoft-teams" class="section level3">
-<h3>Microsoft Teams</h3>
-<p>We will be using Teams <a
-href="https://teams.microsoft.com/l/team/19%3aVHaf9on4w352ST4xnIjKJzKfnU6V7vGqLxmdOh8EOxk1%40thread.tacv2/conversations?groupId=2da29649-c261-42c8-b545-b05f8829edcf&amp;tenantId=ea8f3949-231c-40b6-a33f-56873af96f87"
-target="_blank">MTH-361AB-sp23</a> as the main real-time communication
-tool for general announcements, assignment submissions,
-question-answering discussions, and direct messages. I added you to the
-Teams page already so you just need to log in using your UP credentials.
-If not, then send a request when you log in. Let me know if you need any
-assistance. If you need the Teams code for this class, use
-<strong>ciyapht</strong>.</p>
-<p>Please check the class Teams regularly. If you need to have Teams
-notifications sent to your email, please set up your email preferences
-within Teams.</p>
-<p>If you prefer communicating through email, note that I had set up an
-email filter for this course and you must put the “MTH 361” keyword in
-your subject line. It is easy for me to get notice of your email if you
-put the keyword in the subject line. Concise and specific messages are
-helpful so I know how I can best help you.</p>
-<p><br></p>
-</div>
-<div id="the-learning-commons" class="section level3">
-<h3>The Learning Commons</h3>
-<p>Students can get academic assistance through Learning Commons
-tutoring services and workshops. The Co-Pilot peer tutoring program
-provides students with opportunities to work with other students to get
-help in writing, math, group projects, and other courses. Students can
-schedule an appointment to meet with a Co-Pilot (tutor) or they can also
-meet with a Co-Pilot during drop-in hours. Check the <a
-href="https://www.up.edu/learningcommons/index.html">Learning
-Commons</a> website for more information. Find a tutor at the Learning
-Commons to get support on your academic journey.</p>
-<p><br></p>
-</div>
-<div id="math-resource-center" class="section level3">
-<h3>Math Resource Center</h3>
-<p>Appointment-based tutoring starts week 1. Drop-in tutoring is
-Mon-Thurs, 3:00 PM - 6:30 PM in BC 163 and starts week 2. Visit the <a
-href="https://www.up.edu/learningcommons/math-resource-center/index.html"
-target="_blank">Math Resource Center</a> website with more info.</p>
-<p><br></p>
-</div>
 </div>
 
 

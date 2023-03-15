@@ -1,0 +1,63 @@
+---
+title: "**Quick Notes**"
+---
+
+<br>
+
+## **Basic Statistics Reference Table**
+
+| Inference for                 | Relevant Variables                                                                 | Population Parameters                                                                                                                                                            | Sample Statistics                                                                                                                                                | Theoretical Conditions                                                          | Degrees of Freedom | Standard Error <br>(Hypothesis Testing) | Test Statistic                 | Standard Error<br>(Confidence Interval)    | Margin of Error | Confidence Interval |
+|-------|-------|-------|-------|-------|-------|-------|-------|-------|:-----:|:-----:|
+| One proportion                | One two-level categorical                                                          | $p$                                                                                                                                                                              | $\hat{p}$                                                                                                                                                        | 1\. Independent samples<br>2. Success-failure ($np \ge 10$ and $n(1-p) \ge 10$) | \-                 | $SE = \sqrt{\frac{p_0(1-p_0)}{n}}$      | $Z = \frac{\hat{p} - p_0}{SE}$ | $SE = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$ |  $ME = z^* SE$  |  $\hat{p} \pm ME$   |
+| Difference of two proportions | Two two-level categorical                                                          | $p_{A} - p_{B}$                                                                                                                                                                  | $\hat{p}_{A} - \hat{p}_{B}$                                                                                                                                      |                                                                                 |                    |                                         |                                |                                            |                 |                     |
+| Two-way table                 | Two categorical with two or more levels                                            | \-                                                                                                                                                                               | \-                                                                                                                                                               |                                                                                 |                    |                                         |                                |                                            |                 |                     |
+| One mean                      | Response: One numerical                                                            | $\mu \longrightarrow \text{mean}$<br>$\sigma \longrightarrow \text{standard deviation}$                                                                                          | $\bar{x} \longrightarrow \text{mean}$<br>$s \longrightarrow \text{standard deviation}$                                                                           |                                                                                 |                    |                                         |                                |                                            |                 |                     |
+| Comparing two means           | Response: One numerical<br>Explanatory: One two-level categorical                  | $\mu_{A} - \mu_{B}$                                                                                                                                                              | $\bar{x}_{A} - \bar{x}_{B}$                                                                                                                                      |                                                                                 |                    |                                         |                                |                                            |                 |                     |
+| Comparing paired means        | Response: One numerical<br>(difference of two paired numerical)                    | $\mu_{diff} \longrightarrow \text{mean}$<br>$\sigma_{diff} \longrightarrow \text{standard deviation}$                                                                            | $\bar{x}_{diff} \longrightarrow \text{mean}$<br>$\sigma_{diff} \longrightarrow \text{standard deviation}$                                                        |                                                                                 |                    |                                         |                                |                                            |                 |                     |
+| Simple linear regression      | Response: One numerical<br>Explanatory: One numerical or one two-level categorical | $y = \beta_0 + \beta_1 x$<br>$\beta_0 \longrightarrow \text{intercept}$<br>$\beta_1 \longrightarrow \text{slope}$<br>$\sigma_1 \longrightarrow \text{slope standard deviations}$ | $\hat{y} = b_0 + b_1 x$<br>$b_0 \longrightarrow \text{intercept}$<br>$b_1 \longrightarrow \text{slope}$<br>$s_1 \longrightarrow \text{slope standard deviation}$ |                                                                                 |                    |                                         |                                |                                            |                 |                     |
+
+<br>
+
+## **Common Mathematical Symbols and their LaTeX Syntax in RMarkdown**
+
+-   Equal sign: `$=$` will render as $=$.
+
+-   Not equal sign: `$\ne$` will render as $\ne$.
+
+-   Lesser than sign: `$<$` will render as $<$.
+
+-   Greater than sign: `$<$` will render as $>$.
+
+-   Lesser than or equal to sign: `$\le$` will render as $\le$.
+
+-   Greater than or equal to sign: `$\ge$` will render as $\ge$.
+
+-   Using hats: `$\hat{p}$` will render as $\hat{p}$.
+
+-   Using bars: `$\bar{x}$` will render as $\bar{x}$.
+
+-   Greek lowercase letter mu: `$\mu$` will render as $\mu$.
+
+-   Greek lowercase letter beta: `$\beta$` will render as $\beta$.
+
+-   The letter p: `$p$` will render as $p$.
+
+-   Subscripting: `$p_{A}$` will render as $p_{A}$.
+
+-   Set union: `$\cup$` will render as $\cup$.
+
+-   Set intersection: `$\cap$` will render as $\cap$.
+
+-   Summation Notation: `$\sum_{i=0}^k$` will render as $\sum_{i=0}^k$.
+
+-   Infinity: `$\infty$` will render as $\infty$.
+
+<br>
+
+## **R Coding Cheat Sheet**
+
+This cheat sheet - a comprehensive summary of R commands and procedures we did during lab - will help you on your R coding tasks throughout the course. The R coding cheat sheet below was made and provided by Robin (Reed College).
+
+Download options: [pdf](quick-notes/coding-cheat-sheet/Math-141-Coding-Cheat-Sheet.pdf){target="_blank"} \| [Rmd](quick-notes/coding-cheat-sheet.zip){target="_blank"}
+
+<br>
