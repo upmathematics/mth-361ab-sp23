@@ -55,6 +55,8 @@ Writing a scientific report/paper is essential for any researcher. Your project 
 
 The most important aspect of your project is that you must write a reproducible report. That means that you must include code into your report - similar to your lab assignments. This can be done easily using RMarkdown. Your submission should be a pdf file with the names of your group members.
 
+*Amendment 1:* Your submission should be a pdf or html file with the names of your group members.
+
 <br>
 
 ## **Project Phases**
