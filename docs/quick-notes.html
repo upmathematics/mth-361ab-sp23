@@ -356,151 +356,109 @@ div.tocify {
 <center>
 <table>
 <colgroup>
-<col width="9%" />
-<col width="9%" />
-<col width="9%" />
-<col width="9%" />
-<col width="9%" />
-<col width="9%" />
-<col width="9%" />
-<col width="9%" />
-<col width="9%" />
-<col width="9%" />
-<col width="9%" />
+<col width="38%" />
+<col width="38%" />
+<col width="23%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th>Inference for</th>
-<th>Relevant Variables</th>
-<th>Population Parameters</th>
-<th>Sample Statistics</th>
-<th>Theoretical Conditions</th>
-<th>Degrees of Freedom</th>
-<th>Standard Error <br>(Hypothesis Testing)</th>
-<th>Test Statistic</th>
-<th>Standard Error<br>(Confidence Interval)</th>
-<th align="center">Margin of Error</th>
-<th align="center">Confidence Interval</th>
+<th align="center"><strong>Inference for …</strong></th>
+<th align="center"></th>
+<th><strong>Mathematical Notations</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>One proportion</td>
+<td align="center"><strong>One Proportion</strong></td>
+<td align="center">Relevant Variables</td>
 <td>One two-level categorical</td>
-<td><span class="math inline">\(p \longrightarrow
-\text{proportion}\)</span></td>
-<td><span class="math inline">\(\hat{p} \longrightarrow \text{sample
-proportion}\)</span></td>
-<td>1. Independent samples<br>2. Success-failure (<span
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center">Population Parameters</td>
+<td><span class="math inline">\(p \longrightarrow\)</span> population
+proportion<br><br><span class="math inline">\(p_0
+\longrightarrow\)</span> null value</td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center">Sample Statistics</td>
+<td><span class="math inline">\(\hat{p} \longrightarrow\)</span>
+population proportion (point estimate)</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center">Theoretical Conditions</td>
+<td>- Independent samples<br>- Success-failure: <span
 class="math inline">\(np \ge 10\)</span> and <span
-class="math inline">\(n(1-p) \ge 10\)</span>)</td>
-<td>-</td>
-<td><span class="math inline">\(SE =
-\sqrt{\frac{p_0(1-p_0)}{n}}\)</span></td>
-<td><span class="math inline">\(Z = \frac{\hat{p} -
-p_0}{SE}\)</span></td>
-<td><span class="math inline">\(SE =
-\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\)</span></td>
-<td align="center"><span class="math inline">\(ME = z^* SE\)</span></td>
-<td align="center"><span class="math inline">\(\hat{p} \pm
-ME\)</span></td>
+class="math inline">\(n(1-p) \ge 10\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center">Hypothesis Testing</td>
+<td><span class="math inline">\(H_0: p = p_0 \longrightarrow\)</span>
+null hypothesis<br><br><span class="math inline">\(H_A: p &gt; p_0, p
+&lt; p_0, \text{ or } p \ne p_0 \longrightarrow\)</span> alternative
+hypothesis<br><br><span class="math inline">\(\alpha
+\longrightarrow\)</span> significance level (type I error
+rate)<br><br><span class="math inline">\(SE_{p_0} =
+\sqrt{\frac{p_0(1-p_0)}{n}} \longrightarrow\)</span> standard
+error<br><br><span class="math inline">\(z =
+\frac{\hat{p}-p_0}{SE_{p_0}} \longrightarrow\)</span> test statistic
+(z-score)<br><br><span class="math inline">\(\text{p-value} =
+\begin{cases} P(Z &gt; z) \text{ or } P(Z &lt; z) &amp; \longrightarrow
+\text{ one-sided test for } &gt; \text{ or } &lt;, \\ 2*P(Z &gt; z)
+&amp; \longrightarrow \text{ two-sided test for } \ne
+\end{cases}\)</span></td>
 </tr>
 <tr class="even">
-<td>Difference of two proportions</td>
+<td align="center"></td>
+<td align="center">Confidence Interval</td>
+<td><span class="math inline">\(SE_{\hat{p}} =
+\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \longrightarrow\)</span> standard
+error<br><br><span class="math inline">\(ME = z^* SE_{\hat{p}}
+\longrightarrow\)</span> margin of error<br><br><span
+class="math inline">\(cl = 1-\alpha \longrightarrow\)</span> confidence
+level<br><br><span class="math inline">\(z^* \longrightarrow\)</span>
+critical value at <span class="math inline">\(cl\)</span> confidence
+level<br><br><span class="math inline">\(\hat{p} \pm ME =
+(\hat{p}-ME,\hat{p}+ME) \longrightarrow\)</span> interval</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>Difference of Two Proportions</strong></td>
+<td align="center">Relevant Variables</td>
 <td>Two two-level categorical</td>
-<td><span class="math inline">\(p_{A} - p_{B}\)</span></td>
-<td><span class="math inline">\(\hat{p}_{A} - \hat{p}_{B}\)</span></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="odd">
-<td>Two-way table</td>
-<td>Two categorical with two or more levels</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td align="center"></td>
-<td align="center"></td>
 </tr>
 <tr class="even">
-<td>One mean</td>
-<td>Response: One numerical</td>
-<td><span class="math inline">\(\mu \longrightarrow
-\text{mean}\)</span><br><span class="math inline">\(\sigma
-\longrightarrow \text{standard deviation}\)</span></td>
-<td><span class="math inline">\(\bar{x} \longrightarrow \text{sample
-mean}\)</span><br><span class="math inline">\(s \longrightarrow
-\text{sample standard deviation}\)</span></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 <td align="center"></td>
-<td align="center"></td>
+<td align="center">Population Parameters</td>
+<td><span class="math inline">\(p_a \longrightarrow\)</span> population
+proportion for group a<br><br><span class="math inline">\(p_b
+\longrightarrow\)</span> population proportion for group b<br><br><span
+class="math inline">\(p_0 = 0 \longrightarrow\)</span> null value</td>
 </tr>
 <tr class="odd">
-<td>Comparing two means</td>
-<td>Response: One numerical<br>Explanatory: One two-level
-categorical</td>
-<td><span class="math inline">\(\mu_{A} - \mu_{B}\)</span></td>
-<td><span class="math inline">\(\bar{x}_{A} - \bar{x}_{B}\)</span></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 <td align="center"></td>
-<td align="center"></td>
+<td align="center">Sample Statistics</td>
+<td><span class="math inline">\(\hat{p}_a \longrightarrow\)</span>
+sample proportion (point estimate) for group a<br><br><span
+class="math inline">\(\hat{p}_b \longrightarrow\)</span> sample
+proportion (point estimate) for group b</td>
 </tr>
 <tr class="even">
-<td>Comparing paired means</td>
-<td>Response: One numerical<br>(difference of two paired numerical)</td>
-<td><span class="math inline">\(\mu_{diff} \longrightarrow
-\text{mean}\)</span><br><span class="math inline">\(\sigma_{diff}
-\longrightarrow \text{standard deviation}\)</span></td>
-<td><span class="math inline">\(\bar{x}_{diff} \longrightarrow
-\text{sample mean}\)</span><br><span class="math inline">\(\sigma_{diff}
-\longrightarrow \text{sample standard deviation}\)</span></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 <td align="center"></td>
-<td align="center"></td>
+<td align="center">Theoretical Conditions</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>Simple linear regression</td>
-<td>Response: One numerical<br>Explanatory: One numerical or one
-two-level categorical</td>
-<td><span class="math inline">\(y = \beta_0 + \beta_1
-x\)</span><br><span class="math inline">\(\beta_0 \longrightarrow
-\text{intercept}\)</span><br><span class="math inline">\(\beta_1
-\longrightarrow \text{slope}\)</span><br><span
-class="math inline">\(\sigma_1 \longrightarrow \text{slope standard
-deviation}\)</span></td>
-<td><span class="math inline">\(\hat{y} = b_0 + b_1 x\)</span><br><span
-class="math inline">\(b_0 \longrightarrow \text{sample
-intercept}\)</span><br><span class="math inline">\(b_1 \longrightarrow
-\text{sample slope}\)</span><br><span class="math inline">\(s_1
-\longrightarrow \text{sample slope standard deviation}\)</span></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 <td align="center"></td>
+<td align="center">Hypothesis Testing</td>
+<td></td>
+</tr>
+<tr class="even">
 <td align="center"></td>
+<td align="center">Confidence Interval</td>
+<td></td>
 </tr>
 </tbody>
 </table>
