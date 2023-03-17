@@ -1,0 +1,89 @@
+---
+title: '**Inference for Difference of Two Proportions**'
+subtitle: "Mini-Assignment - MTH 361 A/B - Spring 2023"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 361 A/B}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+  \usepackage{multirow}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+urlcolor: blue
+link-citations: yes
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+
+## I. Inference for Two Proportions
+
+### Materials
+
+The exercises below are derived from the textbook [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
+
+### Exercises
+
+1. **Sleep deprivation, CA vs. OR.** According to  a report on sleep deprivation by the Centers for Disease Control and Prevention, the proportion of California residents who reported insufficient rest or sleep during each of the preceding 30 days is 8.0\%, while this proportion is 8.8\% for Oregon residents. These data are based on simple random samples of 11,545 California and 4,691 Oregon residents. [@data:sleepCAandOR]
+
+    a. Calculate a 95\% confidence interval for the difference between the proportions of Californians and Oregonians who are sleep deprived and interpret it in context of the data. (Reminder: Check conditions)
+    b. Conduct a hypothesis test to determine if these data provide strong evidence the rate of sleep deprivation is different for the two states. (Reminder: Check conditions)
+    c. It is possible the conclusion of the test in part (a) is incorrect. If this is the case, what type of error was made?
+    
+2. **Sleep deprived transportation workers.** The National Sleep Foundation conducted a survey on the sleep habits of randomly sampled transportation workers and a control sample of non-transportation workers. The results of the survey are shown below. [@data:sleepTransport}]
+
+    ```{=latex}
+    \begin{center}
+    \begin{tabular}{l c c c c c }
+    						                & 			            & \multicolumn{4}{c}{\textit{Transportation Professionals}} \\ \cline{3-6}
+    			                      & 			  & 	    	& Truck	  & Train		  & Bus/Taxi/Limo		\\
+    			                      & \textit{Control}  & Pilots	& Drivers	  & Operators	  & Drivers	\\\cline{1-6}
+    Less than 6 hours of sleep	& 35		            & 19		  & 35	      & 29	        & 21	\\
+    6 to 8 hours of sleep		    & 193		            & 132	    & 117	      & 119	        & 131	\\
+    More than 8 hours			      & 64		            & 51		  & 51	      & 32	        & 58	\\ \cline{1-6}
+    Total						            & 292		            & 202	    & 203	      & 180	        & 210		
+    \end{tabular}
+    \end{center}
+    ```
+
+    a. Conduct a hypothesis test to evaluate if these data provide evidence of a difference between the proportions of truck drivers and non-transportation workers (the control group) who get less than 6 hours of sleep per day, i.e. are considered sleep deprived. Use a significance value of $0.05$.
+    b. Compute the confidence interval and interpret your results in context of the data.
+    c. It is possible the conclusion of the test in part (a) is incorrect. If this is the case, what type of error was made?
+    
+\newpage
+    
+3. (Outstanding Question) **HIV in sub-Saharan Africa.** In July 2008 the US National Institutes of Health announced that it was stopping a clinical study early because of unexpected results. The study population consisted of HIV-infected women in sub-Saharan Africa who had been given single dose Nevaripine (a treatment for HIV) while giving birth, to prevent transmission of HIV to the infant. The study was a randomized comparison of continued treatment of a woman (after successful childbirth) with Nevaripine vs Lopinavir, a second drug used to treat HIV. 240 women participated in the study; 120 were randomized to each of the two treatments. Twenty-four weeks after starting the study treatment, each woman was tested to determine if the HIV infection was becoming worse (an outcome called *virologic failure*). Twenty-six of the 120 women treated with Nevaripine experienced virologic failure, while 10 of the 120 women treated with the other drug experienced virologic failure. [@Lockman:2007]
+
+    a. Create a two-way table presenting the results of this study.
+    b. State appropriate hypotheses to test for difference in virologic failure rates between treatment groups.
+    c. Complete the hypothesis test and state an appropriate conclusion. (Reminder: Verify any necessary conditions.)
+    d. Compute the confidence interval and interpret your results in context of the data. (Reminder: Verify any necessary conditions.)
+    
+\newpage
+
+## References {#ref}
+
+<div id="refs"></div>

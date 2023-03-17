@@ -47,11 +47,10 @@ The exercises below are derived from the textbook [OpenIntro Statistics (4th edi
 
 ### Exercises
 
-1. **National Health Plan, Part I.** A *Kaiser Family Foundation* poll for US adults in 2019 found that 79\% of Democrats, 55\% of Independents, and 24\% of Republicans supported a generic ``National Health Plan''. There were 347 Democrats, 298 Republicans, and 617 Independents surveyed.[@data:KFF2019_nat_health_plan]
+1. **National Health Plan, Part I.** A *Kaiser Family Foundation* poll for US adults in 2019 found that 79\% of Democrats, 55\% of Independents, and 24\% of Republicans supported a generic ``National Health Plan''. There were 347 Democrats, 298 Republicans, and 617 Independents surveyed. [@data:KFF2019_nat_health_plan]
 
     a. A political pundit on TV claims that a majority of Independents support a National Health Plan. Do these data provide strong evidence to support this type of statement?
-    b. Would you expect a confidence interval for the proportion of Independents who oppose the public option plan to include 0.5?
-    Explain.
+    b. Would you expect a confidence interval for the proportion of Independents who oppose the public option plan to include 0.5? Explain.
     
 2. **National Health Plan, Part II.** Exercise (1) presents the results of a poll evaluating support for a generic ``National Health Plan'' in the US in 2019, reporting that 55\% of Independents are supportive. If we wanted to estimate this number to within 1\% with 90\% confidence, what would be an appropriate sample size?
     
