@@ -59,7 +59,7 @@ title: "**Quick Notes**"
   <tr>
     <td class="tg-5fiw">Confidence Interval</td>
     <td class="tg-0pky">$SE_{CI} = \sqrt{\frac{\hat{p}\left(1-\hat{p}\right)}{n}} \longrightarrow$ standard error<br><br>$ME = z^* SE_{CI} \longrightarrow$ margin of error<br><br>$cl = 1-\alpha \longrightarrow$ confidence level<br><br>$z^* \longrightarrow$ critical value at $cl$ confidence level<br><br>$\hat{p} \pm ME \longrightarrow$ lowerbound and upperbound of the interval</td>
-    <td class="tg-btxf">`alpha` = $\alpha$<br><br>`cl` = $cl = 1-\alpha$<br><br>$z^* =$ `qnorm(cl + (alpha/2),0,1)`<br><br>$-z^* =$ `qnorm(cl + (alpha/2),0,1)`</td>
+    <td class="tg-btxf">`alpha` = $\alpha$<br><br>`cl` = $cl = 1-\alpha$<br><br>$z^* =$ `qnorm(cl + (alpha/2),0,1)`<br><br>$-z^* =$ `qnorm(cl - (alpha/2),0,1)`</td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="6"><span style="font-weight:bold">Difference of Two Proportions</span></td>
@@ -90,7 +90,7 @@ title: "**Quick Notes**"
   <tr>
     <td class="tg-5fiw">Confidence Interval</td>
     <td class="tg-0pky">$SE_{CI} = \sqrt{\frac{\hat{p}_a\left(1-\hat{p}_a\right)}{n_a} + \frac{\hat{p}_b\left(1-\hat{p}_b\right)}{n_b}} \longrightarrow$ standard error<br><br>$ME = z^* SE_{CI} \longrightarrow$ margin of error<br><br>$cl = 1-\alpha \longrightarrow$ confidence level<br><br>$z^* \longrightarrow$ critical value at $cl$ confidence level<br><br>$\left(\hat{p}_a - \hat{p}_b\right) \pm ME \longrightarrow$ lowerbound and upperbound of the interval</td>
-    <td class="tg-btxf">`alpha` = $\alpha$<br><br>`cl` = $cl = 1-\alpha$<br><br>$z^* =$ `qnorm(cl + (alpha/2),0,1)`<br><br>$-z^* =$ `qnorm(cl + (alpha/2),0,1)`</td>
+    <td class="tg-btxf">`alpha` = $\alpha$<br><br>`cl` = $cl = 1-\alpha$<br><br>$z^* =$ `qnorm(cl + (alpha/2),0,1)`<br><br>$-z^* =$ `qnorm(cl - (alpha/2),0,1)`</td>
   </tr>
 </tbody>
 </table>
