@@ -350,161 +350,257 @@ div.tocify {
 
 
 <p><br></p>
-<div id="basic-statistics-reference-table" class="section level2">
-<h2><strong>Basic Statistics Reference Table</strong></h2>
+<div id="inference-reference-table" class="section level2">
+<h2><strong>Inference Reference Table</strong></h2>
 <p><br></p>
-<center>
-<table>
-<colgroup>
-<col width="38%" />
-<col width="38%" />
-<col width="23%" />
-</colgroup>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-5fiw{background-color:#f9f9f9;border-color:inherit;text-align:right;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
 <thead>
-<tr class="header">
-<th align="center"><strong>Inference for …</strong></th>
-<th align="center"></th>
-<th><strong>Mathematical Notations</strong></th>
+<tr>
+<th class="tg-7btt">
+Inference for …
+</th>
+<th class="tg-c3ow">
+</th>
+<th class="tg-c3ow">
+<span style="font-weight:bold">Mathematical Notations</span>
+</th>
+<th class="tg-7btt">
+R Functions
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="center"><strong>One Proportion</strong></td>
-<td align="center">Relevant Variables</td>
-<td>One two-level categorical</td>
+<tr>
+<td class="tg-7btt" rowspan="6">
+<span style="font-weight:bold">One Proportion</span>
+</td>
+<td class="tg-5fiw">
+Relevant Variables
+</td>
+<td class="tg-0pky">
+Response <span class="math inline">\(\longrightarrow\)</span> One
+two-level categorical
+</td>
+<td class="tg-btxf">
+</td>
 </tr>
-<tr class="even">
-<td align="center"></td>
-<td align="center">Population Parameters</td>
-<td><span class="math inline">\(p \longrightarrow\)</span> population
+<tr>
+<td class="tg-5fiw">
+Population Parameters
+</td>
+<td class="tg-0pky">
+<span class="math inline">\(p \longrightarrow\)</span> population
 proportion<br><br><span class="math inline">\(p_0
-\longrightarrow\)</span> null value</td>
+\longrightarrow\)</span> null value
+</td>
+<td class="tg-btxf">
+</td>
 </tr>
-<tr class="odd">
-<td align="center"></td>
-<td align="center">Sample Statistics</td>
-<td><span class="math inline">\(\hat{p} \longrightarrow\)</span>
-population proportion (point estimate)</td>
+<tr>
+<td class="tg-5fiw">
+Sample Statistics
+</td>
+<td class="tg-0pky">
+<span class="math inline">\(\hat{p} \longrightarrow\)</span> population
+proportion (point estimate)<br><br><span class="math inline">\(n
+\longrightarrow\)</span> sample size
+</td>
+<td class="tg-btxf">
+</td>
 </tr>
-<tr class="even">
-<td align="center"></td>
-<td align="center">Theoretical Conditions</td>
-<td>- Independent samples<br>- Success-failure: <span
-class="math inline">\(np \ge 10\)</span> and <span
-class="math inline">\(n(1-p) \ge 10\)</span></td>
+<tr>
+<td class="tg-5fiw">
+Theoretical Conditions
+</td>
+<td class="tg-0pky">
+Independent random samples<br><br>Success-failure: <br><span
+class="math inline">\(\hspace{30px} np \ge 10\)</span> and <span
+class="math inline">\(n(1-p) \ge 10\)</span>
+</td>
+<td class="tg-btxf">
+</td>
 </tr>
-<tr class="odd">
-<td align="center"></td>
-<td align="center">Hypothesis Testing</td>
-<td><span class="math inline">\(H_0: p = p_0 \longrightarrow\)</span>
-null hypothesis<br><br><span class="math inline">\(H_A: p &gt; p_0, p
-&lt; p_0, \text{ or } p \ne p_0 \longrightarrow\)</span> alternative
+<tr>
+<td class="tg-5fiw">
+Hypothesis Testing
+</td>
+<td class="tg-0pky">
+<span class="math inline">\(H_0: p = p_0 \longrightarrow\)</span> null
+hypothesis<br><br><span class="math inline">\(H_A: p &gt; p_0, p &lt;
+p_0, \text{ or } p \ne p_0 \longrightarrow\)</span> alternative
 hypothesis<br><br><span class="math inline">\(\alpha
 \longrightarrow\)</span> significance level (type I error
-rate)<br><br><span class="math inline">\(SE_{p_0} =
-\sqrt{\frac{p_0(1-p_0)}{n}} \longrightarrow\)</span> standard
-error<br><br><span class="math inline">\(z =
-\frac{\hat{p}-p_0}{SE_{p_0}} \longrightarrow\)</span> test statistic
-(z-score)<br><br><span class="math inline">\(\text{p-value} =
-\begin{cases} P(Z &gt; z) \text{ or } P(Z &lt; z) &amp; \longrightarrow
-\text{ one-sided test for } &gt; \text{ or } &lt;, \\ 2*P(Z &gt; z)
-&amp; \longrightarrow \text{ two-sided test for } \ne
-\end{cases}\)</span></td>
+rate)<br><br><span class="math inline">\(SE_{H} =
+\sqrt{\frac{p_0\left(1-p_0\right)}{n}} \longrightarrow\)</span> standard
+error<br><br><span class="math inline">\(z = \frac{\hat{p}-p_0}{SE_{H}}
+\longrightarrow\)</span> test statistic (z-score)<br><br><span
+class="math inline">\(\text{p-value} = \begin{cases} P(Z &lt; -z) \text{
+or } P(Z &gt; z) &amp; \rightarrow \text{ one-sided} \\ 2P(Z &lt; -z)
+\text{ or } 2P(Z &gt; z) &amp; \rightarrow \text{ two-sided}
+\end{cases}\)</span>
+</td>
+<td class="tg-btxf">
+<span class="math inline">\(P(Z &lt; -z) =\)</span>
+<code>pnorm(-z,0,1)</code><br><br><span class="math inline">\(P(Z &gt;
+z) =\)</span> <code>1-pnorm(z,0,1)</code><br><br><span
+class="math inline">\(P(Z = z) =\)</span> <code>dnorm(z,0,1)</code>
+</td>
 </tr>
-<tr class="even">
-<td align="center"></td>
-<td align="center">Confidence Interval</td>
-<td><span class="math inline">\(SE_{\hat{p}} =
-\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \longrightarrow\)</span> standard
-error<br><br><span class="math inline">\(ME = z^* SE_{\hat{p}}
+<tr>
+<td class="tg-5fiw">
+Confidence Interval
+</td>
+<td class="tg-0pky">
+<span class="math inline">\(SE_{CI} =
+\sqrt{\frac{\hat{p}\left(1-\hat{p}\right)}{n}} \longrightarrow\)</span>
+standard error<br><br><span class="math inline">\(ME = z^* SE_{CI}
 \longrightarrow\)</span> margin of error<br><br><span
 class="math inline">\(cl = 1-\alpha \longrightarrow\)</span> confidence
 level<br><br><span class="math inline">\(z^* \longrightarrow\)</span>
 critical value at <span class="math inline">\(cl\)</span> confidence
-level<br><br><span class="math inline">\(\hat{p} \pm ME =
-(\hat{p}-ME,\hat{p}+ME) \longrightarrow\)</span> interval</td>
+level<br><br><span class="math inline">\(\hat{p} \pm ME
+\longrightarrow\)</span> lowerbound and upperbound of the interval
+</td>
+<td class="tg-btxf">
+<code>alpha</code> = <span
+class="math inline">\(\alpha\)</span><br><br><code>cl</code> = <span
+class="math inline">\(cl = 1-\alpha\)</span><br><br><span
+class="math inline">\(z^* =\)</span>
+<code>qnorm(cl + (alpha/2),0,1)</code><br><br><span
+class="math inline">\(-z^* =\)</span>
+<code>qnorm(cl + (alpha/2),0,1)</code>
+</td>
 </tr>
-<tr class="odd">
-<td align="center"><strong>Difference of Two Proportions</strong></td>
-<td align="center">Relevant Variables</td>
-<td>Two two-level categorical</td>
+<tr>
+<td class="tg-c3ow" rowspan="6">
+<span style="font-weight:bold">Difference of Two Proportions</span>
+</td>
+<td class="tg-5fiw">
+Relevant Variables
+</td>
+<td class="tg-0pky">
+Two two-level categorical
+</td>
+<td class="tg-btxf">
+</td>
 </tr>
-<tr class="even">
-<td align="center"></td>
-<td align="center">Population Parameters</td>
-<td><span class="math inline">\(p_a \longrightarrow\)</span> population
+<tr>
+<td class="tg-5fiw">
+Population Parameters
+</td>
+<td class="tg-0pky">
+<span class="math inline">\(p_a \longrightarrow\)</span> population
 proportion for group a<br><br><span class="math inline">\(p_b
 \longrightarrow\)</span> population proportion for group b<br><br><span
-class="math inline">\(p_0 = 0 \longrightarrow\)</span> null value</td>
+class="math inline">\(p_0 \longrightarrow\)</span> null value
+</td>
+<td class="tg-btxf">
+</td>
 </tr>
-<tr class="odd">
-<td align="center"></td>
-<td align="center">Sample Statistics</td>
-<td><span class="math inline">\(\hat{p}_a \longrightarrow\)</span>
-sample proportion (point estimate) for group a<br><br><span
+<tr>
+<td class="tg-5fiw">
+Sample Statistics
+</td>
+<td class="tg-0pky">
+<span class="math inline">\(\hat{p}_a \longrightarrow\)</span> sample
+proportion (point estimate) for group a<br><br><span
 class="math inline">\(\hat{p}_b \longrightarrow\)</span> sample
-proportion (point estimate) for group b</td>
+proportion (point estimate) for group b<br><br><span
+class="math inline">\(n_a \longrightarrow\)</span> sample size for group
+a<br><br><span class="math inline">\(n_b \longrightarrow\)</span> sample
+size for group b
+</td>
+<td class="tg-btxf">
+</td>
 </tr>
-<tr class="even">
-<td align="center"></td>
-<td align="center">Theoretical Conditions</td>
-<td></td>
+<tr>
+<td class="tg-5fiw">
+Theoretical Conditions
+</td>
+<td class="tg-0pky">
+Independent random samples<br><br>Success-failure: <br><span
+class="math inline">\(\hspace{30px} n_a \hat{p}_a \ge 10\)</span> and
+<span class="math inline">\(n_b\left(1-\hat{p}_b\right) \ge 10\)</span>
+for group a<br><span class="math inline">\(\hspace{30px} n_b \hat{p}_b
+\ge 10\)</span> and <span
+class="math inline">\(n_b\left(1-\hat{p}_b\right) \ge 10\)</span> for
+group b
+</td>
+<td class="tg-btxf">
+</td>
 </tr>
-<tr class="odd">
-<td align="center"></td>
-<td align="center">Hypothesis Testing</td>
-<td></td>
+<tr>
+<td class="tg-5fiw">
+Hypothesis Testing
+</td>
+<td class="tg-0pky">
+<span class="math inline">\(H_0: p_a = p_b \text{ or } p_a - p_b = 0
+\longrightarrow\)</span> null hypothesis<br><br><span
+class="math inline">\(H_A: \begin{cases} p_a \ne p_b \text{ or } p_a -
+p_b \ne 0 \\ p_a &gt; p_b \text{ or } p_a - p_b &gt; 0 \\ p_a &lt; p_b
+\text{ or } p_a - p_b &lt; 0 \end{cases} \longrightarrow\)</span>
+alternative hypothesis<br><br><span class="math inline">\(\alpha
+\longrightarrow\)</span> significance level (type I error
+rate)<br><br><span class="math inline">\(\hat{p}_{pool} =
+\frac{\hat{p}_a n_a + \hat{p}_bn_b}{n_a + n_b} \longrightarrow\)</span>
+pooled sample proportion<br><br><span class="math inline">\(SE_{H} =
+\sqrt{\hat{p}_{pool}\left(1-\hat{p}_{pool}\right) \left( \frac{1}{n_a} +
+\frac{1}{n_b} \right)} \longrightarrow\)</span> standard
+error<br><br><span class="math inline">\(z = \frac{\left(\hat{p}_a -
+\hat{p}_b \right) - p_0}{SE_{H}} \longrightarrow\)</span> test statistic
+(z-score)<br><br><span class="math inline">\(\text{p-value} =
+\begin{cases} P(Z &lt; -z) \text{ or } P(Z &gt; z) &amp; \rightarrow
+\text{ one-sided} \\ 2P(Z &lt; -z) \text{ or } 2P(Z &gt; z) &amp;
+\rightarrow \text{ two-sided} \end{cases}\)</span>
+</td>
+<td class="tg-btxf">
+<span class="math inline">\(P(Z &lt; -z) =\)</span>
+<code>pnorm(-z,0,1)</code><br><br><span class="math inline">\(P(Z &gt;
+z) =\)</span> <code>1-pnorm(z,0,1)</code><br><br><span
+class="math inline">\(P(Z = z) =\)</span> <code>dnorm(z,0,1)</code>
+</td>
 </tr>
-<tr class="even">
-<td align="center"></td>
-<td align="center">Confidence Interval</td>
-<td></td>
+<tr>
+<td class="tg-5fiw">
+Confidence Interval
+</td>
+<td class="tg-0pky">
+<span class="math inline">\(SE_{CI} =
+\sqrt{\frac{\hat{p}_a\left(1-\hat{p}_a\right)}{n_a} +
+\frac{\hat{p}_b\left(1-\hat{p}_b\right)}{n_b}} \longrightarrow\)</span>
+standard error<br><br><span class="math inline">\(ME = z^* SE_{CI}
+\longrightarrow\)</span> margin of error<br><br><span
+class="math inline">\(cl = 1-\alpha \longrightarrow\)</span> confidence
+level<br><br><span class="math inline">\(z^* \longrightarrow\)</span>
+critical value at <span class="math inline">\(cl\)</span> confidence
+level<br><br><span class="math inline">\(\left(\hat{p}_a -
+\hat{p}_b\right) \pm ME \longrightarrow\)</span> lowerbound and
+upperbound of the interval
+</td>
+<td class="tg-btxf">
+<code>alpha</code> = <span
+class="math inline">\(\alpha\)</span><br><br><code>cl</code> = <span
+class="math inline">\(cl = 1-\alpha\)</span><br><br><span
+class="math inline">\(z^* =\)</span>
+<code>qnorm(cl + (alpha/2),0,1)</code><br><br><span
+class="math inline">\(-z^* =\)</span>
+<code>qnorm(cl + (alpha/2),0,1)</code>
+</td>
 </tr>
 </tbody>
 </table>
-</center>
-<p><br></p>
-</div>
-<div
-id="common-mathematical-symbols-and-their-latex-syntax-in-rmarkdown"
-class="section level2">
-<h2><strong>Common Mathematical Symbols and their LaTeX Syntax in
-RMarkdown</strong></h2>
-<p><br></p>
-<ul>
-<li><p>Equal sign: <code>$=$</code> will render as <span
-class="math inline">\(=\)</span>.</p></li>
-<li><p>Not equal sign: <code>$\ne$</code> will render as <span
-class="math inline">\(\ne\)</span>.</p></li>
-<li><p>Lesser than sign: <code>$&lt;$</code> will render as <span
-class="math inline">\(&lt;\)</span>.</p></li>
-<li><p>Greater than sign: <code>$&lt;$</code> will render as <span
-class="math inline">\(&gt;\)</span>.</p></li>
-<li><p>Lesser than or equal to sign: <code>$\le$</code> will render as
-<span class="math inline">\(\le\)</span>.</p></li>
-<li><p>Greater than or equal to sign: <code>$\ge$</code> will render as
-<span class="math inline">\(\ge\)</span>.</p></li>
-<li><p>Using hats: <code>$\hat{p}$</code> will render as <span
-class="math inline">\(\hat{p}\)</span>.</p></li>
-<li><p>Using bars: <code>$\bar{x}$</code> will render as <span
-class="math inline">\(\bar{x}\)</span>.</p></li>
-<li><p>Greek lowercase letter mu: <code>$\mu$</code> will render as
-<span class="math inline">\(\mu\)</span>.</p></li>
-<li><p>Greek lowercase letter beta: <code>$\beta$</code> will render as
-<span class="math inline">\(\beta\)</span>.</p></li>
-<li><p>The letter p: <code>$p$</code> will render as <span
-class="math inline">\(p\)</span>.</p></li>
-<li><p>Subscripting: <code>$p_{A}$</code> will render as <span
-class="math inline">\(p_{A}\)</span>.</p></li>
-<li><p>Set union: <code>$\cup$</code> will render as <span
-class="math inline">\(\cup\)</span>.</p></li>
-<li><p>Set intersection: <code>$\cap$</code> will render as <span
-class="math inline">\(\cap\)</span>.</p></li>
-<li><p>Summation Notation: <code>$\sum_{i=0}^k$</code> will render as
-<span class="math inline">\(\sum_{i=0}^k\)</span>.</p></li>
-<li><p>Infinity: <code>$\infty$</code> will render as <span
-class="math inline">\(\infty\)</span>.</p></li>
-</ul>
 <p><br></p>
 </div>
 

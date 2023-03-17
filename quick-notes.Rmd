@@ -4,65 +4,95 @@ title: "**Quick Notes**"
 
 <br>
 
-## **Basic Statistics Reference Table**
+## **Inference Reference Table**
 
 <br>
 
-<center>
-
-| **Inference for ...** |  | **Mathematical Notations** |
-|:---:|:---:|---|
-| **One Proportion** | Relevant Variables | One two-level categorical |
-|  | Population Parameters | $p \longrightarrow$ population proportion<br><br>$p_0 \longrightarrow$ null value |
-|  | Sample Statistics | $\hat{p} \longrightarrow$ population proportion (point estimate) |
-|  | Theoretical Conditions | - Independent samples<br>- Success-failure: $np \ge 10$ and $n(1-p) \ge 10$ |
-|  | Hypothesis Testing | $H_0: p = p_0 \longrightarrow$ null hypothesis<br><br>$H_A: p > p_0, p < p_0, \text{ or } p \ne p_0 \longrightarrow$ alternative hypothesis<br><br>$\alpha \longrightarrow$ significance level (type I error rate)<br><br>$SE_{p_0} = \sqrt{\frac{p_0(1-p_0)}{n}} \longrightarrow$ standard error<br><br>$z = \frac{\hat{p}-p_0}{SE_{p_0}} \longrightarrow$ test statistic (z-score)<br><br>$\text{p-value} = \begin{cases} P(Z > z) \text{ or } P(Z < z) & \longrightarrow \text{ one-sided test for } > \text{ or } <, \\ 2*P(Z > z) & \longrightarrow \text{ two-sided test for } \ne \end{cases}$ |
-|  | Confidence Interval | $SE_{\hat{p}} = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \longrightarrow$ standard error<br><br>$ME = z^* SE_{\hat{p}} \longrightarrow$ margin of error<br><br>$cl = 1-\alpha \longrightarrow$ confidence level<br><br>$z^* \longrightarrow$ critical value at $cl$ confidence level<br><br>$\hat{p} \pm ME = (\hat{p}-ME,\hat{p}+ME) \longrightarrow$ interval |
-| **Difference of Two Proportions** | Relevant Variables | Two two-level categorical |
-|  | Population Parameters | $p_a \longrightarrow$ population proportion for group a<br><br>$p_b \longrightarrow$ population proportion for group b<br><br>$p_0 = 0 \longrightarrow$ null value |
-|  | Sample Statistics | $\hat{p}_a \longrightarrow$ sample proportion (point estimate) for group a<br><br>$\hat{p}_b \longrightarrow$ sample proportion (point estimate) for group b |
-|  | Theoretical Conditions |  |
-|  | Hypothesis Testing |  |
-|  | Confidence Interval |  |
-
-</center>
-
-<br>
-
-## **Common Mathematical Symbols and their LaTeX Syntax in RMarkdown**
-
-<br>
-
--   Equal sign: `$=$` will render as $=$.
-
--   Not equal sign: `$\ne$` will render as $\ne$.
-
--   Lesser than sign: `$<$` will render as $<$.
-
--   Greater than sign: `$<$` will render as $>$.
-
--   Lesser than or equal to sign: `$\le$` will render as $\le$.
-
--   Greater than or equal to sign: `$\ge$` will render as $\ge$.
-
--   Using hats: `$\hat{p}$` will render as $\hat{p}$.
-
--   Using bars: `$\bar{x}$` will render as $\bar{x}$.
-
--   Greek lowercase letter mu: `$\mu$` will render as $\mu$.
-
--   Greek lowercase letter beta: `$\beta$` will render as $\beta$.
-
--   The letter p: `$p$` will render as $p$.
-
--   Subscripting: `$p_{A}$` will render as $p_{A}$.
-
--   Set union: `$\cup$` will render as $\cup$.
-
--   Set intersection: `$\cap$` will render as $\cap$.
-
--   Summation Notation: `$\sum_{i=0}^k$` will render as $\sum_{i=0}^k$.
-
--   Infinity: `$\infty$` will render as $\infty$.
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-5fiw{background-color:#f9f9f9;border-color:inherit;text-align:right;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-7btt">Inference for ...</th>
+    <th class="tg-c3ow"></th>
+    <th class="tg-c3ow"><span style="font-weight:bold">Mathematical Notations</span></th>
+    <th class="tg-7btt">R Functions</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-7btt" rowspan="6"><span style="font-weight:bold">One Proportion</span></td>
+    <td class="tg-5fiw">Relevant Variables</td>
+    <td class="tg-0pky">Response $\longrightarrow$ One two-level categorical</td>
+    <td class="tg-btxf"></td>
+  </tr>
+  <tr>
+    <td class="tg-5fiw">Population Parameters</td>
+    <td class="tg-0pky">$p \longrightarrow$ population proportion<br><br>$p_0 \longrightarrow$ null value</td>
+    <td class="tg-btxf"></td>
+  </tr>
+  <tr>
+    <td class="tg-5fiw">Sample Statistics</td>
+    <td class="tg-0pky">$\hat{p} \longrightarrow$ population proportion (point estimate)<br><br>$n \longrightarrow$ sample size</td>
+    <td class="tg-btxf"></td>
+  </tr>
+  <tr>
+    <td class="tg-5fiw">Theoretical Conditions</td>
+    <td class="tg-0pky">Independent random samples<br><br>Success-failure: <br>$\hspace{30px} np \ge 10$ and $n(1-p) \ge 10$</td>
+    <td class="tg-btxf"></td>
+  </tr>
+  <tr>
+    <td class="tg-5fiw">Hypothesis Testing</td>
+    <td class="tg-0pky">$H_0: p = p_0 \longrightarrow$ null hypothesis<br><br>$H_A: p > p_0, p < p_0, \text{ or } p \ne p_0 \longrightarrow$ alternative hypothesis<br><br>$\alpha \longrightarrow$ significance level (type I error rate)<br><br>$SE_{H} = \sqrt{\frac{p_0\left(1-p_0\right)}{n}} \longrightarrow$ standard error<br><br>$z = \frac{\hat{p}-p_0}{SE_{H}} \longrightarrow$ test statistic (z-score)<br><br>$\text{p-value} = \begin{cases} P(Z < -z) \text{ or } P(Z > z) & \rightarrow \text{ one-sided} \\ 2P(Z < -z) \text{ or } 2P(Z > z) & \rightarrow \text{ two-sided} \end{cases}$</td>
+    <td class="tg-btxf">$P(Z < -z) =$ `pnorm(-z,0,1)`<br><br>$P(Z > z) =$ `1-pnorm(z,0,1)`<br><br>$P(Z = z) =$ `dnorm(z,0,1)`</td>
+  </tr>
+  <tr>
+    <td class="tg-5fiw">Confidence Interval</td>
+    <td class="tg-0pky">$SE_{CI} = \sqrt{\frac{\hat{p}\left(1-\hat{p}\right)}{n}} \longrightarrow$ standard error<br><br>$ME = z^* SE_{CI} \longrightarrow$ margin of error<br><br>$cl = 1-\alpha \longrightarrow$ confidence level<br><br>$z^* \longrightarrow$ critical value at $cl$ confidence level<br><br>$\hat{p} \pm ME \longrightarrow$ lowerbound and upperbound of the interval</td>
+    <td class="tg-btxf">`alpha` = $\alpha$<br><br>`cl` = $cl = 1-\alpha$<br><br>$z^* =$ `qnorm(cl + (alpha/2),0,1)`<br><br>$-z^* =$ `qnorm(cl + (alpha/2),0,1)`</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" rowspan="6"><span style="font-weight:bold">Difference of Two Proportions</span></td>
+    <td class="tg-5fiw">Relevant Variables</td>
+    <td class="tg-0pky">Two two-level categorical</td>
+    <td class="tg-btxf"></td>
+  </tr>
+  <tr>
+    <td class="tg-5fiw">Population Parameters</td>
+    <td class="tg-0pky">$p_a \longrightarrow$ population proportion for group a<br><br>$p_b \longrightarrow$ population proportion for group b<br><br>$p_0 \longrightarrow$ null value</td>
+    <td class="tg-btxf"></td>
+  </tr>
+  <tr>
+    <td class="tg-5fiw">Sample Statistics</td>
+    <td class="tg-0pky">$\hat{p}_a \longrightarrow$ sample proportion (point estimate) for group a<br><br>$\hat{p}_b \longrightarrow$ sample proportion (point estimate) for group b<br><br>$n_a \longrightarrow$ sample size for group a<br><br>$n_b \longrightarrow$ sample size for group b</td>
+    <td class="tg-btxf"></td>
+  </tr>
+  <tr>
+    <td class="tg-5fiw">Theoretical Conditions</td>
+    <td class="tg-0pky">Independent random samples<br><br>Success-failure: <br>$\hspace{30px} n_a \hat{p}_a \ge 10$ and $n_b\left(1-\hat{p}_b\right) \ge 10$ for group a<br>$\hspace{30px} n_b \hat{p}_b \ge 10$ and $n_b\left(1-\hat{p}_b\right) \ge 10$ for group b</td>
+    <td class="tg-btxf"></td>
+  </tr>
+  <tr>
+    <td class="tg-5fiw">Hypothesis Testing</td>
+    <td class="tg-0pky">$H_0: p_a = p_b \text{ or } p_a - p_b = 0 \longrightarrow$ null hypothesis<br><br>$H_A: \begin{cases} p_a \ne p_b \text{ or } p_a - p_b \ne 0 \\ p_a > p_b \text{ or } p_a - p_b > 0 \\ p_a < p_b \text{ or } p_a - p_b < 0 \end{cases} \longrightarrow$ alternative hypothesis<br><br>$\alpha \longrightarrow$ significance level (type I error rate)<br><br>$\hat{p}_{pool} = \frac{\hat{p}_a n_a + \hat{p}_bn_b}{n_a + n_b} \longrightarrow$ pooled sample proportion<br><br>$SE_{H} = \sqrt{\hat{p}_{pool}\left(1-\hat{p}_{pool}\right) \left( \frac{1}{n_a} + \frac{1}{n_b} \right)} \longrightarrow$ standard error<br><br>$z = \frac{\left(\hat{p}_a - \hat{p}_b \right) - p_0}{SE_{H}} \longrightarrow$ test statistic (z-score)<br><br>$\text{p-value} = \begin{cases} P(Z < -z) \text{ or } P(Z > z) & \rightarrow \text{ one-sided} \\ 2P(Z < -z) \text{ or } 2P(Z > z) & \rightarrow \text{ two-sided} \end{cases}$</td>
+    <td class="tg-btxf">$P(Z < -z) =$ `pnorm(-z,0,1)`<br><br>$P(Z > z) =$ `1-pnorm(z,0,1)`<br><br>$P(Z = z) =$ `dnorm(z,0,1)`</td>
+  </tr>
+  <tr>
+    <td class="tg-5fiw">Confidence Interval</td>
+    <td class="tg-0pky">$SE_{CI} = \sqrt{\frac{\hat{p}_a\left(1-\hat{p}_a\right)}{n_a} + \frac{\hat{p}_b\left(1-\hat{p}_b\right)}{n_b}} \longrightarrow$ standard error<br><br>$ME = z^* SE_{CI} \longrightarrow$ margin of error<br><br>$cl = 1-\alpha \longrightarrow$ confidence level<br><br>$z^* \longrightarrow$ critical value at $cl$ confidence level<br><br>$\left(\hat{p}_a - \hat{p}_b\right) \pm ME \longrightarrow$ lowerbound and upperbound of the interval</td>
+    <td class="tg-btxf">`alpha` = $\alpha$<br><br>`cl` = $cl = 1-\alpha$<br><br>$z^* =$ `qnorm(cl + (alpha/2),0,1)`<br><br>$-z^* =$ `qnorm(cl + (alpha/2),0,1)`</td>
+  </tr>
+</tbody>
+</table>
 
 <br>
