@@ -1,0 +1,75 @@
+---
+title: '**Testing for Independence in Two-Way Tables**'
+subtitle: "Mini-Assignment - MTH 361 A/B - Spring 2023"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 361 A/B}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+  \usepackage{multirow}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+urlcolor: blue
+link-citations: yes
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+
+## I. The Chi-Square Test for Independence
+
+### Materials
+
+The exercises below are derived from the textbook [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
+
+### Exercises
+
+1. **Open source textbook.** A professor using an open source introductory statistics book predicts that 60\% of the students will purchase a hard copy of the book, 25\% will print it out from the web, and 15\% will read it online. At the end of the semester he asks his students to complete a survey where they indicate what format of the book they used. Of the 126 students, 71 said they bought a hard copy of the book, 30 said they printed it out from the web, and 25 said they read it online.
+
+    a. State the hypotheses for testing if the professor's predictions were inaccurate.
+    b. How many students did the professor expect to buy the book, print the book, and read the book exclusively online?
+    c. This is an appropriate setting for a chi-square test. List the conditions required for a test and verify they are satisfied.
+    d. Calculate the chi-squared statistic, the degrees of freedom associated with it, and the p-value.
+    e. Based on the p-value calculated in part (d), what is the conclusion of the hypothesis test? Interpret your conclusion in this context.
+
+2. **True or false.** Determine if the statements below are true or false. For each false statement, suggest an alternative wording to make it a true statement.
+
+    a. The chi-square distribution, just like the normal distribution, has two parameters, mean and standard deviation.
+    b. The chi-square distribution is always right skewed, regardless of the value of the degrees of freedom parameter.
+    c. The chi-square statistic is always positive.
+    d. As the degrees of freedom increases, the shape of the chi-square distribution becomes more skewed.
+    e. As the degrees of freedom increases, the mean of the chi-square distribution increases.
+    f. If you found $\chi^2 = 10$ with $df = 5$ you would fail to reject $H_0$ at the 5\% significance level.
+    g. When finding the p-value of a chi-square test, we always shade the tail areas in both tails.
+    h. As the degrees of freedom increases, the variability of the chi-square distribution decreases.
+
+3. (Outstanding Question) 
+    
+\newpage
+
+## References {#ref}
+
+<div id="refs"></div>
