@@ -66,8 +66,28 @@ The exercises below are derived from the textbook [OpenIntro Statistics (4th edi
     g. When finding the p-value of a chi-square test, we always shade the tail areas in both tails.
     h. As the degrees of freedom increases, the variability of the chi-square distribution decreases.
 
-3. (Outstanding Question) 
-    
+\newpage
+
+3. (Outstanding Question) **Offshore drilling.** A survey asked 827 randomly sampled registered voters in California ``Do you support? Or do you oppose? Drilling for oil and natural gas off the Coast of California? Or do you not know enough to say?'' Below is the distribution of  responses, separated based on whether or not the respondent graduated from  college. [@data:prop19_and_offshoreDrill]
+
+    ```{=latex}
+    \begin{center}
+    \begin{tabular}{l c c}
+    			        & \multicolumn{2}{c}{\textit{College Grad}} \\ \cline{2-3}
+    			        & Yes		& No	\\\cline{1-3}
+    Support		    & 154		& 132	\\
+    Oppose		    & 180		& 126	\\
+    Do not know	  & 104		& 131	\\\cline{1-3}
+    Total		      & 438		& 389		
+    \end{tabular}
+    \end{center}
+    ```
+
+    a. Conduct a hypothesis test to determine if the data provide strong evidence that the proportion of college graduates who do not have an opinion on this issue is different than that of non-college graduates.
+    b. Conduct a hypothesis test to determine if the data provide strong evidence that the proportion of college graduates who support off-shore drilling in California is different than that of non-college graduates.
+    c. Complete a chi-square test for these data to check whether there is a statistically significant difference in responses from college graduates and non-graduates.
+    d. Compare your results from parts (a)-(c). How is the chi-square test different from the other two methods?
+
 \newpage
 
 ## References {#ref}
