@@ -14,6 +14,7 @@ title: "**Quick Notes**"
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
 .tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
 .tg .tg-dvpl{border-color:inherit;text-align:right;vertical-align:top}
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
@@ -22,11 +23,11 @@ title: "**Quick Notes**"
 <thead>
   <tr>
     <th class="tg-7btt">Inference for ...</th>
-    <th class="tg-dvpl"></th>
-    <th class="tg-0pky"><span style="font-weight:bold">Mathematical Notations</span></th>
-    <th class="tg-0pky"><span style="font-weight:bold">R Functions</span></th>
-    <th class="tg-0pky"><span style="font-weight:bold">R Simulation/Bootstrapping</span></th>
-    <th class="tg-0pky"><span style="font-weight:bold">R </span><span style="font-weight:bold;color:#905;background-color:#DDD">`infer`</span><span style="font-weight:bold"> Package</span></th>
+    <th class="tg-7btt"></th>
+    <th class="tg-7btt"><span style="font-weight:bold">Mathematical Notations</span></th>
+    <th class="tg-c3ow"><span style="font-weight:bold">R Functions</span></th>
+    <th class="tg-c3ow"><span style="font-weight:bold">R Simulation/Bootstrapping</span></th>
+    <th class="tg-c3ow"><span style="font-weight:bold">R </span><span style="font-weight:bold;color:#905;background-color:#DDD">`infer`</span><span style="font-weight:bold"> Package</span></th>
   </tr>
 </thead>
 <tbody>
@@ -52,8 +53,8 @@ title: "**Quick Notes**"
   </tr>
   <tr>
     <td class="tg-dvpl">Hypothesis Testing</td>
-    <td class="tg-0pky">$\displaystyle H_0: p = p_0 \longrightarrow$ null hypothesis<br><br>$\displaystyle H_A: p \ge p_0, p \le p_0, \text{ or } p \ne p_0 \longrightarrow$ alternative hypothesis<br><br>$\displaystyle \alpha \longrightarrow$ significance level (type I error rate)<br><br>$\displaystyle SE_{H} = \sqrt{\frac{p_0\left(1-p_0\right)}{n}} \longrightarrow$ standard error<br><br>$\displaystyle z = \frac{\hat{p}-p_0}{SE_{H}} \longrightarrow$ test statistic (z-score)<br><br>$\displaystyle \text{p-value} = \begin{cases} P(Z \le -z) \text{ or } P(Z \ge z) &amp; \rightarrow \text{ one-sided} \\ 2P(Z \le -z) \text{ or } 2P(Z \ge z) &amp; \rightarrow \text{ two-sided} \end{cases}$</td>
-    <td class="tg-0pky">$P(Z \le -z) =$ `pnorm(-z,0,1)`<br><br>$P(Z \ge z) =$ `1-pnorm(z,0,1)`<br><br>$P(Z = z) =$ `dnorm(z,0,1)`</td>
+    <td class="tg-0pky">$\displaystyle H_0: p = p_0 \longrightarrow$ null hypothesis<br><br>$\displaystyle H_A: p > p_0, p < p_0, \text{ or } p \ne p_0 \longrightarrow$ alternative hypothesis<br><br>$\displaystyle \alpha \longrightarrow$ significance level (type I error rate)<br><br>$\displaystyle SE_{H} = \sqrt{\frac{p_0\left(1-p_0\right)}{n}} \longrightarrow$ standard error<br><br>$\displaystyle z = \frac{\hat{p}-p_0}{SE_{H}} \longrightarrow$ test statistic (z-score)<br><br>$\displaystyle \text{p-value} = \begin{cases} P(Z < -z) \text{ or } P(Z > z) &amp; \rightarrow \text{ one-sided} \\ 2P(Z < -z) \text{ or } 2P(Z > z) &amp; \rightarrow \text{ two-sided} \end{cases}$</td>
+    <td class="tg-0pky">$P(Z < -z) =$ `pnorm(-z,0,1)`<br><br>$P(Z > z) =$ `1-pnorm(z,0,1)`<br><br>$P(Z = z) =$ `dnorm(z,0,1)`</td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
   </tr>
@@ -86,8 +87,8 @@ title: "**Quick Notes**"
   </tr>
   <tr>
     <td class="tg-dvpl">Hypothesis Testing</td>
-    <td class="tg-0pky">$\displaystyle H_0: p_a = p_b \text{ or } p_a - p_b = 0 \longrightarrow$ null hypothesis<br><br>$\displaystyle H_A: \begin{cases} p_a \ne p_b \text{ or } p_a - p_b \ne 0 \\ p_a \ge p_b \text{ or } p_a - p_b \ge 0 \\ p_a \le p_b \text{ or } p_a - p_b \le 0 \end{cases} \longrightarrow$ alternative hypothesis<br><br>$\displaystyle \alpha \longrightarrow$ significance level (type I error rate)<br><br>$\displaystyle \hat{p}_{pool} = \frac{\hat{p}_a n_a + \hat{p}_bn_b}{n_a + n_b} \longrightarrow$ pooled sample proportion<br><br>$\displaystyle SE_{H} = \sqrt{\hat{p}_{pool}\left(1-\hat{p}_{pool}\right) \left( \frac{1}{n_a} + \frac{1}{n_b} \right)} \longrightarrow$ standard error<br><br>$\displaystyle z = \frac{\left(\hat{p}_a - \hat{p}_b \right) - p_0}{SE_{H}} \longrightarrow$ test statistic (z-score)<br><br>$\displaystyle \text{p-value} = \begin{cases} P(Z \le -z) \text{ or } P(Z \ge z) &amp; \rightarrow \text{ one-sided} \\ 2P(Z \le -z) \text{ or } 2P(Z \ge z) &amp; \rightarrow \text{ two-sided} \end{cases}$</td>
-    <td class="tg-0pky">$P(Z \le -z) =$ `pnorm(-z,0,1)`<br><br>$P(Z \ge z) =$ `1-pnorm(z,0,1)`<br><br>$P(Z = z) =$ `dnorm(z,0,1)`</td>
+    <td class="tg-0pky">$\displaystyle H_0: p_a = p_b \text{ or } p_a - p_b = 0 \longrightarrow$ null hypothesis<br><br>$\displaystyle H_A: \begin{cases} p_a \ne p_b \text{ or } p_a - p_b \ne 0 \\ p_a > p_b \text{ or } p_a - p_b > 0 \\ p_a < p_b \text{ or } p_a - p_b < 0 \end{cases} \longrightarrow$ alternative hypothesis<br><br>$\displaystyle \alpha \longrightarrow$ significance level (type I error rate)<br><br>$\displaystyle \hat{p}_{pool} = \frac{\hat{p}_a n_a + \hat{p}_bn_b}{n_a + n_b} \longrightarrow$ pooled sample proportion<br><br>$\displaystyle SE_{H} = \sqrt{\hat{p}_{pool}\left(1-\hat{p}_{pool}\right) \left( \frac{1}{n_a} + \frac{1}{n_b} \right)} \longrightarrow$ standard error<br><br>$\displaystyle z = \frac{\left(\hat{p}_a - \hat{p}_b \right) - p_0}{SE_{H}} \longrightarrow$ test statistic (z-score)<br><br>$\displaystyle \text{p-value} = \begin{cases} P(Z < -z) \text{ or } P(Z > z) &amp; \rightarrow \text{ one-sided} \\ 2P(Z < -z) \text{ or } 2P(Z > z) &amp; \rightarrow \text{ two-sided} \end{cases}$</td>
+    <td class="tg-0pky">$P(Z < -z) =$ `pnorm(-z,0,1)`<br><br>$P(Z > z) =$ `1-pnorm(z,0,1)`<br><br>$P(Z = z) =$ `dnorm(z,0,1)`</td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
   </tr>
@@ -147,8 +148,8 @@ title: "**Quick Notes**"
   </tr>
   <tr>
     <td class="tg-dvpl">Hypothesis Testing</td>
-    <td class="tg-0pky">$\displaystyle H_0:$ Variable A is independent with variable B $\longrightarrow$ null hypothesis<br><br>$\displaystyle H_A:$ Variable A is not independent with variable B $\longrightarrow$ alternative hypothesis<br><br>$\displaystyle \alpha \longrightarrow$ significance level (type I error rate)<br><br>$\displaystyle df = (C-1)(R-1) \longrightarrow$ degrees of freedom<br><br>$\displaystyle E_k = E_{(i,j)} = \frac{total(row(i)) \times total(column(j))}{n} \longrightarrow$ expected value of cell $k$ for row $i$ and column $j$<br><br>$\displaystyle O_k \longrightarrow$ number of observation of cell $k$<br><br>$\displaystyle T = C*R \longrightarrow$ number of table cells<br><br>$\displaystyle \chi^2 = \sum_{k=1}^T \frac{(O_k - E_k)^2}{E_k} \longrightarrow$ test statistic (chi-squared)<br><br>$\displaystyle \text{p-value} = P(X \ge \chi^2) =  1 - P(X \le \chi^2) \longrightarrow$ where $X \sim \chi^2$</td>
-    <td class="tg-0pky">`chisq_stat` $= \chi^2$<br><br>`df` $= (C-1)(R-1)$<br><br>$P(X \le \chi^2) =$ `pchisq(chisq_stat,df)`<br><br>$P(X \ge \chi^2) =$ `1 - pchisq(chisq_stat,df)`</td>
+    <td class="tg-0pky">$\displaystyle H_0:$ Variable A is independent with variable B $\longrightarrow$ null hypothesis<br><br>$\displaystyle H_A:$ Variable A is not independent with variable B $\longrightarrow$ alternative hypothesis<br><br>$\displaystyle \alpha \longrightarrow$ significance level (type I error rate)<br><br>$\displaystyle df = (C-1)(R-1) \longrightarrow$ degrees of freedom<br><br>$\displaystyle E_k = E_{(i,j)} = \frac{total(row(i)) \times total(column(j))}{n} \longrightarrow$ expected value of cell $k$ for row $i$ and column $j$<br><br>$\displaystyle O_k \longrightarrow$ number of observation of cell $k$<br><br>$\displaystyle T = (C)(R) \longrightarrow$ number of table cells<br><br>$\displaystyle \chi^2 = \sum_{k=1}^T \frac{(O_k - E_k)^2}{E_k} \longrightarrow$ test statistic (chi-squared)<br><br>$\displaystyle \text{p-value} = P(X > \chi^2) =  1 - P(X \le \chi^2) \longrightarrow$ where $X \sim \chi^2(df)$</td>
+    <td class="tg-0pky">`chisq_stat` $= \chi^2$<br><br>`df` $= (C-1)(R-1)$<br><br>$P(X \le \chi^2) =$ `pchisq(chisq_stat,df)`<br><br>$P(X > \chi^2) =$ `1 - pchisq(chisq_stat,df)`</td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
   </tr>

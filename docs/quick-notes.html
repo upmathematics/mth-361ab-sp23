@@ -359,6 +359,7 @@ div.tocify {
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
 .tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
 .tg .tg-dvpl{border-color:inherit;text-align:right;vertical-align:top}
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
@@ -369,18 +370,18 @@ div.tocify {
 <th class="tg-7btt">
 Inference for …
 </th>
-<th class="tg-dvpl">
+<th class="tg-7btt">
 </th>
-<th class="tg-0pky">
+<th class="tg-7btt">
 <span style="font-weight:bold">Mathematical Notations</span>
 </th>
-<th class="tg-0pky">
+<th class="tg-c3ow">
 <span style="font-weight:bold">R Functions</span>
 </th>
-<th class="tg-0pky">
+<th class="tg-c3ow">
 <span style="font-weight:bold">R Simulation/Bootstrapping</span>
 </th>
-<th class="tg-0pky">
+<th class="tg-c3ow">
 <span style="font-weight:bold">R </span><span
 style="font-weight:bold;color:#905;background-color:#DDD"><code>infer</code></span><span
 style="font-weight:bold"> Package</span>
@@ -444,23 +445,24 @@ Hypothesis Testing
 <td class="tg-0pky">
 <span class="math inline">\(\displaystyle H_0: p = p_0
 \longrightarrow\)</span> null hypothesis<br><br><span
-class="math inline">\(\displaystyle H_A: p \ge p_0, p \le p_0, \text{ or
-} p \ne p_0 \longrightarrow\)</span> alternative hypothesis<br><br><span
-class="math inline">\(\displaystyle \alpha \longrightarrow\)</span>
-significance level (type I error rate)<br><br><span
-class="math inline">\(\displaystyle SE_{H} =
+class="math inline">\(\displaystyle H_A: p &gt; p_0, p &lt; p_0, \text{
+or } p \ne p_0 \longrightarrow\)</span> alternative
+hypothesis<br><br><span class="math inline">\(\displaystyle \alpha
+\longrightarrow\)</span> significance level (type I error
+rate)<br><br><span class="math inline">\(\displaystyle SE_{H} =
 \sqrt{\frac{p_0\left(1-p_0\right)}{n}} \longrightarrow\)</span> standard
 error<br><br><span class="math inline">\(\displaystyle z =
 \frac{\hat{p}-p_0}{SE_{H}} \longrightarrow\)</span> test statistic
 (z-score)<br><br><span class="math inline">\(\displaystyle
-\text{p-value} = \begin{cases} P(Z \le -z) \text{ or } P(Z \ge z)
-&amp;amp; \rightarrow \text{ one-sided} \\ 2P(Z \le -z) \text{ or } 2P(Z
-\ge z) &amp;amp; \rightarrow \text{ two-sided} \end{cases}\)</span>
+\text{p-value} = \begin{cases} P(Z &lt; -z) \text{ or } P(Z &gt; z)
+&amp;amp; \rightarrow \text{ one-sided} \\ 2P(Z &lt; -z) \text{ or }
+2P(Z &gt; z) &amp;amp; \rightarrow \text{ two-sided}
+\end{cases}\)</span>
 </td>
 <td class="tg-0pky">
-<span class="math inline">\(P(Z \le -z) =\)</span>
-<code>pnorm(-z,0,1)</code><br><br><span class="math inline">\(P(Z \ge z)
-=\)</span> <code>1-pnorm(z,0,1)</code><br><br><span
+<span class="math inline">\(P(Z &lt; -z) =\)</span>
+<code>pnorm(-z,0,1)</code><br><br><span class="math inline">\(P(Z &gt;
+z) =\)</span> <code>1-pnorm(z,0,1)</code><br><br><span
 class="math inline">\(P(Z = z) =\)</span> <code>dnorm(z,0,1)</code>
 </td>
 <td class="tg-0pky">
@@ -565,8 +567,8 @@ Hypothesis Testing
 <span class="math inline">\(\displaystyle H_0: p_a = p_b \text{ or } p_a
 - p_b = 0 \longrightarrow\)</span> null hypothesis<br><br><span
 class="math inline">\(\displaystyle H_A: \begin{cases} p_a \ne p_b
-\text{ or } p_a - p_b \ne 0 \\ p_a \ge p_b \text{ or } p_a - p_b \ge 0
-\\ p_a \le p_b \text{ or } p_a - p_b \le 0 \end{cases}
+\text{ or } p_a - p_b \ne 0 \\ p_a &gt; p_b \text{ or } p_a - p_b &gt; 0
+\\ p_a &lt; p_b \text{ or } p_a - p_b &lt; 0 \end{cases}
 \longrightarrow\)</span> alternative hypothesis<br><br><span
 class="math inline">\(\displaystyle \alpha \longrightarrow\)</span>
 significance level (type I error rate)<br><br><span
@@ -579,14 +581,14 @@ error<br><br><span class="math inline">\(\displaystyle z =
 \frac{\left(\hat{p}_a - \hat{p}_b \right) - p_0}{SE_{H}}
 \longrightarrow\)</span> test statistic (z-score)<br><br><span
 class="math inline">\(\displaystyle \text{p-value} = \begin{cases} P(Z
-\le -z) \text{ or } P(Z \ge z) &amp;amp; \rightarrow \text{ one-sided}
-\\ 2P(Z \le -z) \text{ or } 2P(Z \ge z) &amp;amp; \rightarrow \text{
+&lt; -z) \text{ or } P(Z &gt; z) &amp;amp; \rightarrow \text{ one-sided}
+\\ 2P(Z &lt; -z) \text{ or } 2P(Z &gt; z) &amp;amp; \rightarrow \text{
 two-sided} \end{cases}\)</span>
 </td>
 <td class="tg-0pky">
-<span class="math inline">\(P(Z \le -z) =\)</span>
-<code>pnorm(-z,0,1)</code><br><br><span class="math inline">\(P(Z \ge z)
-=\)</span> <code>1-pnorm(z,0,1)</code><br><br><span
+<span class="math inline">\(P(Z &lt; -z) =\)</span>
+<code>pnorm(-z,0,1)</code><br><br><span class="math inline">\(P(Z &gt;
+z) =\)</span> <code>1-pnorm(z,0,1)</code><br><br><span
 class="math inline">\(P(Z = z) =\)</span> <code>dnorm(z,0,1)</code>
 </td>
 <td class="tg-0pky">
@@ -753,20 +755,20 @@ class="math inline">\(j\)</span><br><br><span
 class="math inline">\(\displaystyle O_k \longrightarrow\)</span> number
 of observation of cell <span
 class="math inline">\(k\)</span><br><br><span
-class="math inline">\(\displaystyle T = C*R \longrightarrow\)</span>
+class="math inline">\(\displaystyle T = (C)(R) \longrightarrow\)</span>
 number of table cells<br><br><span class="math inline">\(\displaystyle
 \chi^2 = \sum_{k=1}^T \frac{(O_k - E_k)^2}{E_k} \longrightarrow\)</span>
 test statistic (chi-squared)<br><br><span
-class="math inline">\(\displaystyle \text{p-value} = P(X \ge \chi^2) = 1
-- P(X \le \chi^2) \longrightarrow\)</span> where <span
-class="math inline">\(X \sim \chi^2\)</span>
+class="math inline">\(\displaystyle \text{p-value} = P(X &gt; \chi^2) =
+1 - P(X \le \chi^2) \longrightarrow\)</span> where <span
+class="math inline">\(X \sim \chi^2(df)\)</span>
 </td>
 <td class="tg-0pky">
 <code>chisq_stat</code> <span class="math inline">\(=
 \chi^2\)</span><br><br><code>df</code> <span class="math inline">\(=
 (C-1)(R-1)\)</span><br><br><span class="math inline">\(P(X \le \chi^2)
 =\)</span> <code>pchisq(chisq_stat,df)</code><br><br><span
-class="math inline">\(P(X \ge \chi^2) =\)</span>
+class="math inline">\(P(X &gt; \chi^2) =\)</span>
 <code>1 - pchisq(chisq_stat,df)</code>
 </td>
 <td class="tg-0pky">
