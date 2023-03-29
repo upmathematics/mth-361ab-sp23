@@ -359,7 +359,6 @@ div.tocify {
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
 .tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
 .tg .tg-dvpl{border-color:inherit;text-align:right;vertical-align:top}
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
@@ -370,26 +369,28 @@ div.tocify {
 <th class="tg-7btt">
 Inference for …
 </th>
-<th class="tg-c3ow">
+<th class="tg-dvpl">
 </th>
-<th class="tg-c3ow">
+<th class="tg-0pky">
 <span style="font-weight:bold">Mathematical Notations</span>
 </th>
-<th class="tg-7btt">
-R Functions
+<th class="tg-0pky">
+<span style="font-weight:bold">R Functions</span>
 </th>
-<th class="tg-7btt">
-R Simulation/Bootstrapping
+<th class="tg-0pky">
+<span style="font-weight:bold">R Simulation/Bootstrapping</span>
 </th>
-<th class="tg-7btt">
-R <code>infer</code> Package
+<th class="tg-0pky">
+<span style="font-weight:bold">R </span><span
+style="font-weight:bold;color:#905;background-color:#DDD"><code>infer</code></span><span
+style="font-weight:bold"> Package</span>
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tg-7btt" rowspan="6">
-<span style="font-weight:bold">One Proportion</span>
+One Proportion
 </td>
 <td class="tg-dvpl">
 Relevant Variables
@@ -410,9 +411,9 @@ two-level categorical
 Population Parameters
 </td>
 <td class="tg-0pky">
-<span class="math inline">\(p \longrightarrow\)</span> population
-proportion<br><br><span class="math inline">\(p_0
-\longrightarrow\)</span> null value
+<span class="math inline">\(\displaystyle p \longrightarrow\)</span>
+population proportion<br><br><span class="math inline">\(\displaystyle
+p_0 \longrightarrow\)</span> null value
 </td>
 </tr>
 <tr>
@@ -420,8 +421,9 @@ proportion<br><br><span class="math inline">\(p_0
 Sample Statistics
 </td>
 <td class="tg-0pky">
-<span class="math inline">\(\hat{p} \longrightarrow\)</span> population
-proportion (point estimate)<br><br><span class="math inline">\(n
+<span class="math inline">\(\displaystyle \hat{p}
+\longrightarrow\)</span> population proportion (point
+estimate)<br><br><span class="math inline">\(\displaystyle n
 \longrightarrow\)</span> sample size
 </td>
 </tr>
@@ -440,24 +442,25 @@ class="math inline">\(n(1-p) \ge 10\)</span>
 Hypothesis Testing
 </td>
 <td class="tg-0pky">
-<span class="math inline">\(H_0: p = p_0 \longrightarrow\)</span> null
-hypothesis<br><br><span class="math inline">\(H_A: p &gt; p_0, p &lt;
-p_0, \text{ or } p \ne p_0 \longrightarrow\)</span> alternative
-hypothesis<br><br><span class="math inline">\(\alpha
-\longrightarrow\)</span> significance level (type I error
-rate)<br><br><span class="math inline">\(SE_{H} =
+<span class="math inline">\(\displaystyle H_0: p = p_0
+\longrightarrow\)</span> null hypothesis<br><br><span
+class="math inline">\(\displaystyle H_A: p \ge p_0, p \le p_0, \text{ or
+} p \ne p_0 \longrightarrow\)</span> alternative hypothesis<br><br><span
+class="math inline">\(\displaystyle \alpha \longrightarrow\)</span>
+significance level (type I error rate)<br><br><span
+class="math inline">\(\displaystyle SE_{H} =
 \sqrt{\frac{p_0\left(1-p_0\right)}{n}} \longrightarrow\)</span> standard
-error<br><br><span class="math inline">\(z = \frac{\hat{p}-p_0}{SE_{H}}
-\longrightarrow\)</span> test statistic (z-score)<br><br><span
-class="math inline">\(\text{p-value} = \begin{cases} P(Z &lt; -z) \text{
-or } P(Z &gt; z) &gt; \rightarrow \text{ one-sided} \\ 2P(Z &lt; -z)
-\text{ or } 2P(Z &gt; z) &gt; \rightarrow \text{ two-sided}
-\end{cases}\)</span>
+error<br><br><span class="math inline">\(\displaystyle z =
+\frac{\hat{p}-p_0}{SE_{H}} \longrightarrow\)</span> test statistic
+(z-score)<br><br><span class="math inline">\(\displaystyle
+\text{p-value} = \begin{cases} P(Z \le -z) \text{ or } P(Z \ge z)
+&amp;amp; \rightarrow \text{ one-sided} \\ 2P(Z \le -z) \text{ or } 2P(Z
+\ge z) &amp;amp; \rightarrow \text{ two-sided} \end{cases}\)</span>
 </td>
 <td class="tg-0pky">
-<span class="math inline">\(P(Z &lt; -z) =\)</span>
-<code>pnorm(-z,0,1)</code><br><br><span class="math inline">\(P(Z &gt;
-z) =\)</span> <code>1-pnorm(z,0,1)</code><br><br><span
+<span class="math inline">\(P(Z \le -z) =\)</span>
+<code>pnorm(-z,0,1)</code><br><br><span class="math inline">\(P(Z \ge z)
+=\)</span> <code>1-pnorm(z,0,1)</code><br><br><span
 class="math inline">\(P(Z = z) =\)</span> <code>dnorm(z,0,1)</code>
 </td>
 <td class="tg-0pky">
@@ -470,21 +473,21 @@ class="math inline">\(P(Z = z) =\)</span> <code>dnorm(z,0,1)</code>
 Confidence Interval
 </td>
 <td class="tg-0pky">
-<span class="math inline">\(SE_{CI} =
+<span class="math inline">\(\displaystyle SE_{CI} =
 \sqrt{\frac{\hat{p}\left(1-\hat{p}\right)}{n}} \longrightarrow\)</span>
-standard error<br><br><span class="math inline">\(ME = z^* SE_{CI}
-\longrightarrow\)</span> margin of error<br><br><span
-class="math inline">\(cl = 1-\alpha \longrightarrow\)</span> confidence
-level<br><br><span class="math inline">\(z^* \longrightarrow\)</span>
+standard error<br><br><span class="math inline">\(\displaystyle ME = z^*
+SE_{CI} \longrightarrow\)</span> margin of error<br><br><span
+class="math inline">\(\displaystyle cl = 1-\alpha
+\longrightarrow\)</span> confidence level<br><br><span
+class="math inline">\(\displaystyle z^* \longrightarrow\)</span>
 critical value at <span class="math inline">\(cl\)</span> confidence
-level<br><br><span class="math inline">\(\hat{p} \pm ME
+level<br><br><span class="math inline">\(\displaystyle \hat{p} \pm ME
 \longrightarrow\)</span> lowerbound and upperbound of the interval
 </td>
 <td class="tg-0pky">
-<code>alpha</code> = <span
-class="math inline">\(\alpha\)</span><br><br><code>cl</code> = <span
-class="math inline">\(cl = 1-\alpha\)</span><br><br><span
-class="math inline">\(z^* =\)</span>
+<code>alpha</code> <span class="math inline">\(=
+\alpha\)</span><br><br><code>cl</code> <span class="math inline">\(=
+1-\alpha\)</span><br><br><span class="math inline">\(z^* =\)</span>
 <code>qnorm(cl + (alpha/2),0,1)</code><br><br><span
 class="math inline">\(-z^* =\)</span>
 <code>qnorm(cl - (alpha/2),0,1)</code>
@@ -495,14 +498,15 @@ class="math inline">\(-z^* =\)</span>
 </td>
 </tr>
 <tr>
-<td class="tg-c3ow" rowspan="6">
-<span style="font-weight:bold">Difference of Two Proportions</span>
+<td class="tg-7btt" rowspan="6">
+Difference of Two Proportions
 </td>
 <td class="tg-dvpl">
 Relevant Variables
 </td>
 <td class="tg-0pky">
-Two two-level categorical
+Response <span class="math inline">\(\longrightarrow\)</span> Two
+two-level categorical
 </td>
 <td class="tg-0pky" rowspan="4">
 </td>
@@ -516,10 +520,12 @@ Two two-level categorical
 Population Parameters
 </td>
 <td class="tg-0pky">
-<span class="math inline">\(p_a \longrightarrow\)</span> population
-proportion for group a<br><br><span class="math inline">\(p_b
-\longrightarrow\)</span> population proportion for group b<br><br><span
-class="math inline">\(p_0 \longrightarrow\)</span> null value
+<span class="math inline">\(\displaystyle p_a \longrightarrow\)</span>
+population proportion for group a<br><br><span
+class="math inline">\(\displaystyle p_b \longrightarrow\)</span>
+population proportion for group b<br><br><span
+class="math inline">\(\displaystyle p_0 \longrightarrow\)</span> null
+value
 </td>
 </tr>
 <tr>
@@ -527,12 +533,13 @@ class="math inline">\(p_0 \longrightarrow\)</span> null value
 Sample Statistics
 </td>
 <td class="tg-0pky">
-<span class="math inline">\(\hat{p}_a \longrightarrow\)</span> sample
-proportion (point estimate) for group a<br><br><span
-class="math inline">\(\hat{p}_b \longrightarrow\)</span> sample
-proportion (point estimate) for group b<br><br><span
-class="math inline">\(n_a \longrightarrow\)</span> sample size for group
-a<br><br><span class="math inline">\(n_b \longrightarrow\)</span> sample
+<span class="math inline">\(\displaystyle \hat{p}_a
+\longrightarrow\)</span> sample proportion (point estimate) for group
+a<br><br><span class="math inline">\(\displaystyle \hat{p}_b
+\longrightarrow\)</span> sample proportion (point estimate) for group
+b<br><br><span class="math inline">\(\displaystyle n_a
+\longrightarrow\)</span> sample size for group a<br><br><span
+class="math inline">\(\displaystyle n_b \longrightarrow\)</span> sample
 size for group b
 </td>
 </tr>
@@ -555,29 +562,31 @@ group b
 Hypothesis Testing
 </td>
 <td class="tg-0pky">
-<span class="math inline">\(H_0: p_a = p_b \text{ or } p_a - p_b = 0
-\longrightarrow\)</span> null hypothesis<br><br><span
-class="math inline">\(H_A: \begin{cases} p_a \ne p_b \text{ or } p_a -
-p_b \ne 0 \\ p_a &gt; p_b \text{ or } p_a - p_b &gt; 0 \\ p_a &lt; p_b
-\text{ or } p_a - p_b &lt; 0 \end{cases} \longrightarrow\)</span>
-alternative hypothesis<br><br><span class="math inline">\(\alpha
-\longrightarrow\)</span> significance level (type I error
-rate)<br><br><span class="math inline">\(\hat{p}_{pool} =
-\frac{\hat{p}_a n_a + \hat{p}_bn_b}{n_a + n_b} \longrightarrow\)</span>
-pooled sample proportion<br><br><span class="math inline">\(SE_{H} =
+<span class="math inline">\(\displaystyle H_0: p_a = p_b \text{ or } p_a
+- p_b = 0 \longrightarrow\)</span> null hypothesis<br><br><span
+class="math inline">\(\displaystyle H_A: \begin{cases} p_a \ne p_b
+\text{ or } p_a - p_b \ne 0 \\ p_a \ge p_b \text{ or } p_a - p_b \ge 0
+\\ p_a \le p_b \text{ or } p_a - p_b \le 0 \end{cases}
+\longrightarrow\)</span> alternative hypothesis<br><br><span
+class="math inline">\(\displaystyle \alpha \longrightarrow\)</span>
+significance level (type I error rate)<br><br><span
+class="math inline">\(\displaystyle \hat{p}_{pool} = \frac{\hat{p}_a n_a
++ \hat{p}_bn_b}{n_a + n_b} \longrightarrow\)</span> pooled sample
+proportion<br><br><span class="math inline">\(\displaystyle SE_{H} =
 \sqrt{\hat{p}_{pool}\left(1-\hat{p}_{pool}\right) \left( \frac{1}{n_a} +
 \frac{1}{n_b} \right)} \longrightarrow\)</span> standard
-error<br><br><span class="math inline">\(z = \frac{\left(\hat{p}_a -
-\hat{p}_b \right) - p_0}{SE_{H}} \longrightarrow\)</span> test statistic
-(z-score)<br><br><span class="math inline">\(\text{p-value} =
-\begin{cases} P(Z &lt; -z) \text{ or } P(Z &gt; z) &gt; \rightarrow
-\text{ one-sided} \\ 2P(Z &lt; -z) \text{ or } 2P(Z &gt; z) &gt;
-\rightarrow \text{ two-sided} \end{cases}\)</span>
+error<br><br><span class="math inline">\(\displaystyle z =
+\frac{\left(\hat{p}_a - \hat{p}_b \right) - p_0}{SE_{H}}
+\longrightarrow\)</span> test statistic (z-score)<br><br><span
+class="math inline">\(\displaystyle \text{p-value} = \begin{cases} P(Z
+\le -z) \text{ or } P(Z \ge z) &amp;amp; \rightarrow \text{ one-sided}
+\\ 2P(Z \le -z) \text{ or } 2P(Z \ge z) &amp;amp; \rightarrow \text{
+two-sided} \end{cases}\)</span>
 </td>
 <td class="tg-0pky">
-<span class="math inline">\(P(Z &lt; -z) =\)</span>
-<code>pnorm(-z,0,1)</code><br><br><span class="math inline">\(P(Z &gt;
-z) =\)</span> <code>1-pnorm(z,0,1)</code><br><br><span
+<span class="math inline">\(P(Z \le -z) =\)</span>
+<code>pnorm(-z,0,1)</code><br><br><span class="math inline">\(P(Z \ge z)
+=\)</span> <code>1-pnorm(z,0,1)</code><br><br><span
 class="math inline">\(P(Z = z) =\)</span> <code>dnorm(z,0,1)</code>
 </td>
 <td class="tg-0pky">
@@ -590,26 +599,240 @@ class="math inline">\(P(Z = z) =\)</span> <code>dnorm(z,0,1)</code>
 Confidence Interval
 </td>
 <td class="tg-0pky">
-<span class="math inline">\(SE_{CI} =
+<span class="math inline">\(\displaystyle SE_{CI} =
 \sqrt{\frac{\hat{p}_a\left(1-\hat{p}_a\right)}{n_a} +
 \frac{\hat{p}_b\left(1-\hat{p}_b\right)}{n_b}} \longrightarrow\)</span>
-standard error<br><br><span class="math inline">\(ME = z^* SE_{CI}
-\longrightarrow\)</span> margin of error<br><br><span
-class="math inline">\(cl = 1-\alpha \longrightarrow\)</span> confidence
-level<br><br><span class="math inline">\(z^* \longrightarrow\)</span>
+standard error<br><br><span class="math inline">\(\displaystyle ME = z^*
+SE_{CI} \longrightarrow\)</span> margin of error<br><br><span
+class="math inline">\(\displaystyle cl = 1-\alpha
+\longrightarrow\)</span> confidence level<br><br><span
+class="math inline">\(\displaystyle z^* \longrightarrow\)</span>
 critical value at <span class="math inline">\(cl\)</span> confidence
-level<br><br><span class="math inline">\(\left(\hat{p}_a -
+level<br><br><span class="math inline">\(\displaystyle \left(\hat{p}_a -
 \hat{p}_b\right) \pm ME \longrightarrow\)</span> lowerbound and
 upperbound of the interval
 </td>
 <td class="tg-0pky">
-<code>alpha</code> = <span
-class="math inline">\(\alpha\)</span><br><br><code>cl</code> = <span
-class="math inline">\(cl = 1-\alpha\)</span><br><br><span
-class="math inline">\(z^* =\)</span>
+<code>alpha</code> <span class="math inline">\(=
+\alpha\)</span><br><br><code>cl</code> <span class="math inline">\(=
+1-\alpha\)</span><br><br><span class="math inline">\(z^* =\)</span>
 <code>qnorm(cl + (alpha/2),0,1)</code><br><br><span
 class="math inline">\(-z^* =\)</span>
 <code>qnorm(cl - (alpha/2),0,1)</code>
+</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-7btt" rowspan="5">
+One-Way Tables
+</td>
+<td class="tg-dvpl">
+Relevant Variables
+</td>
+<td class="tg-0pky">
+Response <span class="math inline">\(\longrightarrow\)</span> One
+categorical with two or more levels
+</td>
+<td class="tg-0pky" rowspan="4">
+</td>
+<td class="tg-0pky" rowspan="4">
+</td>
+<td class="tg-0pky" rowspan="4">
+</td>
+</tr>
+<tr>
+<td class="tg-dvpl">
+Population Parameters
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-dvpl">
+Sample Statistics
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-dvpl">
+Theoretical Conditions
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-dvpl">
+Hypothesis Testing
+</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-7btt" rowspan="5">
+Two-Way Tables
+</td>
+<td class="tg-dvpl">
+Relevant Variables
+</td>
+<td class="tg-0pky">
+Explanatory <span class="math inline">\(\longrightarrow\)</span> One
+categorical with two or more levels<br>Response <span
+class="math inline">\(\longrightarrow\)</span> One categorical with two
+or more levels
+</td>
+<td class="tg-0pky" rowspan="4">
+</td>
+<td class="tg-0pky" rowspan="4">
+</td>
+<td class="tg-0pky" rowspan="4">
+</td>
+</tr>
+<tr>
+<td class="tg-dvpl">
+Population Parameters
+</td>
+<td class="tg-0pky">
+<span class="math inline">\(\displaystyle df \longrightarrow\)</span>
+degrees of freedom (expected value of the chi-square distribution)
+</td>
+</tr>
+<tr>
+<td class="tg-dvpl">
+Sample Statistics
+</td>
+<td class="tg-0pky">
+<span class="math inline">\(\displaystyle \chi^2
+\longrightarrow\)</span> chi-squared statistic (point
+estimate)<br><br><span class="math inline">\(\displaystyle C
+\longrightarrow\)</span> number of levels in variable A (number of table
+columns)<br><br><span class="math inline">\(\displaystyle R
+\longrightarrow\)</span> number of levels in variable B (number of table
+rows)<br><br><span class="math inline">\(\displaystyle n
+\longrightarrow\)</span> sample size
+</td>
+</tr>
+<tr>
+<td class="tg-dvpl">
+Theoretical Conditions
+</td>
+<td class="tg-0pky">
+Independent random samples<br><br>Sample size for each cell in the
+two-way table must have at least 5 expected cases
+</td>
+</tr>
+<tr>
+<td class="tg-dvpl">
+Hypothesis Testing
+</td>
+<td class="tg-0pky">
+<span class="math inline">\(\displaystyle H_0:\)</span> Variable A is
+independent with variable B <span
+class="math inline">\(\longrightarrow\)</span> null
+hypothesis<br><br><span class="math inline">\(\displaystyle
+H_A:\)</span> Variable A is not independent with variable B <span
+class="math inline">\(\longrightarrow\)</span> alternative
+hypothesis<br><br><span class="math inline">\(\displaystyle \alpha
+\longrightarrow\)</span> significance level (type I error
+rate)<br><br><span class="math inline">\(\displaystyle df = (C-1)(R-1)
+\longrightarrow\)</span> degrees of freedom<br><br><span
+class="math inline">\(\displaystyle E_k = E_{(i,j)} =
+\frac{total(row(i)) \times total(column(j))}{n} \longrightarrow\)</span>
+expected value of cell <span class="math inline">\(k\)</span> for row
+<span class="math inline">\(i\)</span> and column <span
+class="math inline">\(j\)</span><br><br><span
+class="math inline">\(\displaystyle O_k \longrightarrow\)</span> number
+of observation of cell <span
+class="math inline">\(k\)</span><br><br><span
+class="math inline">\(\displaystyle T = C*R \longrightarrow\)</span>
+number of table cells<br><br><span class="math inline">\(\displaystyle
+\chi^2 = \sum_{k=1}^T \frac{(O_k - E_k)^2}{E_k} \longrightarrow\)</span>
+test statistic (chi-squared)<br><br><span
+class="math inline">\(\displaystyle \text{p-value} = P(X \ge \chi^2) = 1
+- P(X \le \chi^2) \longrightarrow\)</span> where <span
+class="math inline">\(X \sim \chi^2\)</span>
+</td>
+<td class="tg-0pky">
+<code>chisq_stat</code> <span class="math inline">\(=
+\chi^2\)</span><br><br><code>df</code> <span class="math inline">\(=
+(C-1)(R-1)\)</span><br><br><span class="math inline">\(P(X \le \chi^2)
+=\)</span> <code>pchisq(chisq_stat,df)</code><br><br><span
+class="math inline">\(P(X \ge \chi^2) =\)</span>
+<code>1 - pchisq(chisq_stat,df)</code>
+</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-7btt" rowspan="6">
+One Mean
+</td>
+<td class="tg-dvpl">
+Relevant Variables
+</td>
+<td class="tg-0pky">
+Response <span class="math inline">\(\longrightarrow\)</span> One
+numerical
+</td>
+<td class="tg-0pky" rowspan="4">
+</td>
+<td class="tg-0pky" rowspan="4">
+</td>
+<td class="tg-0pky" rowspan="4">
+</td>
+</tr>
+<tr>
+<td class="tg-dvpl">
+Population Parameters
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-dvpl">
+Sample Statistics
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-dvpl">
+Theoretical Conditions
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-dvpl">
+Hypothesis Testing
+</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+</td>
+</tr>
+<tr>
+<td class="tg-dvpl">
+Confidence Interval
+</td>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
 </td>
 <td class="tg-0pky">
 </td>
