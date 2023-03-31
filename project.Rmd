@@ -30,7 +30,7 @@ Each group are assigned with a name. ^[Group names are inspired by Star Wars X-w
 |:-----:|:---------------------------------------------------------------------------------------------------------------------------------------------------:|:-----:|
 |   1   |                                                                   Group Formation                                                                   |  2/3 |
 |   2   |                                    Data selection, study design, data exploration, and framing research questions                                   |  3/3 |
-|   3   |                                Hypothesis formulation, more data exploration, and testing out methods as appropriate                                | 3/31 |
+|   3   |                                Hypothesis formulation, more data exploration, and testing out methods as appropriate                                | 4/5 |
 |   4   |           Testing out the methods, methods fine-tuning, and writing the interpretation and discussion of the results in the context of the data.      | 4/21 |
 |   5   |        Generate conclusions while putting the entire report together as one scientific narrative and creating a 10-minute presentation.         |  4/28 |
 
