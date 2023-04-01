@@ -1,0 +1,309 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[RO,R]{MTH 361 A/B}
+\fancyfoot[CO,C]{}
+\fancyfoot[R]{\thepage}
+\usepackage{float}
+\usepackage{multirow}
+
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Inference using Randomization and Bootstrapping},
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{\textbf{Inference using Randomization and Bootstrapping}}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Mini-Assignment - MTH 361 A/B - Spring 2023}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+\hfill\break
+
+\textbf{Instructions:}
+
+\begin{itemize}
+\item
+  Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+\item
+  Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+\item
+  Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+\item
+  \textbf{Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.}
+\item
+  If you have questions or concerns, please feel free to ask the instructor.
+\end{itemize}
+
+\textbf{R Packages:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\FunctionTok{library}\NormalTok{(openintro)}
+\FunctionTok{library}\NormalTok{(infer)}
+\end{Highlighting}
+\end{Shaded}
+
+\newpage
+
+\hypertarget{i.-randomization-and-simulations-for-inference}{%
+\subsection{I. Randomization and Simulations for Inference}\label{i.-randomization-and-simulations-for-inference}}
+
+\hypertarget{materials}{%
+\subsubsection{Materials}\label{materials}}
+
+\begin{itemize}
+\item
+  Randomization for Inference for One Proportion
+
+  Given \(p_0\) (proportion null value), \(\hat{p}\) (sample proportion), \(N\) (trials). You can simulate the null and sampling distributions using the \(rbinom\) function and compute the p-value and confidence interval. Below is an example code for bootstrapping for one proportion.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# variables}
+\NormalTok{p\_0 }\OtherTok{\textless{}{-}} \FloatTok{0.50}
+\NormalTok{p\_hat }\OtherTok{\textless{}{-}} \FloatTok{0.60}
+\NormalTok{N }\OtherTok{\textless{}{-}} \DecValTok{100}
+\NormalTok{samples }\OtherTok{\textless{}{-}} \DecValTok{1000}
+
+\CommentTok{\# the null and sampling distributions}
+\NormalTok{oneprop\_null\_distribution }\OtherTok{\textless{}{-}} \FunctionTok{rbinom}\NormalTok{(samples,N,p\_0)}
+\NormalTok{oneprop\_sampling\_distribution }\OtherTok{\textless{}{-}} \FunctionTok{rbinom}\NormalTok{(samples,N,p\_hat)}
+\NormalTok{oneprop\_df }\OtherTok{\textless{}{-}} \FunctionTok{tibble}\NormalTok{(}\AttributeTok{counts =} \FunctionTok{c}\NormalTok{(oneprop\_null\_distribution,}
+\NormalTok{                                oneprop\_sampling\_distribution),}
+                     \AttributeTok{proportions =}\NormalTok{ counts}\SpecialCharTok{/}\NormalTok{N,}
+                     \AttributeTok{label =} \FunctionTok{rep}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\StringTok{"null"}\NormalTok{,}\StringTok{"sampling"}\NormalTok{),}\AttributeTok{each=}\NormalTok{samples))}
+
+\CommentTok{\# computing the p{-}value}
+\NormalTok{oneprop\_p\_value }\OtherTok{\textless{}{-}}\NormalTok{ oneprop\_df }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(label }\SpecialCharTok{==} \StringTok{"null"}\NormalTok{,}
+\NormalTok{         proportions }\SpecialCharTok{\textgreater{}}\NormalTok{ p\_hat) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{p\_value =} \FunctionTok{n}\NormalTok{()}\SpecialCharTok{/}\NormalTok{samples)}
+\NormalTok{oneprop\_p\_value}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1 x 1
+##   p_value
+##     <dbl>
+## 1   0.027
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# computing the confidence interval}
+\NormalTok{alpha }\OtherTok{\textless{}{-}} \FloatTok{0.05}
+\NormalTok{cl }\OtherTok{\textless{}{-}} \DecValTok{1}\SpecialCharTok{{-}}\NormalTok{alpha}
+\NormalTok{z\_star }\OtherTok{\textless{}{-}} \FunctionTok{qnorm}\NormalTok{(cl }\SpecialCharTok{+}\NormalTok{ (alpha}\SpecialCharTok{/}\DecValTok{2}\NormalTok{),}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{)}
+\NormalTok{oneprop\_confidence\_interval }\OtherTok{\textless{}{-}}\NormalTok{ oneprop\_df }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(label }\SpecialCharTok{==} \StringTok{"sampling"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{standard\_error =} \FunctionTok{sd}\NormalTok{(proportions),}
+            \AttributeTok{lowerbound =}\NormalTok{ p\_hat }\SpecialCharTok{{-}}\NormalTok{ z\_star}\SpecialCharTok{*}\NormalTok{standard\_error,}
+            \AttributeTok{upperbound =}\NormalTok{ p\_hat }\SpecialCharTok{+}\NormalTok{ z\_star}\SpecialCharTok{*}\NormalTok{standard\_error)}
+\NormalTok{oneprop\_confidence\_interval }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1 x 3
+##   standard_error lowerbound upperbound
+##            <dbl>      <dbl>      <dbl>
+## 1         0.0474      0.507      0.693
+\end{verbatim}
+\end{itemize}
+
+\newpage
+
+\begin{itemize}
+\item
+  Randomization for Two-Way Tables
+
+  Given two categorical variables with multiple levels. You can compute the chi-squared statistic by using the method of randomization. Below is an example code using the \texttt{ask} dataset.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# summarized table of the data}
+\FunctionTok{table}\NormalTok{(ask }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(question\_class,response))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                 response
+## question_class   disclose hide
+##   general               2   71
+##   neg_assumption       36   37
+##   pos_assumption       23   50
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{4747}\NormalTok{)}
+
+\NormalTok{samples }\OtherTok{\textless{}{-}} \DecValTok{1000}
+
+\CommentTok{\# compute the chi{-}square statistic using the data}
+\NormalTok{ask\_rand\_obs }\OtherTok{\textless{}{-}}\NormalTok{ ask }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{specify}\NormalTok{(response }\SpecialCharTok{\textasciitilde{}}\NormalTok{ question\_class) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{calculate}\NormalTok{(}\AttributeTok{stat =} \StringTok{"Chisq"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{pull}\NormalTok{()}
+
+\CommentTok{\# perform randomization assuming the null hypothesis is true}
+\NormalTok{ask\_rand\_dist }\OtherTok{\textless{}{-}}\NormalTok{ ask }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{specify}\NormalTok{(response }\SpecialCharTok{\textasciitilde{}}\NormalTok{ question\_class) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{hypothesise}\NormalTok{(}\AttributeTok{null =} \StringTok{"independence"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{generate}\NormalTok{(}\AttributeTok{reps =}\NormalTok{ samples, }\AttributeTok{type =} \StringTok{"permute"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{calculate}\NormalTok{(}\AttributeTok{stat =} \StringTok{"Chisq"}\NormalTok{)}
+
+\CommentTok{\# compute the pvalue}
+\NormalTok{ask\_pvalue }\OtherTok{=}\NormalTok{ ask\_rand\_dist }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(stat }\SpecialCharTok{\textgreater{}}\NormalTok{ ask\_rand\_obs) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{p\_value =} \FunctionTok{n}\NormalTok{()}\SpecialCharTok{/}\NormalTok{samples)}
+\NormalTok{ask\_pvalue}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1 x 1
+##   p_value
+##     <dbl>
+## 1       0
+\end{verbatim}
+\end{itemize}
+
+\newpage
+
+\hypertarget{exercises}{%
+\subsubsection{Exercises}\label{exercises}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Malaria Vaccine Trial.} Perform an inference of two proportions using simulations. Use the \texttt{malaria} dataset to determine if there is a statistically significance difference between the proportion of infected individuals between the placebo and vaccine groups. Modify the example code given above. In addition, perform an inference for two-way tables using randomization using the same dataset.
+\item
+  (Outstanding Question) \textbf{Sex Discrimination on Promotions.} Perform an inference for two-way tables using randomization. Use the \texttt{sex\_discrimination} dataset to determine if there is a statistically significant association between who gets promoted based on sex. Modify the example code given above.
+\end{enumerate}
+
+\end{document}
