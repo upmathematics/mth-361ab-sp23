@@ -59,7 +59,7 @@ The exercises below are derived from the textbook [OpenIntro Statistics (4th edi
 
 \newpage
 
-2. **Global warming, Part I.** Let's consider a limited set of climate data,examining temperature differences in 1948 vs 2018. We sampled 197 locations from the National Oceanic and Atmospheric Administration's(NOAA) historical data,where the data was available for both years of interest. We want to know: were there more days with temperatures exceeding 90\textdegree{}F in 2018 or in 1948? [@webpage:noaa_1948_2018] The difference in number of days exceeding 90\textdegree{}F (number of days in 2018 - number of days in 1948) was calculated for each of the 197 locations. The average of these differences was 2.9 days with a standard deviation of 17.2 days. We are interested in determining whether these data provide strong evidence that there were more days in 2018 that exceeded 90\textdegree{}F from NOAA's weather stations.
+2. **Global warming, Part I.** Let's consider a limited set of climate data,examining temperature differences in 1948 vs 2018. We sampled 197 locations from the National Oceanic and Atmospheric Administration's(NOAA) historical data, where the data was available for both years of interest. We want to know: were there more days with temperatures exceeding 90\textdegree{}F in 2018 or in 1948? [@webpage:noaa_1948_2018] The difference in number of days exceeding 90\textdegree{}F (number of days in 2018 - number of days in 1948) was calculated for each of the 197 locations. The average of these differences was 2.9 days with a standard deviation of 17.2 days. We are interested in determining whether these data provide strong evidence that there were more days in 2018 that exceeded 90\textdegree{}F from NOAA's weather stations.
 
     ```{r global_warming_v2_1_diffs, echo=FALSE, fig.align="center", fig.pos="H", out.width = '60%'}
     knitr::include_graphics("global_warming_v2_1_diffs.pdf")
@@ -67,7 +67,7 @@ The exercises below are derived from the textbook [OpenIntro Statistics (4th edi
 
     a. Is there a relationship between the observations collected in 1948 and 2018? Or are the observations in the two groups independent?Explain.
     b. Write hypotheses for this research in symbols and in words.
-    c. Check the conditions required to complete this test. A histogram of the differences is given to the right.
+    c. Check the conditions required to complete this test. A histogram of the differences is given above.
     d. Calculate the test statistic and find the p-value.
     e. Use $\alpha = 0.05$ to evaluate the test, and interpret your conclusion in context.
     f. What type of error might we have made? Explain in context what the error means.

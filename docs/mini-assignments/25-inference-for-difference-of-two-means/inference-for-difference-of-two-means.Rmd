@@ -1,0 +1,108 @@
+---
+title: '**Inference for Difference of Two Means**'
+subtitle: "Mini-Assignment - MTH 361 A/B - Spring 2023"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 361 A/B}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+  \usepackage{multirow}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+urlcolor: blue
+link-citations: yes
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+
+## I. Difference of Two Means
+
+### Materials
+
+The exercises below are derived from the textbook [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
+
+### Exercises
+
+1. **Fuel efficiency of manual and automatic cars, Part I.**Each year the US Environmental Protection Agency (EPA) releases fuel economy data on cars manufactured in that year. Below are summary statistics on fuel efficiency (in miles/gallon) from random samples of cars with manual and automatic transmissions. Do these data provide strong evidence of a difference between the average fuel efficiency of cars with manual and automatic transmissions in terms of their average city mileage? Assume that conditions for inference are
+satisfied. [@data:epaMPG]
+
+    ```{=latex}
+    \begin{center}
+    \begin{tabular}{l c c }
+    \hline
+            & \multicolumn{2}{c}{City MPG} \\
+    \hline
+            & Automatic     & Manual         \\
+    Mean    & 16.12         & 19.85      \\
+    SD      & 3.58          & 4.51       \\
+    n       & 26            & 26 \\
+    \hline
+    & \\
+    & \\
+    \end{tabular}
+    \end{center}
+    ```
+
+    ```{r fuel_eff_city_box, echo=FALSE, fig.align="center", fig.pos="H", out.width = '30%'}
+    knitr::include_graphics("fuel_eff_city_box.pdf")
+    ```
+
+2. **Fuel efficiency of manual and automatic cars, Part II.** The table provides summary statistics on highway fuel economy of the same 52 cars from Exercise~\ref{fuel_eff_city}. Use these statistics to calculate a 98\% confidence interval for the difference between average highway mileage of manual and automatic cars, and interpret this interval in the context of the data. [@data:epaMPG]
+
+    ```{=latex}
+    \begin{center}
+    \begin{tabular}{l c c }
+    \hline
+            & \multicolumn{2}{c}{Hwy MPG} \\
+    \hline
+                & Automatic     & Manual         \\
+    Mean    & 22.92         & 27.88          \\
+    SD      & 5.29          & 5.01           \\
+    n       & 26            & 26 \\
+    \hline
+    & \\
+    & \\
+    \end{tabular}
+    \end{center}
+    ```
+
+    ```{r fuel_eff_hway_box, echo=FALSE, fig.align="center", fig.pos="H", out.width = '30%'}
+    knitr::include_graphics("fuel_eff_hway_box.pdf")
+    ```
+
+\newpage
+
+3. (Outstanding Question) **Gaming and distracted eating.**
+
+    a. A group of researchers are interested in the possible effects of distracting stimuli during eating, such as an increase or decrease in the amount of food consumption. To test this hypothesis, they monitored food intake for a group of 44 patients who were randomized into two equal groups. The treatment group ate lunch while playing solitaire, and the control group ate lunch without any added distractions. Patients in the treatment group ate 52.1 grams of biscuits, with a standard deviation of 45.1 grams, and patients in the control group ate 27.1 grams of biscuits, with a standard deviation of 26.4 grams. Do these data provide convincing evidence that the average food intake (measured in amount of biscuits consumed) is different for the patients in the treatment group? Assume that conditions for inference are satisfied. [@Oldham:2011]
+    b. The researchers from part (a) also investigated the effects of being distracted by a game on how much people eat. The 22 patients in the treatment group who ate their lunch while playing solitaire were asked to do a serial-order recall of the food lunch items they ate. The average number of items recalled by the patients in this group was 4.9, with a standard deviation of 1.8. The average number of items recalled by the patients in the control group (no distraction) was 6.1, with a standard deviation of 1.8. Do these data provide strong evidence that the average number of food items recalled by the patients in the treatment and control groups are different?
+
+\newpage
+
+## References {#ref}
+
+<div id="refs"></div>
