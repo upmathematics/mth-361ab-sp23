@@ -1,0 +1,65 @@
+---
+title: '**Power Calculations**'
+subtitle: "Mini-Assignment - MTH 361 A/B - Spring 2023"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 361 A/B}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+  \usepackage{multirow}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+
+## I. Determining Sample Size to Maximize Power
+
+### Materials
+
+The exercises below are derived from the textbook [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
+
+### Exercises
+
+1. **Increasing corn yield.** A large farm wants to try out a new type of fertilizer to evaluate whether it will improve the farm's corn production. 
+
+    The land is broken into plots that produce an average of 1,215 pounds of corn with a standard deviation of 94 pounds per plot. The owner is interested in detecting any average difference of at least 40 pounds per plot. 
+    
+    How many plots of land would be needed for the experiment if the desired power level is 90\%? Use $\alpha = 0.05$. Assume each plot of land gets treated with either the current fertilizer or the new fertilizer.
+
+2. **Email outreach efforts.** A medical research group is recruiting people to complete short surveys about their medical history. For example, one survey asks for information on a person's family history in regards to cancer. Another survey asks about what topics were discussed during the person's last visit to a hospital. 
+
+    So far, as people sign up, they complete an average of just 4 surveys, and the standard deviation of the number of surveys is about 2.2. The research group wants to try a new interface that they think will encourage new enrollees to complete more surveys, where they will randomize each enrollee to either get the new interface or the current interface. 
+    
+    How many new enrollees do they need for each interface to detect an effect size of 0.5 surveys per enrollee, if the desired power level is 80\%? Use $\alpha = 0.05$.
+
+\newpage
+
+3. (Outstanding Question) **Weight loss drug.** Suppose you are conducting a study to test the effectiveness of a new weight loss drug. You want to determine the sample size needed to achieve a statistical power of at least 80\% at a significance level of 0.05.
+
+    Previous studies have shown that the mean weight loss of individuals taking the drug is 10 pounds, with a standard deviation of 3 pounds. You want to test the hypothesis that the mean weight loss of individuals taking the drug in your study is greater than 10 pounds. You plan to use a two-sided t-test with equal sample sizes in both groups. Assume a normal distribution of weight loss and a dropout rate of 20\%. The study will last for 12 weeks, and you expect to observe a mean weight loss of at least 12 pounds with the new drug.
+
+    What is the required sample size needed to achieve a statistical power of 80\% at a significance level of 0.05?
