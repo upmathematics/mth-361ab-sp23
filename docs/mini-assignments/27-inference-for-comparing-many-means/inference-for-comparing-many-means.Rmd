@@ -1,0 +1,160 @@
+---
+title: '**Inference for Comparing Many Means**'
+subtitle: "Mini-Assignment - MTH 361 A/B - Spring 2023"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 361 A/B}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+  \usepackage{multirow}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+urlcolor: blue
+link-citations: yes
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+
+## I. The Method of ANalysis Of VAriance (ANOVA)
+
+### Materials
+
+The exercises below are derived from the textbook [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
+
+### Exercises
+
+1. **True / False: ANOVA.** Determine if the following statements are true or false in ANOVA, and explain your reasoning for statements you identify as false.
+
+    a. As the number of groups increases, the modified significance level for pairwise tests increases as well.
+    b. As the total sample size increases, the degrees of freedom for the residuals increases as well.
+    c. The constant variance condition can be somewhat relaxed when the sample sizes are relatively consistent across groups.
+    d. The independence assumption can be relaxed when the total sample size is large.
+
+    If the null hypothesis that the means of four groups are all the same is rejected using ANOVA at a 5\% significance level, then ...
+    
+    e. we can then conclude that all the means are different from one another.
+    f. the standardized variability between groups is higher than the standardized variability within groups.
+    g. the pairwise analysis will identify at least one pair of means that are significantly different.
+    h. the appropriate $\alpha$ to be used in pairwise comparisons is 0.05 / 4 = 0.0125 since there are four groups.
+
+\newpage
+
+2. **Work hours and education.** The General Social Survey collects data on demographics, education, and work, among many other characteristics of US residents. [@data:gss] Using ANOVA, we can consider educational attainment levels for all 1,172 respondents at once. Below are the distributions of hours worked by educational attainment and relevant summary statistics that will be helpful in carrying out this analysis.
+
+    ```{=latex}
+    \begin{center}
+    \begin{tabular}{l  r  r  r  r  r  r}
+                    & \multicolumn{5}{c}{\textit{Educational attainment}} \\
+    \cline{2-6}
+                    & Less than HS  & HS    & Jr Coll   & Bachelor's & Graduate & Total \\
+    \hline
+    Mean            & 38.67         & 39.6  & 41.39     & 42.55     & 40.85     & 40.45 \\
+    SD              & 15.81         & 14.97 & 18.1      & 13.62     & 15.51     & 15.17 \\
+    n               & 121           & 546   & 97        & 253       & 155       & 1,172 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    ```
+
+    ```{r work_hours_education, echo=FALSE, fig.align="center", fig.pos="H", out.width = '80%'}
+    knitr::include_graphics("work_hours_education.pdf")
+    ```
+
+    a. Write hypotheses for evaluating whether the average number of hours worked varies across the five groups.
+    b. Check conditions and describe any assumptions you must make to proceed with the test.
+    c. Below is part of the output associated with this test. Fill in the empty cells.
+
+    ```{=latex}
+    \begin{center}
+    \renewcommand{\arraystretch}{1.25}
+    \begin{tabular}{lrrrrr}
+      \hline
+                & Df    
+                        & Sum Sq        
+                                & Mean Sq       
+                                        & F-value      
+                                                & Pr($>$F) \\ 
+      \hline
+    degree      & \fbox{\textcolor{white}{{\footnotesize XXXXX}}}       
+                        & \fbox{\textcolor{white}{{\footnotesize XXXXX}}}       
+                                & 501.54    
+                                        & \fbox{\textcolor{white}{{\footnotesize XXXXX}}}   
+                                                & 0.0682 \\ 
+    Residuals   & \fbox{\textcolor{white}{{\footnotesize XXXXX}}} 
+                        & 267,382     
+                                & \fbox{\textcolor{white}{{\footnotesize  XXXXX}}}          
+                                        &       
+                                                &  \\ 
+       \hline
+    Total       & \fbox{\textcolor{white}{{\footnotesize XXXXX}}} 
+                        &\fbox{\textcolor{white}{{\footnotesize XXXXX}}}
+    \end{tabular}
+    \end{center}
+    ```
+
+    d. What is the conclusion of the test?
+
+\newpage
+
+3. (Outstanding Question) **Student performance across discussion sections.** A professor who teaches a large introductory statistics class (197 students) with eight discussion sections would like to test if student performance differs by discussion section, where each discussion section has a different teaching assistant. The summary table below shows the average final exam score for each discussion section as well as the standard deviation of scores and the number of students in each section.
+
+    ```{=latex}
+    \begin{center}
+    \begin{tabular}{rrrrrrrrr}
+      \hline
+                & Sec 1 & Sec 2 & Sec 3 & Sec 4 & Sec 5 & Sec 6 & Sec 7 & Sec 8 \\ 
+      \hline
+    $n_i$       & 33 & 19 & 10 & 29 & 33 & 10 & 32 & 31 \\ 
+    $\bar{x}_i$ & 92.94 & 91.11 & 91.80 & 92.45 & 89.30 & 88.30 & 90.12 & 93.35 \\ 
+    $s_i$       & 4.21 & 5.58 & 3.43 & 5.92 & 9.32 & 7.27 & 6.93 & 4.57 \\ 
+       \hline
+    \end{tabular}
+    \end{center}
+    ```
+
+    The ANOVA output below can be used to test for differences between the average scores from the different discussion sections.
+
+    ```{=latex}
+    \begin{center}
+    \begin{tabular}{lrrrrr}
+    \hline
+                & Df        & Sum Sq & Mean Sq  & F value & Pr($>$F) \\ 
+    \hline
+    section         & 7         & 525.01    & 75.00         & 1.87  & 0.0767 \\ 
+    Residuals   & 189   & 7584.11   & 40.13         &       &  \\ 
+    \hline
+    \end{tabular}
+    \end{center}
+    ```
+
+    Conduct a hypothesis test to determine if these data provide convincing evidence that the average score varies across some (or all) groups. Check conditions and describe any assumptions you must make to proceed with the test.
+
+\newpage
+
+## References {#ref}
+
+<div id="refs"></div>
