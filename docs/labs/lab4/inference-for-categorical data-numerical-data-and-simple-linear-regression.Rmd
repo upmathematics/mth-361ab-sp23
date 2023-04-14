@@ -1,0 +1,525 @@
+---
+title: "Inference for Categoral and Numerical Data, and Simple Linear Regression"
+output:
+  html_document:
+    css: www/lab.css
+    highlight: pygments
+    theme: cerulean
+    toc: true
+    toc_float: true
+---
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(eval = TRUE, results = FALSE, fig.show = "hide", message = FALSE)
+set.seed(1234)
+library(tidyverse)
+library(openintro)
+library(infer)
+library(skimr)
+library(statsr)
+library(broom)
+```
+
+---
+
+<font size="4"> **MTH 361 A/B SP23** (University of Portland): [**Lab 4 R Studio Cloud**](https://posit.cloud/spaces/326046/content/5800434){target="_Blank'} </font>
+
+**Content Source:** [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
+
+---
+
+# Getting Started
+
+### Load packages
+
+In this lab, we will explore and visualize the data using the `tidyverse` suite of packages.
+The data can be found in the companion package for OpenIntro labs, **openintro**.
+We will also use the **infer** package for resampling.
+
+Let's load the packages.
+
+```{r load-packages, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(openintro)
+library(infer)
+library(skimr)
+library(statsr)
+library(broom)
+```
+
+### Creating a reproducible lab report
+
+To create your new lab report, in RStudio, go to New File -\> R Markdown... Then, choose From Template and then choose `Lab Report for OpenIntro Statistics Labs` from the list of templates.
+
+::: {#boxedtext}
+**Setting a seed:** We will take some random samples and build sampling distributions in this lab, which means you should set a seed at the start of your lab.
+If this concept is new to you, review the lab on "Probability and the Normal Distribution".
+:::
+
+# I. Inference for Categorical Data
+
+### The data
+
+You will be analyzing the same dataset as in the previous lab, where you delved into a sample from the Youth Risk Behavior Surveillance System (YRBSS) survey, which uses data from high schoolers to help discover health patterns.
+The dataset is called `yrbss`.
+
+1.  What are the counts within each category for the amount of days these students have texted while driving within the past 30 days?
+    What is the proportion of people who have texted while driving every day in the past 30 days and never wear helmets?
+
+Remember that you can use `filter` to limit the dataset to just non-helmet wearers.
+Here, we will name the dataset `no_helmet`.
+
+```{r no helmet}
+no_helmet <- yrbss %>%
+  filter(helmet_12m == "never")
+```
+
+Also, it may be easier to calculate the proportion if you create a new variable that specifies whether the individual has texted every day while driving over the past 30 days or not.
+We will call this variable `text_ind`.
+
+```{r indicator-texting}
+no_helmet <- no_helmet %>%
+  drop_na %>%
+  mutate(text_ind = ifelse(text_while_driving_30d == "30", "yes", "no"))
+```
+
+## Inference on proportions
+
+When summarizing the YRBSS, the Centers for Disease Control and Prevention seeks insight into the population *parameters*.
+To do this, you can answer the question, "What proportion of people in your sample reported that they have texted while driving each day for the past 30 days?" with a statistic; while the question "What proportion of people on earth have texted while driving each day for the past 30 days?" is answered with an estimate of the parameter.
+
+The inferential tools for estimating population proportion are analogous to those used for means in the last chapter: the confidence interval and the hypothesis test.
+
+```{r nohelmet-text-ci}
+no_helmet %>%
+  specify(response = text_ind, success = "yes") %>%
+  generate(reps = 1000, type = "bootstrap") %>%
+  calculate(stat = "prop") %>%
+  get_ci(level = 0.95)
+```
+
+Note that since the goal is to construct an interval estimate for a proportion, it's necessary to both include the `success` argument within `specify`, which accounts for the proportion of non-helmet wearers than have consistently texted while driving the past 30 days, in this example, and that `stat` within `calculate` is here "prop", signaling that you are trying to do some sort of inference on a proportion.
+
+1.  What is the margin of error for the estimate of the proportion of non-helmet wearers that have texted while driving each day for the past 30 days based on this survey?
+
+2.  Using the `infer` package, calculate confidence intervals for two other categorical variables (you'll need to decide which level to call "success", and report the associated margins of error. Interpret the interval in context of the data. It may be helpful to create new data sets for each of the two countries first, and then use these data sets to construct the confidence intervals.
+
+## How does the proportion affect the margin of error?
+
+Imagine you've set out to survey 1000 people on two questions: are you at least 6-feet tall?
+and are you left-handed?
+Since both of these sample proportions were calculated from the same sample size, they should have the same margin of error, right?
+Wrong!
+While the margin of error does change with sample size, it is also affected by the proportion.
+
+Think back to the formula for the standard error: $SE = \sqrt{p(1-p)/n}$.
+This is then used in the formula for the margin of error for a 95% confidence interval: $$
+ME = 1.96\times SE = 1.96\times\sqrt{p(1-p)/n} \,.
+$$ Since the population proportion $p$ is in this $ME$ formula, it should make sense that the margin of error is in some way dependent on the population proportion.
+We can visualize this relationship by creating a plot of $ME$ vs. $p$.
+
+Since sample size is irrelevant to this discussion, let's just set it to some value ($n = 1000$) and use this value in the following calculations:
+
+```{r n-for-me-plot}
+n <- 1000
+```
+
+The first step is to make a variable `p` that is a sequence from 0 to 1 with each number incremented by 0.01.
+You can then create a variable of the margin of error (`me`) associated with each of these values of `p` using the familiar approximate formula ($ME = 2 \times SE$).
+
+```{r p-me}
+p <- seq(from = 0, to = 1, by = 0.01)
+me <- 2 * sqrt(p * (1 - p)/n)
+```
+
+Lastly, you can plot the two variables against each other to reveal their relationship.
+To do so, we need to first put these variables in a data frame that you can call in the `ggplot` function.
+
+```{r me-plot}
+dd <- data.frame(p = p, me = me)
+ggplot(data = dd, aes(x = p, y = me)) + 
+  geom_line() +
+  labs(x = "Population Proportion", y = "Margin of Error")
+```
+
+1.  Describe the relationship between `p` and `me`. Include the margin of error vs. population proportion plot you constructed in your answer. For a given sample size, for which value of `p` is margin of error maximized?
+
+------------------------------------------------------------------------
+
+## More Practice
+
+For some of the exercises below, you will conduct inference comparing two proportions.
+In such cases, you have a response variable that is categorical, and an explanatory variable that is also categorical, and you are comparing the proportions of success of the response variable across the levels of the explanatory variable.
+This means that when using `infer`, you need to include both variables within `specify`.
+
+1.  Is there convincing evidence that those who sleep 10+ hours per day are more likely to strength train every day of the week?
+    As always, write out the hypotheses for any tests you conduct and outline the status of the conditions for inference.
+    If you find a significant difference, also quantify this difference with a confidence interval.
+
+2.  Let's say there has been no difference in likeliness to strength train every day of the week for those who sleep 10+ hours.
+    What is the probability that you could detect a change (at a significance level of 0.05) simply by chance?
+    *Hint:* Review the definition of the Type 1 error.
+
+3.  Suppose you're hired by the local government to estimate the proportion of residents that attend a religious service on a weekly basis.
+    According to the guidelines, the estimate must have a margin of error no greater than 1% with 95% confidence.
+    You have no idea what to expect for $p$.
+    How many people would you have to sample to ensure that you are within the guidelines?\
+    *Hint:* Refer to your plot of the relationship between $p$ and margin of error.
+    This question does not require using a dataset.
+
+# II. Inference for Numerical Data
+
+### The data
+
+Every two years, the Centers for Disease Control and Prevention conduct the Youth Risk Behavior Surveillance System (YRBSS) survey, where it takes data from high schoolers (9th through 12th grade), to analyze health patterns.
+You will work with a selected group of variables from a random sample of observations during one of the years the YRBSS was conducted.
+
+Load the `yrbss` data set into your workspace.
+
+```{r load-data}
+data(yrbss)
+```
+
+There are observations on 13 different variables, some categorical and some numerical.
+The meaning of each variable can be found by bringing up the help file:
+
+```{r help-nc}
+?yrbss
+```
+
+1.  What are the cases in this data set? How many cases are there in our sample?
+
+Remember that you can answer this question by viewing the data in the data viewer or by using the following command:
+
+```{r str}
+glimpse(yrbss)
+```
+
+## Exploratory data analysis
+
+You will first start with analyzing the weight of the participants in kilograms: `weight`.
+
+Using visualization and summary statistics, describe the distribution of weights.
+The `skim()` function from the **skimr** package produces nice summaries of the variables in the dataset, separating categorical (character) variables from quantitative variables.
+
+```{r summary}
+yrbss %>% 
+  skim()
+```
+
+1.  How many observations are we missing weights from?
+
+Next, consider the possible relationship between a high schooler's weight and their physical activity.
+Plotting the data is a useful first step because it helps us quickly visualize trends, identify strong associations, and develop research questions.
+
+First, let's create a new variable `physical_3plus`, which will be coded as either "yes" if the student is physically active for *at least* 3 days a week, and "no" if not.
+
+```{r create new var}
+yrbss <- yrbss %>% 
+  drop_na() %>%
+  mutate(physical_3plus = if_else(physically_active_7d > 2, "yes", "no"))
+```
+
+2.  Make a side-by-side boxplots of `physical_3plus` and `weight`. Is there a relationship between these two variables? What did you expect and why?
+
+The box plots show how the medians of the two distributions compare, but we can also compare the means of the distributions using the following to first group the data by the `physical_3plus` variable, and then calculate the mean `weight` in these groups using the `mean` function while ignoring missing values by setting the `na.rm` argument to `TRUE`.
+
+```{r by-means}
+yrbss %>%
+  group_by(physical_3plus) %>%
+  summarise(mean_weight = mean(weight, na.rm = TRUE))
+```
+
+There is an observed difference, but is this difference large enough to deem it "statistically significant"?
+In order to answer this question we will conduct a hypothesis test.
+
+## Inference
+
+3.  Are all conditions necessary for inference satisfied?
+    Comment on each.
+    You can compute the group sizes with the `summarize` command above by defining a new variable with the definition `n()`.
+
+4.  Write the hypotheses for testing if the average weights are different for those who exercise at least times a week and those who don't.
+
+Next, we will work through creating a permutation distribution using tools from the **infer** package.
+
+But first, we need to initialize the test, which we will save as `obs_diff`.
+
+```{r inf-weight-habit-ht-initial, tidy=FALSE, warning = FALSE}
+obs_diff <- yrbss %>%
+  specify(weight ~ physical_3plus) %>%
+  calculate(stat = "diff in means", order = c("yes", "no"))
+```
+
+Recall that the `specify()` function is used to specify the variables you are considering (notated `y ~x`), and you can use the `calculate()` function to specify the `stat`istic you want to calculate and the `order` of subtraction you want to use.
+For this hypothesis, the statistic you are searching for is the difference in means, with the order being `yes - no`.
+
+After you have calculated your observed statistic, you need to create a permutation distribution.
+This is the distribution that is created by shuffling the observed weights into new `physical_3plus` groups, labeled "yes" and "no"
+
+We will save the permutation distribution as `null_dist`.
+
+```{r inf-weight-habit-ht-null, tidy=FALSE, warning = FALSE}
+null_dist <- yrbss %>%
+  specify(weight ~ physical_3plus) %>%
+  hypothesize(null = "independence") %>%
+  generate(reps = 1000, type = "permute") %>%
+  calculate(stat = "diff in means", order = c("yes", "no"))
+```
+
+The `hypothesize()` function is used to declare what the null hypothesis is.
+Here, we are assuming that student's weight is independent of whether they exercise at least 3 days or not.
+
+We should also note that the `type` argument within `generate()` is set to `"permute"`.
+This ensures that the statistics calculated by the `calculate()` function come from a reshuffling of the data (not a resampling of the data)!
+Finally, the `specify()` and `calculate()` steps should look familiar, since they are the same as what we used to find the observed difference in means!
+
+We can visualize this null distribution with the following code:
+
+```{r}
+ggplot(data = null_dist, aes(x = stat)) +
+  geom_histogram()
+```
+
+5.  Add a vertical red line to the plot above, demonstrating where the observed difference in means (`obs_diff`) falls on the distribution.
+
+6.  How many of these `null_dist` permutations have a difference at least as large (or larger) as `obs_diff`?
+
+Now that you have calculated the observed statistic and generated a permutation distribution, you can calculate the p-value for your hypothesis test using the function `get_p_value()` from the infer package.
+
+```{r inf-weight-habit-ht-pvalue}
+null_dist %>%
+  get_p_value(obs_stat = obs_diff, direction = "two_sided")
+```
+
+7.  What warning message do you get?
+    Why do you think you get this warning message?
+
+8.  Construct and record a confidence interval for the difference between the weights of those who exercise at least three times a week and those who don't, and interpret this interval in context of the data.
+
+------------------------------------------------------------------------
+
+## More Practice
+
+9.  Calculate a 95% confidence interval for the average height in meters (`height`) and interpret it in context.
+
+11. Conduct a hypothesis test evaluating whether the average height is different for those who exercise at least three times a week and those who don't.
+
+# III. Inference for Linear Regression
+
+The Human Freedom Index is a report that attempts to summarize the idea of "freedom" through a bunch of different variables for many countries around the globe.
+It serves as a rough objective measure for the relationships between the different types of freedom - whether it's political, religious, economical or personal freedom - and other social and economic circumstances.
+The Human Freedom Index is an annually co-published report by the Cato Institute, the Fraser Institute, and the Liberales Institut at the Friedrich Naumann Foundation for Freedom.
+
+You'll be analysing data from the Human Freedom Index reports.
+Your aim will be to summarize a few of the relationships within the data both graphically and numerically in order to find which variables can help tell a story about freedom.
+
+### The data
+
+The data we're working with is in the openintro package and it's called `hfi`, short for Human Freedom Index.
+
+1.  What are the dimensions of the dataset?
+    What does each row represent?
+    The dataset spans a lot of years, but we are only interested in data from year 2016.
+    Filter the data `hfi` data frame for year 2016, select the six variables, and assign the result to a data frame named `hfi_2016`.
+
+```{r include = FALSE}
+hfi_2016 <- hfi %>% 
+  filter(year == 2016)
+```
+
+2.  What type of plot would you use to display the relationship between the personal freedom score, `pf_score`, and `pf_expression_control`? Plot this relationship using the variable `pf_expression_control` as the predictor. Does the relationship look linear? If you knew a country's `pf_expression_control`, or its score out of 10, with 0 being the most, of political pressures and controls on media content, would you be comfortable using a linear model to predict the personal freedom score?
+
+If the relationship looks linear, we can quantify the strength of the relationship with the correlation coefficient.
+
+```{r cor}
+hfi_2016 %>%
+  summarise(cor(pf_expression_control, pf_score))
+```
+
+## Sum of squared residuals
+
+::: {#boxedtext}
+In this section, you will use an interactive function to investigate what we mean by "sum of squared residuals".
+You will need to run this function in your console, not in your markdown document.
+Running the function also requires that the `hfi` dataset is loaded in your environment.
+You will also need to make sure the Plots tab in the lower right-hand corner has enough space to make a plot.
+:::
+
+Think back to the way that we described the distribution of a single variable.
+Recall that we discussed characteristics such as center, spread, and shape.
+It's also useful to be able to describe the relationship of two numerical variables, such as `pf_expression_control` and `pf_score` above.
+
+3.  Looking at your plot from the previous exercise, describe the relationship between these two variables. Make sure to discuss the form, direction, and strength of the relationship as well as any unusual observations.
+
+Just as you've used the mean and standard deviation to summarize a single variable, you can summarize the relationship between these two variables by finding the line that best follows their association.
+Use the following interactive function to select the line that you think does the best job of going through the cloud of points.
+
+```{r plotss-expression-score, eval=FALSE}
+plot_ss(x = pf_expression_control, y = pf_score, data = hfi_2016)
+```
+
+After running this command, you'll be prompted to click two points on the plot to define a line.
+Once you've done that, the line you specified will be shown in black and the residuals in blue.
+
+<div>
+
+If your plot is appearing below your code chunk and won't let you select points to make a line, take the following steps:
+
+-   Go to the Tools bar at the top of RStudio
+-   Click on "Global Options..."
+-   Click on the "R Markdown pane" (on the left)
+-   Uncheck the box that says "Show output inline for all R Markdown documents"
+
+</div>
+
+Recall that the residuals are the difference between the observed values and the values predicted by the line:
+
+$$
+  e_i = y_i - \hat{y}_i
+$$
+
+The most common way to do linear regression is to select the line that minimizes the sum of squared residuals.
+To visualize the squared residuals, you can rerun the plot command and add the argument `showSquares = TRUE`.
+
+```{r plotss-expression-score-squares, eval=FALSE}
+plot_ss(x = pf_expression_control, y = pf_score, data = hfi_2016, showSquares = TRUE)
+```
+
+Note that the output from the `plot_ss` function provides you with the slope and intercept of your line as well as the sum of squares.
+
+4.  Using `plot_ss`, choose a line that does a good job of minimizing the sum of squares. Run the function several times. What was the smallest sum of squares that you got? How does it compare to your neighbours?
+
+## The linear model
+
+It is rather cumbersome to try to get the correct least squares line, i.e. the line that minimizes the sum of squared residuals, through trial and error.
+Instead, you can use the `lm` function in R to fit the linear model (a.k.a. regression line).
+
+```{r m1}
+m1 <- lm(pf_score ~ pf_expression_control, data = hfi_2016)
+```
+
+The first argument in the function `lm()` is a formula that takes the form `y ~ x`.
+Here it can be read that we want to make a linear model of `pf_score` as a function of `pf_expression_control`.
+The second argument specifies that R should look in the `hfi` data frame to find the two variables.
+
+**Note:** Piping **will not** work here, as the data frame is not the first argument!
+
+The output of `lm()` is an object that contains all of the information we need about the linear model that was just fit.
+We can access this information using the `tidy()` function.
+
+```{r summary-m1}
+tidy(m1)
+```
+
+Let's consider this output piece by piece.
+First, the formula used to describe the model is shown at the top, in what's displayed as the "Call".
+After the formula you find the five-number summary of the residuals.
+The "Coefficients" table shown next is key; its first column displays the linear model's y-intercept and the coefficient of `pf_expression_control`.
+With this table, we can write down the least squares regression line for the linear model:
+
+$$
+  \hat{y} = 4.28 + 0.542 \times pf\_expression\_control
+$$
+
+This equation tells us two things:
+
+-   For countries with a `pf_expression_control` of 0 (those with the largest amount of political pressure on media content), we expect their mean personal freedom score to be 4.28.
+-   For every 1 unit increase in `pf_expression_control`, we expect a country's mean personal freedom score to increase 0.542 units.
+
+We can assess model fit using $R^2$, the proportion of variability in the response variable that is explained by the explanatory variable.
+We use the `glance()` function to access this information.
+
+```{r}
+glance(m1)
+```
+
+For this model, 71.4% of the variability in `pf_score` is explained by `pf_expression_control`.
+
+5.  Fit a new model that uses `pf_expression_control` to predict `hf_score`, or the total human freedom score. Using the estimates from the R output, write the equation of the regression line. What does the slope tell us in the context of the relationship between human freedom and the amount of political pressure on media content?
+
+## Prediction and prediction errors
+
+Let's create a scatterplot with the least squares line for `m1` laid on top.
+
+```{r reg-with-line}
+ggplot(data = hfi_2016, aes(x = pf_expression_control, y = pf_score)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+Here, we are literally adding a layer on top of our plot.
+`geom_smooth` creates the line by fitting a linear model.
+It can also show us the standard error `se` associated with our line, but we'll suppress that for now.
+
+This line can be used to predict $y$ at any value of $x$.
+When predictions are made for values of $x$ that are beyond the range of the observed data, it is referred to as *extrapolation* and is not usually recommended.
+However, predictions made within the range of the data are more reliable.
+They're also used to compute the residuals.
+
+6.  If someone saw the least squares regression line and not the actual data, how would they predict a country's personal freedom school for one with a 3 rating for `pf_expression_control`? Is this an overestimate or an underestimate, and by how much? In other words, what is the residual for this prediction?
+
+## Model diagnostics
+
+To assess whether the linear model is reliable, we need to check for (1) linearity, (2) nearly normal residuals, and (3) constant variability.
+
+In order to do these checks we need access to the fitted (predicted) values and the residuals.
+We can use the `augment()` function to calculate these.
+
+```{r}
+m1_aug <- augment(m1)
+```
+
+**Linearity**: You already checked if the relationship between `pf_score` and `pf_expression_control` is linear using a scatterplot.
+We should also verify this condition with a plot of the residuals vs. fitted (predicted) values.
+
+```{r residuals}
+ggplot(data = m1_aug, aes(x = .fitted, y = .resid)) +
+  geom_point() +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "red") +
+  xlab("Fitted values") +
+  ylab("Residuals")
+```
+
+Notice here that `m1` can also serve as a data set because stored within it are the fitted values ($\hat{y}$) and the residuals.
+Also note that we're getting fancy with the code here.
+After creating the scatterplot on the first layer (first line of code), we overlay a red horizontal dashed line at $y = 0$ (to help us check whether the residuals are distributed around 0), and we also rename the axis labels to be more informative.
+
+7.  Is there any apparent pattern in the residuals plot? What does this indicate about the linearity of the relationship between the two variables?
+
+</br>
+
+**Nearly normal residuals**: To check this condition, we can look at a histogram of the residuals.
+
+```{r hist-res}
+ggplot(data = m1_aug, aes(x = .resid)) +
+  geom_histogram(binwidth = 0.25) +
+  xlab("Residuals")
+```
+
+8.  Based on the histogram, does the nearly normal residuals condition appear to be violated? Why or why not?
+
+</br>
+
+**Constant variability**:
+
+9. Based on the residuals vs. fitted plot, does the constant variability condition appear to be violated? Why or why not?
+
+------------------------------------------------------------------------
+
+## More Practice
+
+1. Choose another variable that you think would strongly correlate with `pf_score`.
+    Produce a scatterplot of the two variables and fit a linear model.
+    At a glance, does there seem to be a linear relationship?
+
+2. How does this relationship compare to the relationship between `pf_score` and `pf_expression_control`?
+    Use the $R^2$ values from the two model summaries to compare.
+    Does your independent variable seem to predict `pf_score` better?
+    Why or why not?
+
+3. Check the model diagnostics using appropriate visualisations and evaluate if the model conditions have been met.
+
+------------------------------------------------------------------------
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png){style="border-width:0"}</a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
