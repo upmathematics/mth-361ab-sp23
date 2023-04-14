@@ -1,0 +1,120 @@
+---
+title: '**Linear Regression \& Least Squares Regression**'
+subtitle: "Mini-Assignment - MTH 361 A/B - Spring 2023"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 361 A/B}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+  \usepackage{multirow}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+urlcolor: blue
+link-citations: yes
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+
+## I. The Method of Least Squares
+
+### Materials
+
+The exercises below are derived from the textbook [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
+
+### Exercises
+
+1. **Identify relationships.** For each of the twelve plots, identify the strength of the relationship (e.g. weak, moderate, or strong) in the data and whether fitting a linear model would be  reasonable.
+
+```{r,echo=FALSE, out.width='40%', fig.width=3, fig.height=3,fig.show='hold',fig.align='center'}
+knitr::include_graphics("identify_relationships_u.pdf")
+knitr::include_graphics("identify_relationships_lin_pos_strong.pdf")
+knitr::include_graphics("identify_relationships_lin_pos_weak.pdf")
+knitr::include_graphics("identify_relationships_n.pdf")
+knitr::include_graphics("identify_relationships_lin_neg_strong.pdf")
+knitr::include_graphics("identify_relationships_none.pdf")
+knitr::include_graphics("identify_relationships_s.pdf")
+knitr::include_graphics("identify_relationships_hockey_stick.pdf")
+knitr::include_graphics("identify_relationships_pos_lin_strong.pdf")
+knitr::include_graphics("identify_relationships_pos_weak.pdf")
+knitr::include_graphics("identify_relationships_pos_weaker.pdf")
+knitr::include_graphics("identify_relationships_neg_lin_weak.pdf")
+```
+
+\newpage
+
+2. **The Coast Starlight.** The Coast Starlight Amtrak train runs from Seattle to Los Angeles. The scatterplot below displays the distance between each stop (in miles) and the amount of time it takes to travel from one stop to another (in minutes).
+
+    ```{r coast_starlight, echo=FALSE, out.width='50%', fig.align='center'}
+    knitr::include_graphics("coast_starlight.pdf")
+    ```
+
+    a. Describe the relationship between distance and travel time.
+    b. How would the relationship change if travel time was instead measured in hours, and distance was instead measured in kilometers?
+    c. Correlation between travel time (in miles) and distance (in minutes)  is $r = 0.636$. What is the correlation between travel time (in kilometers)  and distance (in hours)?
+    
+    The mean travel time from one stop to the next on the Coast Starlight is 129 mins, with a standard deviation of 113 minutes. The mean distance traveled from one stop to the next is 108 miles with a standard deviation of 99 miles. The correlation between travel time and distance is 0.636.
+    
+    d. Write the equation of the regression line for predicting travel time.
+    e. Interpret the slope and the intercept in this context.
+    f. Calculate $R^2$ of the regression line for predicting travel time from distance traveled for the Coast Starlight, and interpret $R^2$ in the context of the application.         g. The distance between Santa Barbara and Los Angeles is 103 miles. Use the model to estimate the time it takes for the Starlight to travel between these two cities.
+    h. It actually takes the Coast Starlight about 168 mins to travel from Santa Barbara to Los Angeles. Calculate the residual and explain the meaning of this residual value.
+    i. Suppose Amtrak is considering adding a stop to the Coast Starlight 500 miles away from Los Angeles. Would it be appropriate to use this linear model to predict the travel time from Los Angeles to this point? 
+
+\newpage
+
+3. (Outstanding Question) **Body measurements.** Researchers studying anthropometry collected body girth measurements and skeletal diameter measurements, as well as age, weight, height and gender for 507 physically active individuals. [@Heinz:2003] The scatterplot below shows the relationship between height and shoulder girth (over deltoid muscles), both measured in centimeters.
+
+    ```{r body_measurements_height_shoulder_girth, echo=FALSE, out.width='40%', fig.align='center'}
+    knitr::include_graphics("body_measurements_height_shoulder_girth.pdf")
+    ```
+
+    a. Describe the relationship between shoulder girth and height.
+    b. How would the relationship change if shoulder girth was measured in inches while the units of height remained in centimeters?
+
+    The scatterplot below shows the relationship between weight measured in kilograms and hip girth measured in centimeters.
+    
+    ```{r body_measurements_weight_hip_girth, echo=FALSE, out.width='40%', fig.align='center'}
+    knitr::include_graphics("body_measurements_weight_hip_girth.pdf")
+    ```
+    
+    c. Describe the relationship between hip girth and weight.
+    d. How would the relationship change if weight was measured in pounds while the units for hip girth remained in centimeters?
+    
+     The mean shoulder girth is 107.20 cm with a standard deviation of 10.37 cm. The mean height is 171.14 cm with a standard deviation of 9.41 cm. The correlation between height and shoulder girth is 0.67.
+
+    e. Write the equation of the regression line for predicting height.
+    f. Interpret the slope and the intercept in this context.
+    g. Calculate $R^2$ of the regression line for predicting height from shoulder girth, and interpret it in the context of the application.
+    h. A randomly selected student from your class has a shoulder girth of 100 cm. Predict the height of this student using the model.
+    i. The student from part (d) is 160 cm tall. Calculate the residual, and explain what this residual means.
+    j. A one year old has a shoulder girth of 56 cm. Would it be appropriate to use this linear model to predict the height of this child?
+
+\newpage
+
+## References {#ref}
+
+<div id="refs"></div>
