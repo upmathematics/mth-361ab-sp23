@@ -44,8 +44,7 @@ The exercises below are derived from the textbook [OpenIntro Statistics (4th edi
 
 ### Exercises
 
-1. **Unexpected expense.** In a random sample 765 adults in the United States, 322 say
-they could not cover a \$400 unexpected expense without borrowing money or going into debt.
+1. **Unexpected expense.** In a random sample 765 adults in the United States, 322 say they could not cover a \$400 unexpected expense without borrowing money or going into debt.
 
     a. What population is under consideration in the data set?
     b. What parameter is being estimated and what is the point estimate for the parameter?
