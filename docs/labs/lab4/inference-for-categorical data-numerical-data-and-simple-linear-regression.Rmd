@@ -1,5 +1,5 @@
 ---
-title: "Inference for Categoral and Numerical Data, and Simple Linear Regression"
+title: "Inference for Categorical and Numerical Data, and Simple Linear Regression"
 output:
   html_document:
     css: www/lab.css
