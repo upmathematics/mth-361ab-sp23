@@ -60,8 +60,7 @@ If this concept is new to you, review the lab on "Probability and the Normal Dis
 
 ### The data
 
-You will be analyzing the same dataset as in the previous lab, where you delved into a sample from the Youth Risk Behavior Surveillance System (YRBSS) survey, which uses data from high schoolers to help discover health patterns.
-The dataset is called `yrbss`.
+You will be analyzing the dataset `yrbss`, where you will delv into a sample from the Youth Risk Behavior Surveillance System (YRBSS) survey, which uses data from high schoolers to help discover health patterns.
 
 1.  What are the counts within each category for the amount of days these students have texted while driving within the past 30 days?
     What is the proportion of people who have texted while driving every day in the past 30 days and never wear helmets?
