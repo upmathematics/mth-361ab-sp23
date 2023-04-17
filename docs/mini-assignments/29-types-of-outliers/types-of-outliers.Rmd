@@ -1,0 +1,90 @@
+---
+title: '**Types of Outliers**'
+subtitle: "Mini-Assignment - MTH 361 A/B - Spring 2023"
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[RO,R]{MTH 361 A/B}
+  \fancyfoot[CO,C]{}
+  \fancyfoot[R]{\thepage}
+  \usepackage{float}
+  \usepackage{multirow}
+output:
+  bookdown::pdf_document2:
+    toc: no
+    number_section: no
+urlcolor: blue
+link-citations: yes
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\
+
+**Instructions:**
+ 
+ * Please provide complete solutions for each problem. If it involves mathematical computations, explanations, or analysis, please provide your reasoning or detailed solutions.
+ 
+ * Note that some problems have multiple solutions or ways to solve it. Make sure that your solutions are clear enough to showcase your work and understanding of the material.
+ 
+ * Creativity and collaborations are encouraged. Use all of the resources you have and what you need to complete the mini-assignment. Each student must take personal responsibility and submit their work individually. Please abide by the University of Portland Academic Honor Principle.
+ 
+ * **Please save your work as one pdf file, don't put your name in any part of the document, and submit it to the Teams Assignments for this course. Your document upload will correspond to your name automatically in Teams.**
+ 
+ * If you have questions or concerns, please feel free to ask the instructor.
+
+\newpage
+
+## I. Outliers in Linear Regression
+
+### Materials
+
+The exercises below are derived from the textbook [OpenIntro Statistics (4th edition)](https://www.openintro.org/book/os/){target="_blank"} by David Diez, Mine Cetinkaya-Rundel, and Christopher Barr.
+
+### Exercises
+
+1. **Outliers, Part I.** Identify the outliers in the scatterplots shown below, and determine what type of outliers they are. Explain your reasoning.
+
+```{r,echo=FALSE, out.width='30%', fig.width=3, fig.height=3,fig.show='hold',fig.align='center'}
+knitr::include_graphics("outliers_1_1.pdf")
+knitr::include_graphics("outliers_2_1.pdf")
+knitr::include_graphics("outliers_3_1.pdf")
+```
+
+2. **Outliers, Part II.** Identify the outliers in the scatterplots shown below and determine what type of outliers they are. Explain your reasoning.
+    
+```{r,echo=FALSE, out.width='30%', fig.width=3, fig.height=3,fig.show='hold',fig.align='center'}
+knitr::include_graphics("outliers_1_2.pdf")
+knitr::include_graphics("outliers_2_2.pdf")
+knitr::include_graphics("outliers_3_2.pdf")
+```  
+
+\newpage
+
+3. (Outstanding Question) **Urban homeowners, Part I.** The scatterplot below shows the percent of families who own their home vs. the percent of the population living in urban areas. [@data:urbanOwner] There are 52 observations, each corresponding to a state in the US. Puerto Rico and District of Columbia are also included.
+
+    ```{r urban_homeowners_outlier,echo=FALSE, out.width='50%', fig.width=3, fig.height=3,fig.show='hold',fig.align='center'}
+    knitr::include_graphics("urban_homeowners_outlier.pdf")
+    ``` 
+
+    a. Describe the relationship between the percent of families who own their home and the percent of the population living in urban areas.
+    b. The outlier at the bottom right corner is District of Columbia, where 100\% of the population is considered urban. What type of an outlier is this observation?
+    
+    Below is a similar scatterplot, excluding District of Columbia, as well as the residuals plot. There were 51 cases.
+    
+    ```{r urban_homeowners_cond,echo=FALSE, out.width='50%', fig.width=3, fig.height=3,fig.show='hold',fig.align='center'}
+    knitr::include_graphics("urban_homeowners_cond.pdf")
+    ```
+
+    c. For these data, $R^2=0.28$. What is the correlation? How can you tell if it is positive or negative?
+    d. Examine the residual plot. What do you observe? Is a simple least squares fit appropriate for these data?
+
+\newpage
+
+## References {#ref}
+
+<div id="refs"></div>
