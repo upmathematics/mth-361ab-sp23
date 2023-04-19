@@ -65,7 +65,7 @@ knitr::include_graphics("outliers_3_2.pdf")
 
 \newpage
 
-3. (Outstanding Question) **Urban homeowners, Part I.** The scatterplot below shows the percent of families who own their home vs. the percent of the population living in urban areas. [@data:urbanOwner] There are 52 observations, each corresponding to a state in the US. Puerto Rico and District of Columbia are also included.
+3. (Outstanding Question) **Urban homeowners** The scatterplot below shows the percent of families who own their home vs. the percent of the population living in urban areas. [@data:urbanOwner] There are 52 observations, each corresponding to a state in the US. Puerto Rico and District of Columbia are also included.
 
     ```{r urban_homeowners_outlier,echo=FALSE, out.width='50%', fig.width=3, fig.height=3,fig.show='hold',fig.align='center'}
     knitr::include_graphics("urban_homeowners_outlier.pdf")
