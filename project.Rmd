@@ -12,12 +12,14 @@ Each group are assigned with a name. ^[Group names are inspired by Star Wars X-w
 
   * Section A (11:25 AM - 12:20 PM)
       - Corona: Audrey S., Shane M., Annie W.
-      - Meteor: Colleen S., Dylan P., Sophie O.
+      - Meteor-1: Sophie O.
+      - Meteor-2: Dylan P.
       - Red: Ella S., Anabel H., Mia A.
       - Yellow: Luke k., Alex H., Vincent R.
   * Section B (12:30 PM - 1:25 PM)
       - Blue: Caden D., Devam P, Alec U.
-      - Echo: Tamsen D., Anna S., Samone W., Ndemoh S.
+      - Echo-1: Tamsen D., Samone W., Ndemoh S.
+      - Echo-2: Anna S.
       - Phantom: Niklas M., Milton N., Xavier S., Eli R.
 
 <br>
