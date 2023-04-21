@@ -98,6 +98,8 @@ The most important aspect of your project is that you must write a reproducible 
 
 *Amendment 2:* The final report must include a title - *Title:* Your final project report must have a descriptive title that is representative of your project's contents.
 
+*Amendment 3:* Complete the project individual assessment worksheet by the day of the presentations. This worksheet will be used to evaluate your individual grade for your group project.
+
   * *Put your report together as one scientific narrative:* Your final report should contain these three parts below. Note that you already wrote most of these from Phases 2-4. You just need to organize them in a more scientific narrative fashion.
       - *Introduction:* This section should include your background research, research questions, hypothesis statements, and data description.
       - *Data Exploration:* This section should include your exploration of your data that leads to your question and hypotheses. Include details on how you wrangle your data or if made additional computations.
