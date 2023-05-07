@@ -1,0 +1,35 @@
+---
+title: 'Final Project Presentations Schedule'
+subtitle: 'MTH361 Applied Statistics I - Spring 2023'
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+## Section A: Tuesday 5/2, 10:30 AM - 12:30 PM, Franz 205
+
+1. Comprehensive Analysis of Demographic Data on Members of the US Armed Forces, Including Gender, Race and Rank by Ella S. Anabel H., and Mia A.
+
+2. Survivor: How to Become a Winner? by Shane M. Audrey S., and Annie Walsh
+
+3. Statistical Analysis of Duke Student's GPA by Sophie O.
+
+4. A Presentation on Problematic Pupil Prejudice and Partiality Pertaining to Professor Performance by Alex H., Luke K., and Vincent R.
+
+
+
+## Section B: Wednesday 5/3, 1:30 PM - 3:30 PM, Franz 205
+
+1. The Affect of Age on Home Condition in Ames, Iowa by Devam P., Caden D., and Alec U.
+
+2. Mario Kart Wii by Xavier S., Milton N. Eli R. and Niklas M.
+
+3. Sentiment Analysis in Application to the Study of Vincent Van Gogh by Anna S.
+
+4. RuPaul's Drag Race by Samone W., Tamsen D., and Ndemoh S.

@@ -1,0 +1,38 @@
+---
+title: "Project Individual Assessment Worksheet"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Name:**
+
+Please provide elaborate answers to the following questions regarding your contribution and experience in your group. These questions will count as your individual credit for your final project report.
+
+1. Describe briefly what your project was about.
+
+\vspace{150pt}
+
+2. In a short paragraph, describe the particular contributions that you made in the final report.
+
+\vspace{150pt}
+
+3. Do you feel that the workload for the entire project was shared equally among all group members? If not, please elaborate.
+
+\vspace{150pt}
+
+\newpage
+
+4. What new skills or knowledge did you gain through completing this project?
+
+\vspace{150pt}
+
+5. How did you measure the success of your project, and were you satisfied with the results?
+
+\vspace{150pt}
+
+6. What can you improve on yourself for the next time you are in a group project?
+
+\vspace{150pt}
