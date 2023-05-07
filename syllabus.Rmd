@@ -260,7 +260,7 @@ The computation of a student's final grade is based on the following:
   * To get a maximum passing grade (A) for the course, you need at least \%80 *Outstanding* grades of mini-assignments, \%60 *Outstanding* grades of lab assignments, and an *Excellent* individual grade for the final group project.
   * Getting either -/+ on your grade depends on your group grade for the final project.
 
-Note that these are not absolutes and subject to change based on circumstances. To give you a point of reference, there are 37 mini-assignments and 5 Lab assignments.
+Note that these are not absolutes and subject to change based on circumstances. To give you a point of reference, there are 29 mini-assignments (+2 optional) and 4 Lab assignments.
 
 <br>
 
